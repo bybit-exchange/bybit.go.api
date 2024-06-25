@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/wuhewuhe/bybit.go.api/models"
+	"github.com/bybit-exchange/bybit.go.api/models"
 )
 
 // MarketKlinesService Market Kline (GET /v5/market/kline)

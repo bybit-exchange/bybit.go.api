@@ -1,12 +1,19 @@
 # bybit-go-api
-[![GO 1.21.0](https://img.shields.io/badge/Go-1.21.0-brightgreen.svg)](https://github.com/wuhewuhe/bybit-go-api)   [![Contributor Victor](https://img.shields.io/badge/contributor-Victor-blue.svg)](https://github.com/wuhewuhe/bybit-go-api)   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/wuhewuhe/bybit-go-api/blob/main/LICENSE)
+[![GO 1.21.0](https://img.shields.io/badge/Go-1.21.0-brightgreen.svg)](https://github.com/bybit-exchange/bybit-go-api)   [![Contributor Victor](https://img.shields.io/badge/contributor-Victor-blue.svg)](https://github.com/bybit-exchange/bybit-go-api)   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/bybit-exchange/bybit-go-api/blob/main/LICENSE)
+
 ## Table of Contents
-- [About](#about)
-- [Development](#development)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contact](#contact)
-- [Contributors](#contributors)
+- [bybit-go-api](#bybit-go-api)
+	- [Table of Contents](#table-of-contents)
+	- [About](#about)
+	- [Development](#development)
+	- [Installation](#installation)
+	- [Usage](#usage)
+		- [Rest API](#rest-api)
+		- [Websocket public channel](#websocket-public-channel)
+		- [Websocket private channel](#websocket-private-channel)
+	- [Contact](#contact)
+	- [Contributors](#contributors)
+
 ## About
 The Official Go Lang API connector for Bybit's HTTP and WebSocket APIs.
 
@@ -41,10 +48,11 @@ require (
 ```
 
 To import my package you need just to put the link to your go mode file
-**github.com/wuhewuhe/bybit.go.api**
+**github.com/bybit-exchange/bybit.go.api**
 
 ## Usage
 Note: Replace placeholders (like YOUR_API_KEY, links, or other details) with the actual information. You can also customize this template to better fit the actual state and details of your Java API.
+
 ### Rest API
 - Place an order by Map
 ```go
@@ -166,13 +174,13 @@ List of other contributors
         <a href="https://github.com/wuhewuhe">
             <img src="https://avatars.githubusercontent.com/u/32245754?v=4" width="100px;" alt=""/>
             <br />
-            <sub>   
+            <sub>
                 <b>Victor</b>
             </sub>
         </a>
         <br />
-        <a href="https://github.com/wuhewuhe/bybit-java-api/commits?author=wuhewuhe" title="Code">💻</a>
-        <a href="https://github.com/wuhewuhe/bybit-java-api/commits?author=wuhewuhe" title="Documentation">📖</a>
+        <a href="https://github.com/bybit-exchange/bybit-java-api/commits?author=wuhewuhe" title="Code">💻</a>
+        <a href="https://github.com/bybit-exchange/bybit-java-api/commits?author=wuhewuhe" title="Documentation">📖</a>
     </td>
   </tr>
 </table>

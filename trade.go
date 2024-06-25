@@ -2,9 +2,10 @@ package bybit_connector
 
 import (
 	"context"
-	"github.com/wuhewuhe/bybit.go.api/handlers"
-	"github.com/wuhewuhe/bybit.go.api/models"
 	"net/http"
+
+	"github.com/bybit-exchange/bybit.go.api/handlers"
+	"github.com/bybit-exchange/bybit.go.api/models"
 )
 
 type TradeClient struct {

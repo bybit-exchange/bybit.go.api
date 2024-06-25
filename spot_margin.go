@@ -3,8 +3,9 @@ package bybit_connector
 import (
 	"context"
 	"errors"
-	"github.com/wuhewuhe/bybit.go.api/handlers"
 	"net/http"
+
+	"github.com/bybit-exchange/bybit.go.api/handlers"
 )
 
 type SpotMarginClient struct {
