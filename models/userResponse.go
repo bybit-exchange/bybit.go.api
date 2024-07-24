@@ -16,3 +16,12 @@ type UserVolumeInfo struct {
 	DepositUpdateTime   string `json:"depositUpdateTime"`
 	VolUpdateTime       string `json:"volUpdateTime"`
 }
+
+type SubMember struct {
+	AccountMode int    `json:"accountMode"`
+	MemberType  int    `json:"memberType"`
+	Remark      string `json:"remark"`
+	Status      int    `json:"status"`
+	Uid         string `json:"uid"`
+	Username    string `json:"username"`
+}
