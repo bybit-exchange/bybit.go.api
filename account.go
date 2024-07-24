@@ -146,7 +146,7 @@ func (s *AccountClient) GetCollateralInfo(ctx context.Context, opts ...RequestOp
 func (s *AccountClient) GetAccountInfo(ctx context.Context, opts ...RequestOption) (res *ServerResponse, err error) {
 	r := &request{
 		method:   http.MethodGet,
-		endpoint: "/v5/account/upgrade-to-uta",
+		endpoint: "/v5/account/info",
 		secType:  secTypeSigned,
 	}
 	data, err := s.c.callAPI(ctx, r, opts...)
