@@ -2,8 +2,9 @@ package bybit_connector
 
 import (
 	"context"
-	"github.com/fqds/bybit-go-api-mf/handlers"
 	"net/http"
+
+	"github.com/fqds/bybit-go-api-mf/handlers"
 )
 
 func (s *BybitClientRequest) GetTransactionLog(ctx context.Context, opts ...RequestOption) (res *ServerResponse, err error) {
@@ -214,6 +215,105 @@ func (s *BybitClientRequest) GetSelfMarketProtectionGroup(ctx context.Context, o
 	r := &request{
 		method:   http.MethodGet,
 		endpoint: "/v5/account/smp-group",
+		secType:  secTypeSigned,
+	}
+	data, err := SendRequest(ctx, opts, r, s, err)
+	return GetServerResponse(err, data)
+}
+
+// GetAccountInstrumentsInfo
+func (s *BybitClientRequest) GetAccountInstrumentsInfo(ctx context.Context, opts ...RequestOption) (res *ServerResponse, err error) {
+	r := &request{
+		method:   http.MethodGet,
+		endpoint: "/v5/account/instruments-info",
+		secType:  secTypeSigned,
+	}
+	data, err := SendRequest(ctx, opts, r, s, err)
+	return GetServerResponse(err, data)
+}
+
+// ManualBorrow
+func (s *BybitClientRequest) ManualBorrow(ctx context.Context, opts ...RequestOption) (res *ServerResponse, err error) {
+	r := &request{
+		method:   http.MethodPost,
+		endpoint: "/v5/account/borrow",
+		secType:  secTypeSigned,
+	}
+	data, err := SendRequest(ctx, opts, r, s, err)
+	return GetServerResponse(err, data)
+}
+
+// GetMaxBorrowableAmount
+func (s *BybitClientRequest) GetMaxBorrowableAmount(ctx context.Context, opts ...RequestOption) (res *ServerResponse, err error) {
+	r := &request{
+		method:   http.MethodGet,
+		endpoint: "/v5/spot-margin-trade/max-borrowable",
+		secType:  secTypeSigned,
+	}
+	data, err := SendRequest(ctx, opts, r, s, err)
+	return GetServerResponse(err, data)
+}
+
+// GetPositionTiers
+func (s *BybitClientRequest) GetPositionTiers(ctx context.Context, opts ...RequestOption) (res *ServerResponse, err error) {
+	r := &request{
+		method:   http.MethodGet,
+		endpoint: "/v5/spot-margin-trade/position-tiers",
+		secType:  secTypeSigned,
+	}
+	data, err := SendRequest(ctx, opts, r, s, err)
+	return GetServerResponse(err, data)
+}
+
+// GetCoinState
+func (s *BybitClientRequest) GetCoinState(ctx context.Context, opts ...RequestOption) (res *ServerResponse, err error) {
+	r := &request{
+		method:   http.MethodGet,
+		endpoint: "/v5/spot-margin-trade/coinstate",
+		secType:  secTypeSigned,
+	}
+	data, err := SendRequest(ctx, opts, r, s, err)
+	return GetServerResponse(err, data)
+}
+
+// GetAvailableAmountToRepay
+func (s *BybitClientRequest) GetAvailableAmountToRepay(ctx context.Context, opts ...RequestOption) (res *ServerResponse, err error) {
+	r := &request{
+		method:   http.MethodGet,
+		endpoint: "/v5/spot-margin-trade/repayment-available-amount",
+		secType:  secTypeSigned,
+	}
+	data, err := SendRequest(ctx, opts, r, s, err)
+	return GetServerResponse(err, data)
+}
+
+// ManualRepay
+func (s *BybitClientRequest) ManualRepay(ctx context.Context, opts ...RequestOption) (res *ServerResponse, err error) {
+	r := &request{
+		method:   http.MethodPost,
+		endpoint: "/v5/account/repay",
+		secType:  secTypeSigned,
+	}
+	data, err := SendRequest(ctx, opts, r, s, err)
+	return GetServerResponse(err, data)
+}
+
+// ManualRepayWithoutAssetConversion
+func (s *BybitClientRequest) ManualRepayWithoutAssetConversion(ctx context.Context, opts ...RequestOption) (res *ServerResponse, err error) {
+	r := &request{
+		method:   http.MethodPost,
+		endpoint: "/v5/account/no-convert-repay",
+		secType:  secTypeSigned,
+	}
+	data, err := SendRequest(ctx, opts, r, s, err)
+	return GetServerResponse(err, data)
+}
+
+// SetLimitPriceAction sets the limit order price action when it exceeds the price limit
+func (s *BybitClientRequest) SetLimitPriceAction(ctx context.Context, opts ...RequestOption) (res *ServerResponse, err error) {
+	r := &request{
+		method:   http.MethodPost,
+		endpoint: "/v5/account/set-limit-px-action",
 		secType:  secTypeSigned,
 	}
 	data, err := SendRequest(ctx, opts, r, s, err)

@@ -78,6 +78,17 @@ func (s *BybitClientRequest) AssociateInsLoan(ctx context.Context, opts ...Reque
 	return GetServerResponse(err, data)
 }
 
+// RepayInsLoan repays the institutional loan
+func (s *BybitClientRequest) RepayInsLoan(ctx context.Context, opts ...RequestOption) (res *ServerResponse, err error) {
+	r := &request{
+		method:   http.MethodPost,
+		endpoint: "/v5/ins-loan/repay-loan",
+		secType:  secTypeSigned,
+	}
+	data, err := SendRequest(ctx, opts, r, s, err)
+	return GetServerResponse(err, data)
+}
+
 // Crypto Loan
 
 // Deprecated: BorrowCryptoLoan is deprecated.

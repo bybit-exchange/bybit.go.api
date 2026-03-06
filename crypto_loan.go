@@ -9,7 +9,7 @@ import (
 
 func (s *BybitClientRequest) GetBorrowableCoins(ctx context.Context, opts ...RequestOption) (res *ServerResponse, err error) {
 	r := &request{
-		method:   http.MethodPost,
+		method:   http.MethodGet,
 		endpoint: "/v5/crypto-loan-common/loanable-data",
 		secType:  secTypeNone,
 	}
@@ -19,7 +19,7 @@ func (s *BybitClientRequest) GetBorrowableCoins(ctx context.Context, opts ...Req
 
 func (s *BybitClientRequest) GetCollateralCoins(ctx context.Context, opts ...RequestOption) (res *ServerResponse, err error) {
 	r := &request{
-		method:   http.MethodPost,
+		method:   http.MethodGet,
 		endpoint: "/v5/crypto-loan-common/collateral-data",
 		secType:  secTypeNone,
 	}
@@ -29,7 +29,7 @@ func (s *BybitClientRequest) GetCollateralCoins(ctx context.Context, opts ...Req
 
 func (s *BybitClientRequest) GetMaxCollateralAmount(ctx context.Context, opts ...RequestOption) (res *ServerResponse, err error) {
 	r := &request{
-		method:   http.MethodPost,
+		method:   http.MethodGet,
 		endpoint: "/v5/crypto-loan-common/max-collateral-amount",
 		secType:  secTypeSigned,
 	}
@@ -235,6 +235,61 @@ func (s *BybitClientRequest) SupplyFixedLoan(ctx context.Context, opts ...Reques
 	r := &request{
 		method:   http.MethodPost,
 		endpoint: "/v5/crypto-loan-fixed/supply",
+		secType:  secTypeSigned,
+	}
+	data, err := SendRequest(ctx, opts, r, s, err)
+	return GetServerResponse(err, data)
+}
+
+// RepayCollateral
+func (s *BybitClientRequest) RepayCollateral(ctx context.Context, opts ...RequestOption) (res *ServerResponse, err error) {
+	r := &request{
+		method:   http.MethodPost,
+		endpoint: "/v5/crypto-loan-flexible/repay-collateral",
+		secType:  secTypeSigned,
+	}
+	data, err := SendRequest(ctx, opts, r, s, err)
+	return GetServerResponse(err, data)
+}
+
+// RepayFixedCollateral
+func (s *BybitClientRequest) RepayFixedCollateral(ctx context.Context, opts ...RequestOption) (res *ServerResponse, err error) {
+	r := &request{
+		method:   http.MethodPost,
+		endpoint: "/v5/crypto-loan-fixed/repay-collateral",
+		secType:  secTypeSigned,
+	}
+	data, err := SendRequest(ctx, opts, r, s, err)
+	return GetServerResponse(err, data)
+}
+
+// RenewBorrowOrder
+func (s *BybitClientRequest) RenewBorrowOrder(ctx context.Context, opts ...RequestOption) (res *ServerResponse, err error) {
+	r := &request{
+		method:   http.MethodPost,
+		endpoint: "/v5/crypto-loan-fixed/renew",
+		secType:  secTypeSigned,
+	}
+	data, err := SendRequest(ctx, opts, r, s, err)
+	return GetServerResponse(err, data)
+}
+
+// GetRenewOrderInfo
+func (s *BybitClientRequest) GetRenewOrderInfo(ctx context.Context, opts ...RequestOption) (res *ServerResponse, err error) {
+	r := &request{
+		method:   http.MethodGet,
+		endpoint: "/v5/crypto-loan-fixed/renew-info",
+		secType:  secTypeSigned,
+	}
+	data, err := SendRequest(ctx, opts, r, s, err)
+	return GetServerResponse(err, data)
+}
+
+// GetCryptoLoanMaxCollateralAmount gets the max collateral amount for crypto loan
+func (s *BybitClientRequest) GetCryptoLoanMaxCollateralAmount(ctx context.Context, opts ...RequestOption) (res *ServerResponse, err error) {
+	r := &request{
+		method:   http.MethodGet,
+		endpoint: "/v5/crypto-loan/max-collateral-amount",
 		secType:  secTypeSigned,
 	}
 	data, err := SendRequest(ctx, opts, r, s, err)

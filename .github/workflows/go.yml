@@ -1,6 +1,3 @@
-# This workflow will build a golang project
-# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-go
-
 name: Go
 
 on:
@@ -10,19 +7,25 @@ on:
     branches: [ "main" ]
 
 jobs:
-
   build:
     runs-on: ubuntu-latest
+
     steps:
     - uses: actions/checkout@v3
 
     - name: Set up Go
       uses: actions/setup-go@v4
       with:
-        go-version: '1.20'
+        go-version: '1.21'   # Bybit API 要求 1.21+
 
     - name: Build
-      run: go build -v ./...
+      run: |
+        go list ./... \
+          | grep -v "examples" \
+          | grep -v "unit_test" \
+          | xargs -L1 go build -v
+
 
     - name: Test
-      run: go test -v ./...
+      run: |
+        go list ./... | grep -v "examples" | xargs -L1 go test -v

@@ -2,9 +2,10 @@ package bybit_connector
 
 import (
 	"context"
+	"net/http"
+
 	"github.com/fqds/bybit-go-api-mf/handlers"
 	"github.com/fqds/bybit-go-api-mf/models"
-	"net/http"
 )
 
 func (s *BybitClientRequest) PlacePreCheckOrder(ctx context.Context, opts ...RequestOption) (res *ServerResponse, err error) {
@@ -183,6 +184,20 @@ func (s *BybitClientRequest) RequestTestFund(ctx context.Context, opts ...Reques
 	r := &request{
 		method:   http.MethodGet,
 		endpoint: "/v5/account/demo-apply-money",
+		secType:  secTypeSigned,
+	}
+	data, err := SendRequest(ctx, opts, r, s, err)
+	return GetServerResponse(err, data)
+}
+
+// GetUserSettingConfig
+func (s *BybitClientRequest) GetUserSettingConfig(ctx context.Context, opts ...RequestOption) (res *ServerResponse, err error) {
+	if err = handlers.ValidateParams(s.params); err != nil {
+		return nil, err
+	}
+	r := &request{
+		method:   http.MethodGet,
+		endpoint: "/v5/account/user-setting-config",
 		secType:  secTypeSigned,
 	}
 	data, err := SendRequest(ctx, opts, r, s, err)

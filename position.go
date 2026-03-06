@@ -2,8 +2,9 @@ package bybit_connector
 
 import (
 	"context"
-	"github.com/fqds/bybit-go-api-mf/handlers"
 	"net/http"
+
+	"github.com/fqds/bybit-go-api-mf/handlers"
 )
 
 func (s *BybitClientRequest) GetPositionList(ctx context.Context, opts ...RequestOption) (res *ServerResponse, err error) {

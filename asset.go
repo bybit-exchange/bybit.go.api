@@ -2,8 +2,9 @@ package bybit_connector
 
 import (
 	"context"
-	"github.com/fqds/bybit-go-api-mf/handlers"
 	"net/http"
+
+	"github.com/fqds/bybit-go-api-mf/handlers"
 )
 
 func (s *BybitClientRequest) GetAssetOrderRecord(ctx context.Context, opts ...RequestOption) (res *ServerResponse, err error) {
@@ -324,6 +325,61 @@ func (s *BybitClientRequest) ConfirmConvertQuote(ctx context.Context, opts ...Re
 	r := &request{
 		method:   http.MethodPost,
 		endpoint: "/v5/asset/exchange/convert-execute",
+		secType:  secTypeSigned,
+	}
+	data, err := SendRequest(ctx, opts, r, s, err)
+	return GetServerResponse(err, data)
+}
+
+// GetWithdrawalAddress
+func (s *BybitClientRequest) GetWithdrawalAddress(ctx context.Context, opts ...RequestOption) (res *ServerResponse, err error) {
+	r := &request{
+		method:   http.MethodGet,
+		endpoint: "/v5/asset/withdraw/query-address",
+		secType:  secTypeSigned,
+	}
+	data, err := SendRequest(ctx, opts, r, s, err)
+	return GetServerResponse(err, data)
+}
+
+// GetSmallBalanceList gets the list of small balances that can be converted
+func (s *BybitClientRequest) GetSmallBalanceList(ctx context.Context, opts ...RequestOption) (res *ServerResponse, err error) {
+	r := &request{
+		method:   http.MethodGet,
+		endpoint: "/v5/asset/covert/small-balance-list",
+		secType:  secTypeSigned,
+	}
+	data, err := SendRequest(ctx, opts, r, s, err)
+	return GetServerResponse(err, data)
+}
+
+// GetSmallBalanceConvertQuote gets a quote for converting small balances
+func (s *BybitClientRequest) GetSmallBalanceConvertQuote(ctx context.Context, opts ...RequestOption) (res *ServerResponse, err error) {
+	r := &request{
+		method:   http.MethodPost,
+		endpoint: "/v5/asset/covert/get-quote",
+		secType:  secTypeSigned,
+	}
+	data, err := SendRequest(ctx, opts, r, s, err)
+	return GetServerResponse(err, data)
+}
+
+// ExecuteSmallBalanceConvert executes the small balance conversion
+func (s *BybitClientRequest) ExecuteSmallBalanceConvert(ctx context.Context, opts ...RequestOption) (res *ServerResponse, err error) {
+	r := &request{
+		method:   http.MethodPost,
+		endpoint: "/v5/asset/covert/small-balance-execute",
+		secType:  secTypeSigned,
+	}
+	data, err := SendRequest(ctx, opts, r, s, err)
+	return GetServerResponse(err, data)
+}
+
+// GetSmallBalanceConvertHistory gets the history of small balance conversions
+func (s *BybitClientRequest) GetSmallBalanceConvertHistory(ctx context.Context, opts ...RequestOption) (res *ServerResponse, err error) {
+	r := &request{
+		method:   http.MethodGet,
+		endpoint: "/v5/asset/covert/small-balance-history",
 		secType:  secTypeSigned,
 	}
 	data, err := SendRequest(ctx, opts, r, s, err)
