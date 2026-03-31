@@ -18,14 +18,7 @@ func main() {
 		log.Fatal("BYBIT_API_KEY and BYBIT_API_SECRET required")
 	}
 
-	// Init Bybit client (testnet if enabled)
-	var baseURL string
-	if cfg.Testnet {
-		baseURL = bybit.TESTNET // Assume constant exists
-	} else {
-		baseURL = bybit.PROD // Assume constant exists
-	}
-	client := bybit.NewBybitHttpClient(cfg.APIKey, cfg.APISecret, bybit.WithBaseURL(baseURL))
+// Init Bybit client - MAINNET ALWAYS for prod server\n// Tests use BYBIT_TESTNET=true\nbaseURL := bybit.PROD // Default mainnet\nif cfg.Testnet {\n\tbaseURL = bybit.TESTNET\n}\nclient := bybit.NewBybitHttpClient(cfg.APIKey, cfg.APISecret, bybit.WithBaseURL(baseURL))\n\n// Log network\nlog.Printf("Bybit network: %s", baseURL)
 
 	// Register handlers
 	http.HandleFunc("/tools", handlers.ToolsHandler)

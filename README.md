@@ -193,8 +193,7 @@ select {}
 Run the MCP server to expose Bybit APIs as AI tools:
 
 ```bash
-# Testnet (recommended)
-export BYBIT_TESTNET=true
+# Mainnet (default for prod)\n# export BYBIT_TESTNET=true  # For testing only
 export BYBIT_API_KEY=your_testnet_key
 export BYBIT_API_SECRET=your_testnet_secret
 export MCP_PORT=30001  # optional
