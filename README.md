@@ -188,7 +188,37 @@ _ = ws.Connect([]string{"order"})
 select {}
 ```
 
+## MCP Server (New!)
+
+Run the MCP server to expose Bybit APIs as AI tools:
+
+```bash
+# Testnet (recommended)
+export BYBIT_TESTNET=true
+export BYBIT_API_KEY=your_testnet_key
+export BYBIT_API_SECRET=your_testnet_secret
+export MCP_PORT=30001  # optional
+go run cmd/mcp-server/main.go
+```
+
+Endpoints:
+- `GET /tools` → Tool schemas JSON
+- `POST /call` → Execute tool `{name, args}`
+- `GET /health` → OK
+
+Example:
+```bash
+curl http://localhost:30001/tools  # []
+curl -X POST http://localhost:30001/call \
+  -H 'Content-Type: application/json' \
+  -d '{"name":"get_tickers","args":{"symbol":"BTCUSDT"}}'
+  # {"error": "No tools yet"}
+```
+
+Tools added in future PRs.
+
 ## Contact
+
 For support, join our Bybit API community on [Telegram](https://t.me/Bybitapi).
 
 ## Contributors
