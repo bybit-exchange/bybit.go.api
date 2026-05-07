@@ -2,6 +2,7 @@ package bybit_connector
 
 import (
 	"context"
+	"encoding/json"
 	"errors"
 	"net/http"
 
