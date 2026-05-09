@@ -4,8 +4,8 @@ import (
 	"context"
 	"net/http"
 
-	"github.com/bybit-exchange/bybit.go.api/handlers"
-	"github.com/bybit-exchange/bybit.go.api/models"
+	"github.com/0xArchiviste/bybit.go.api/handlers"
+	"github.com/0xArchiviste/bybit.go.api/models"
 )
 
 func (s *BybitClientRequest) PlacePreCheckOrder(ctx context.Context, opts ...RequestOption) (res *ServerResponse, err error) {

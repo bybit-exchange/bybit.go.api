@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/bybit-exchange/bybit.go.api/models"
+	"github.com/0xArchiviste/bybit.go.api/models"
 )
 
 func (s *BybitClientRequest) GetServerTime(ctx context.Context, opts ...RequestOption) (res *ServerResponse, err error) {

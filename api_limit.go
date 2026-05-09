@@ -4,7 +4,7 @@ import (
 	"context"
 	"net/http"
 
-	"github.com/bybit-exchange/bybit.go.api/handlers"
+	"github.com/0xArchiviste/bybit.go.api/handlers"
 )
 
 // QueryCap
