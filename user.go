@@ -182,26 +182,27 @@ func (s *BybitClientRequest) GetUidWalletType(ctx context.Context, opts ...Reque
 	return GetServerResponse(err, data)
 }
 
-func (s *BybitClientRequest) GetAffiliateUserInfo(ctx context.Context, opts ...RequestOption) (res *ServerResponse, err error) {
+
+func (s *BybitClientRequest) QueryReferrals(ctx context.Context, opts ...RequestOption) (res *ServerResponse, err error) {
 	if err = handlers.ValidateParams(s.params); err != nil {
 		return nil, err
 	}
 	r := &request{
 		method:   http.MethodGet,
-		endpoint: "/v5/user/aff-customer-info",
+		endpoint: "/v5/user/invitation/referrals",
 		secType:  secTypeSigned,
 	}
 	data, err := SendRequest(ctx, opts, r, s, err)
 	return GetServerResponse(err, data)
 }
 
-func (s *BybitClientRequest) GetAffiliateUserList(ctx context.Context, opts ...RequestOption) (res *ServerResponse, err error) {
+func (s *BybitClientRequest) SignAgreement(ctx context.Context, opts ...RequestOption) (res *ServerResponse, err error) {
 	if err = handlers.ValidateParams(s.params); err != nil {
 		return nil, err
 	}
 	r := &request{
-		method:   http.MethodGet,
-		endpoint: "/v5/user/aff-customer-list",
+		method:   http.MethodPost,
+		endpoint: "/v5/user/agreement",
 		secType:  secTypeSigned,
 	}
 	data, err := SendRequest(ctx, opts, r, s, err)

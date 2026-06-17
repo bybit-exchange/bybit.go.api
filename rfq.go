@@ -194,3 +194,94 @@ func (s *BybitClientRequest) GetRFQTradeList(ctx context.Context, opts ...Reques
 	data, err := SendRequest(ctx, opts, r, s, err)
 	return GetServerResponse(err, data)
 }
+
+func (s *BybitClientRequest) AcceptNonLpQuote(ctx context.Context, opts ...RequestOption) (res *ServerResponse, err error) {
+	if err = handlers.ValidateParams(s.params); err != nil {
+		return nil, err
+	}
+	r := &request{
+		method:   http.MethodPost,
+		endpoint: "/v5/rfq/accept-other-quote",
+		secType:  secTypeSigned,
+	}
+	data, err := SendRequest(ctx, opts, r, s, err)
+	return GetServerResponse(err, data)
+}
+
+func (s *BybitClientRequest) CancelAllQuotes(ctx context.Context, opts ...RequestOption) (res *ServerResponse, err error) {
+	if err = handlers.ValidateParams(s.params); err != nil {
+		return nil, err
+	}
+	r := &request{
+		method:   http.MethodPost,
+		endpoint: "/v5/rfq/cancel-all-quotes",
+		secType:  secTypeSigned,
+	}
+	data, err := SendRequest(ctx, opts, r, s, err)
+	return GetServerResponse(err, data)
+}
+
+func (s *BybitClientRequest) CancelQuote(ctx context.Context, opts ...RequestOption) (res *ServerResponse, err error) {
+	if err = handlers.ValidateParams(s.params); err != nil {
+		return nil, err
+	}
+	r := &request{
+		method:   http.MethodPost,
+		endpoint: "/v5/rfq/cancel-quote",
+		secType:  secTypeSigned,
+	}
+	data, err := SendRequest(ctx, opts, r, s, err)
+	return GetServerResponse(err, data)
+}
+
+func (s *BybitClientRequest) CreateQuote(ctx context.Context, opts ...RequestOption) (res *ServerResponse, err error) {
+	if err = handlers.ValidateParams(s.params); err != nil {
+		return nil, err
+	}
+	r := &request{
+		method:   http.MethodPost,
+		endpoint: "/v5/rfq/create-quote",
+		secType:  secTypeSigned,
+	}
+	data, err := SendRequest(ctx, opts, r, s, err)
+	return GetServerResponse(err, data)
+}
+
+func (s *BybitClientRequest) ExecuteQuote(ctx context.Context, opts ...RequestOption) (res *ServerResponse, err error) {
+	if err = handlers.ValidateParams(s.params); err != nil {
+		return nil, err
+	}
+	r := &request{
+		method:   http.MethodPost,
+		endpoint: "/v5/rfq/execute-quote",
+		secType:  secTypeSigned,
+	}
+	data, err := SendRequest(ctx, opts, r, s, err)
+	return GetServerResponse(err, data)
+}
+
+func (s *BybitClientRequest) GetRfqsRealtime(ctx context.Context, opts ...RequestOption) (res *ServerResponse, err error) {
+	if err = handlers.ValidateParams(s.params); err != nil {
+		return nil, err
+	}
+	r := &request{
+		method:   http.MethodGet,
+		endpoint: "/v5/rfq/rfq-realtime",
+		secType:  secTypeSigned,
+	}
+	data, err := SendRequest(ctx, opts, r, s, err)
+	return GetServerResponse(err, data)
+}
+
+func (s *BybitClientRequest) GetRfqs(ctx context.Context, opts ...RequestOption) (res *ServerResponse, err error) {
+	if err = handlers.ValidateParams(s.params); err != nil {
+		return nil, err
+	}
+	r := &request{
+		method:   http.MethodGet,
+		endpoint: "/v5/rfq/rfq-list",
+		secType:  secTypeSigned,
+	}
+	data, err := SendRequest(ctx, opts, r, s, err)
+	return GetServerResponse(err, data)
+}

@@ -34,3 +34,42 @@ func (s *BybitClientRequest) QueryAll(ctx context.Context, opts ...RequestOption
 	data, err := SendRequest(ctx, opts, r, s, err)
 	return GetServerResponse(err, data)
 }
+
+func (s *BybitClientRequest) QueryBrokerAllUidDetails(ctx context.Context, opts ...RequestOption) (res *ServerResponse, err error) {
+	if err = handlers.ValidateParams(s.params); err != nil {
+		return nil, err
+	}
+	r := &request{
+		method:   http.MethodGet,
+		endpoint: "/v5/broker/apilimit/query-all",
+		secType:  secTypeSigned,
+	}
+	data, err := SendRequest(ctx, opts, r, s, err)
+	return GetServerResponse(err, data)
+}
+
+func (s *BybitClientRequest) QueryBrokerCap(ctx context.Context, opts ...RequestOption) (res *ServerResponse, err error) {
+	if err = handlers.ValidateParams(s.params); err != nil {
+		return nil, err
+	}
+	r := &request{
+		method:   http.MethodGet,
+		endpoint: "/v5/broker/apilimit/query-cap",
+		secType:  secTypeSigned,
+	}
+	data, err := SendRequest(ctx, opts, r, s, err)
+	return GetServerResponse(err, data)
+}
+
+func (s *BybitClientRequest) SetBrokerApiLimit(ctx context.Context, opts ...RequestOption) (res *ServerResponse, err error) {
+	if err = handlers.ValidateParams(s.params); err != nil {
+		return nil, err
+	}
+	r := &request{
+		method:   http.MethodPost,
+		endpoint: "/v5/broker/apilimit/set",
+		secType:  secTypeSigned,
+	}
+	data, err := SendRequest(ctx, opts, r, s, err)
+	return GetServerResponse(err, data)
+}

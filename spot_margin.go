@@ -306,3 +306,133 @@ func (s *BybitClientRequest) SetSpotMarginAutoRepayMode(ctx context.Context, opt
 	}
 	return res, nil
 }
+
+func (s *BybitClientRequest) GetSpotMarginPositionTiers(ctx context.Context, opts ...RequestOption) (res *ServerResponse, err error) {
+	if err = handlers.ValidateParams(s.params); err != nil {
+		return nil, err
+	}
+	r := &request{
+		method:   http.MethodGet,
+		endpoint: "/v5/spot-margin-trade/position-tiers",
+		secType:  secTypeSigned,
+	}
+	data, err := SendRequest(ctx, opts, r, s, err)
+	return GetServerResponse(err, data)
+}
+
+func (s *BybitClientRequest) GetSpotMarginTradeCoinState(ctx context.Context, opts ...RequestOption) (res *ServerResponse, err error) {
+	if err = handlers.ValidateParams(s.params); err != nil {
+		return nil, err
+	}
+	r := &request{
+		method:   http.MethodGet,
+		endpoint: "/v5/spot-margin-trade/coinstate",
+		secType:  secTypeSigned,
+	}
+	data, err := SendRequest(ctx, opts, r, s, err)
+	return GetServerResponse(err, data)
+}
+
+func (s *BybitClientRequest) GetSpotMarginTradeMaxBorrowable(ctx context.Context, opts ...RequestOption) (res *ServerResponse, err error) {
+	if err = handlers.ValidateParams(s.params); err != nil {
+		return nil, err
+	}
+	r := &request{
+		method:   http.MethodGet,
+		endpoint: "/v5/spot-margin-trade/max-borrowable",
+		secType:  secTypeSigned,
+	}
+	data, err := SendRequest(ctx, opts, r, s, err)
+	return GetServerResponse(err, data)
+}
+
+func (s *BybitClientRequest) GetSpotMarginTradeRepaymentAvailableAmount(ctx context.Context, opts ...RequestOption) (res *ServerResponse, err error) {
+	if err = handlers.ValidateParams(s.params); err != nil {
+		return nil, err
+	}
+	r := &request{
+		method:   http.MethodGet,
+		endpoint: "/v5/spot-margin-trade/repayment-available-amount",
+		secType:  secTypeSigned,
+	}
+	data, err := SendRequest(ctx, opts, r, s, err)
+	return GetServerResponse(err, data)
+}
+
+func (s *BybitClientRequest) QueryFixedBorrowContracts(ctx context.Context, opts ...RequestOption) (res *ServerResponse, err error) {
+	if err = handlers.ValidateParams(s.params); err != nil {
+		return nil, err
+	}
+	r := &request{
+		method:   http.MethodGet,
+		endpoint: "/v5/spot-margin-trade/fixedborrow-contract-info",
+		secType:  secTypeSigned,
+	}
+	data, err := SendRequest(ctx, opts, r, s, err)
+	return GetServerResponse(err, data)
+}
+
+func (s *BybitClientRequest) QueryFixedBorrowOrders(ctx context.Context, opts ...RequestOption) (res *ServerResponse, err error) {
+	if err = handlers.ValidateParams(s.params); err != nil {
+		return nil, err
+	}
+	r := &request{
+		method:   http.MethodGet,
+		endpoint: "/v5/spot-margin-trade/fixedborrow-order-info",
+		secType:  secTypeSigned,
+	}
+	data, err := SendRequest(ctx, opts, r, s, err)
+	return GetServerResponse(err, data)
+}
+
+func (s *BybitClientRequest) QueryFixedBorrowMarket(ctx context.Context, opts ...RequestOption) (res *ServerResponse, err error) {
+	if err = handlers.ValidateParams(s.params); err != nil {
+		return nil, err
+	}
+	r := &request{
+		method:   http.MethodGet,
+		endpoint: "/v5/spot-margin-trade/fixedborrow-order-quote",
+		secType:  secTypeSigned,
+	}
+	data, err := SendRequest(ctx, opts, r, s, err)
+	return GetServerResponse(err, data)
+}
+
+func (s *BybitClientRequest) RenewFixedBorrow(ctx context.Context, opts ...RequestOption) (res *ServerResponse, err error) {
+	if err = handlers.ValidateParams(s.params); err != nil {
+		return nil, err
+	}
+	r := &request{
+		method:   http.MethodPost,
+		endpoint: "/v5/spot-margin-trade/fixedborrow-renew",
+		secType:  secTypeSigned,
+	}
+	data, err := SendRequest(ctx, opts, r, s, err)
+	return GetServerResponse(err, data)
+}
+
+func (s *BybitClientRequest) AccountFixedBorrow(ctx context.Context, opts ...RequestOption) (res *ServerResponse, err error) {
+	if err = handlers.ValidateParams(s.params); err != nil {
+		return nil, err
+	}
+	r := &request{
+		method:   http.MethodPost,
+		endpoint: "/v5/spot-margin-trade/fixedborrow",
+		secType:  secTypeSigned,
+	}
+	data, err := SendRequest(ctx, opts, r, s, err)
+	return GetServerResponse(err, data)
+}
+
+func (s *BybitClientRequest) QueryBorrowLiability(ctx context.Context, opts ...RequestOption) (res *ServerResponse, err error) {
+	if err = handlers.ValidateParams(s.params); err != nil {
+		return nil, err
+	}
+	r := &request{
+		method:   http.MethodGet,
+		endpoint: "/v5/spot-margin-trade/Liability",
+		secType:  secTypeSigned,
+	}
+	data, err := SendRequest(ctx, opts, r, s, err)
+	return GetServerResponse(err, data)
+}

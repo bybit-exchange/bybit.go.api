@@ -349,3 +349,53 @@ func (s *BybitClientRequest) GetFeeGroupStructure(ctx context.Context, opts ...R
 	data, err := SendRequest(ctx, opts, r, s, err)
 	return GetServerResponse(err, data)
 }
+
+func (s *BybitClientRequest) GetRpiOrderbook(ctx context.Context, opts ...RequestOption) (res *ServerResponse, err error) {
+	r := &request{
+		method:   http.MethodGet,
+		endpoint: "/v5/market/rpi_orderbook",
+		secType:  secTypeNone,
+	}
+	data, err := SendRequest(ctx, opts, r, s, err)
+	return GetServerResponse(err, data)
+}
+
+func (s *BybitClientRequest) GetSpreadInstrumentsInfo(ctx context.Context, opts ...RequestOption) (res *ServerResponse, err error) {
+	r := &request{
+		method:   http.MethodGet,
+		endpoint: "/v5/spread/instrument",
+		secType:  secTypeNone,
+	}
+	data, err := SendRequest(ctx, opts, r, s, err)
+	return GetServerResponse(err, data)
+}
+
+func (s *BybitClientRequest) GetSpreadOrderbook(ctx context.Context, opts ...RequestOption) (res *ServerResponse, err error) {
+	r := &request{
+		method:   http.MethodGet,
+		endpoint: "/v5/spread/orderbook",
+		secType:  secTypeNone,
+	}
+	data, err := SendRequest(ctx, opts, r, s, err)
+	return GetServerResponse(err, data)
+}
+
+func (s *BybitClientRequest) GetSpreadRecentTrades(ctx context.Context, opts ...RequestOption) (res *ServerResponse, err error) {
+	r := &request{
+		method:   http.MethodGet,
+		endpoint: "/v5/spread/recent-trade",
+		secType:  secTypeNone,
+	}
+	data, err := SendRequest(ctx, opts, r, s, err)
+	return GetServerResponse(err, data)
+}
+
+func (s *BybitClientRequest) GetSpreadTickers(ctx context.Context, opts ...RequestOption) (res *ServerResponse, err error) {
+	r := &request{
+		method:   http.MethodGet,
+		endpoint: "/v5/spread/tickers",
+		secType:  secTypeNone,
+	}
+	data, err := SendRequest(ctx, opts, r, s, err)
+	return GetServerResponse(err, data)
+}

@@ -190,14 +190,156 @@ func (s *BybitClientRequest) RequestTestFund(ctx context.Context, opts ...Reques
 	return GetServerResponse(err, data)
 }
 
-// GetUserSettingConfig
-func (s *BybitClientRequest) GetUserSettingConfig(ctx context.Context, opts ...RequestOption) (res *ServerResponse, err error) {
+func (s *BybitClientRequest) AmendSpreadOrder(ctx context.Context, opts ...RequestOption) (res *ServerResponse, err error) {
 	if err = handlers.ValidateParams(s.params); err != nil {
 		return nil, err
 	}
 	r := &request{
-		method:   http.MethodGet,
-		endpoint: "/v5/account/user-setting-config",
+		method:   http.MethodPost,
+		endpoint: "/v5/spread/order/amend",
+		secType:  secTypeSigned,
+	}
+	data, err := SendRequest(ctx, opts, r, s, err)
+	return GetServerResponse(err, data)
+}
+
+func (s *BybitClientRequest) CancelAllSpreadOrders(ctx context.Context, opts ...RequestOption) (res *ServerResponse, err error) {
+	if err = handlers.ValidateParams(s.params); err != nil {
+		return nil, err
+	}
+	r := &request{
+		method:   http.MethodPost,
+		endpoint: "/v5/spread/order/cancel-all",
+		secType:  secTypeSigned,
+	}
+	data, err := SendRequest(ctx, opts, r, s, err)
+	return GetServerResponse(err, data)
+}
+
+func (s *BybitClientRequest) CreateSpreadOrder(ctx context.Context, opts ...RequestOption) (res *ServerResponse, err error) {
+	if err = handlers.ValidateParams(s.params); err != nil {
+		return nil, err
+	}
+	r := &request{
+		method:   http.MethodPost,
+		endpoint: "/v5/spread/order/create",
+		secType:  secTypeSigned,
+	}
+	data, err := SendRequest(ctx, opts, r, s, err)
+	return GetServerResponse(err, data)
+}
+
+func (s *BybitClientRequest) GetAssetDetail(ctx context.Context, opts ...RequestOption) (res *ServerResponse, err error) {
+	if err = handlers.ValidateParams(s.params); err != nil {
+		return nil, err
+	}
+	r := &request{
+		method:   http.MethodPost,
+		endpoint: "/v5/alpha/trade/asset-detail",
+		secType:  secTypeSigned,
+	}
+	data, err := SendRequest(ctx, opts, r, s, err)
+	return GetServerResponse(err, data)
+}
+
+func (s *BybitClientRequest) GetBizTokenDetails(ctx context.Context, opts ...RequestOption) (res *ServerResponse, err error) {
+	if err = handlers.ValidateParams(s.params); err != nil {
+		return nil, err
+	}
+	r := &request{
+		method:   http.MethodPost,
+		endpoint: "/v5/alpha/trade/biz-token-details",
+		secType:  secTypeSigned,
+	}
+	data, err := SendRequest(ctx, opts, r, s, err)
+	return GetServerResponse(err, data)
+}
+
+func (s *BybitClientRequest) GetBizTokenList(ctx context.Context, opts ...RequestOption) (res *ServerResponse, err error) {
+	if err = handlers.ValidateParams(s.params); err != nil {
+		return nil, err
+	}
+	r := &request{
+		method:   http.MethodPost,
+		endpoint: "/v5/alpha/trade/biz-token-list",
+		secType:  secTypeSigned,
+	}
+	data, err := SendRequest(ctx, opts, r, s, err)
+	return GetServerResponse(err, data)
+}
+
+func (s *BybitClientRequest) GetBizTokenPriceList(ctx context.Context, opts ...RequestOption) (res *ServerResponse, err error) {
+	if err = handlers.ValidateParams(s.params); err != nil {
+		return nil, err
+	}
+	r := &request{
+		method:   http.MethodPost,
+		endpoint: "/v5/alpha/trade/biz-token-price-list",
+		secType:  secTypeSigned,
+	}
+	data, err := SendRequest(ctx, opts, r, s, err)
+	return GetServerResponse(err, data)
+}
+
+func (s *BybitClientRequest) GetOrderList(ctx context.Context, opts ...RequestOption) (res *ServerResponse, err error) {
+	if err = handlers.ValidateParams(s.params); err != nil {
+		return nil, err
+	}
+	r := &request{
+		method:   http.MethodPost,
+		endpoint: "/v5/alpha/trade/order-list",
+		secType:  secTypeSigned,
+	}
+	data, err := SendRequest(ctx, opts, r, s, err)
+	return GetServerResponse(err, data)
+}
+
+func (s *BybitClientRequest) GetPayTokenList(ctx context.Context, opts ...RequestOption) (res *ServerResponse, err error) {
+	if err = handlers.ValidateParams(s.params); err != nil {
+		return nil, err
+	}
+	r := &request{
+		method:   http.MethodPost,
+		endpoint: "/v5/alpha/trade/pay-token-list",
+		secType:  secTypeSigned,
+	}
+	data, err := SendRequest(ctx, opts, r, s, err)
+	return GetServerResponse(err, data)
+}
+
+func (s *BybitClientRequest) ExecutePurchase(ctx context.Context, opts ...RequestOption) (res *ServerResponse, err error) {
+	if err = handlers.ValidateParams(s.params); err != nil {
+		return nil, err
+	}
+	r := &request{
+		method:   http.MethodPost,
+		endpoint: "/v5/alpha/trade/purchase",
+		secType:  secTypeSigned,
+	}
+	data, err := SendRequest(ctx, opts, r, s, err)
+	return GetServerResponse(err, data)
+}
+
+func (s *BybitClientRequest) GetTradeQuote(ctx context.Context, opts ...RequestOption) (res *ServerResponse, err error) {
+	if err = handlers.ValidateParams(s.params); err != nil {
+		return nil, err
+	}
+	r := &request{
+		method:   http.MethodPost,
+		endpoint: "/v5/alpha/trade/quote",
+		secType:  secTypeSigned,
+	}
+	data, err := SendRequest(ctx, opts, r, s, err)
+	return GetServerResponse(err, data)
+}
+
+func (s *BybitClientRequest) ExecuteRedeem(ctx context.Context, opts ...RequestOption) (res *ServerResponse, err error) {
+	if err = handlers.ValidateParams(s.params); err != nil {
+		return nil, err
+	}
+	r := &request{
+		method:   http.MethodPost,
+		endpoint: "/v5/alpha/trade/redeem",
 		secType:  secTypeSigned,
 	}
 	data, err := SendRequest(ctx, opts, r, s, err)

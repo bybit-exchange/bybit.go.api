@@ -385,3 +385,237 @@ func (s *BybitClientRequest) GetSmallBalanceConvertHistory(ctx context.Context, 
 	data, err := SendRequest(ctx, opts, r, s, err)
 	return GetServerResponse(err, data)
 }
+
+func (s *BybitClientRequest) SetBatchCollateralSwitch(ctx context.Context, opts ...RequestOption) (res *ServerResponse, err error) {
+	if err = handlers.ValidateParams(s.params); err != nil {
+		return nil, err
+	}
+	r := &request{
+		method:   http.MethodPost,
+		endpoint: "/v5/account/set-collateral-switch-batch",
+		secType:  secTypeSigned,
+	}
+	data, err := SendRequest(ctx, opts, r, s, err)
+	return GetServerResponse(err, data)
+}
+
+func (s *BybitClientRequest) GetOptionAssetInfo(ctx context.Context, opts ...RequestOption) (res *ServerResponse, err error) {
+	r := &request{
+		method:   http.MethodGet,
+		endpoint: "/v5/account/option-asset-info",
+		secType:  secTypeSigned,
+	}
+	data, err := SendRequest(ctx, opts, r, s, err)
+	return GetServerResponse(err, data)
+}
+
+func (s *BybitClientRequest) GetPayInfo(ctx context.Context, opts ...RequestOption) (res *ServerResponse, err error) {
+	r := &request{
+		method:   http.MethodGet,
+		endpoint: "/v5/account/pay-info",
+		secType:  secTypeSigned,
+	}
+	data, err := SendRequest(ctx, opts, r, s, err)
+	return GetServerResponse(err, data)
+}
+
+func (s *BybitClientRequest) GetUserSettingConfig(ctx context.Context, opts ...RequestOption) (res *ServerResponse, err error) {
+	r := &request{
+		method:   http.MethodGet,
+		endpoint: "/v5/account/user-setting-config",
+		secType:  secTypeSigned,
+	}
+	data, err := SendRequest(ctx, opts, r, s, err)
+	return GetServerResponse(err, data)
+}
+
+func (s *BybitClientRequest) GetWalletBalance(ctx context.Context, opts ...RequestOption) (res *ServerResponse, err error) {
+	if err = handlers.ValidateParams(s.params); err != nil {
+		return nil, err
+	}
+	r := &request{
+		method:   http.MethodGet,
+		endpoint: "/v5/account/wallet-balance",
+		secType:  secTypeSigned,
+	}
+	data, err := SendRequest(ctx, opts, r, s, err)
+	return GetServerResponse(err, data)
+}
+
+func (s *BybitClientRequest) GetAccountWithdrawalInfo(ctx context.Context, opts ...RequestOption) (res *ServerResponse, err error) {
+	if err = handlers.ValidateParams(s.params); err != nil {
+		return nil, err
+	}
+	r := &request{
+		method:   http.MethodGet,
+		endpoint: "/v5/account/withdrawal",
+		secType:  secTypeSigned,
+	}
+	data, err := SendRequest(ctx, opts, r, s, err)
+	return GetServerResponse(err, data)
+}
+
+func (s *BybitClientRequest) GetAssetOverview(ctx context.Context, opts ...RequestOption) (res *ServerResponse, err error) {
+	r := &request{
+		method:   http.MethodGet,
+		endpoint: "/v5/asset/asset-overview",
+		secType:  secTypeSigned,
+	}
+	data, err := SendRequest(ctx, opts, r, s, err)
+	return GetServerResponse(err, data)
+}
+
+func (s *BybitClientRequest) GetPortfolioMargin(ctx context.Context, opts ...RequestOption) (res *ServerResponse, err error) {
+	r := &request{
+		method:   http.MethodGet,
+		endpoint: "/v5/asset/portfolio-margin",
+		secType:  secTypeSigned,
+	}
+	data, err := SendRequest(ctx, opts, r, s, err)
+	return GetServerResponse(err, data)
+}
+
+func (s *BybitClientRequest) GetTotalMembersAssets(ctx context.Context, opts ...RequestOption) (res *ServerResponse, err error) {
+	r := &request{
+		method:   http.MethodGet,
+		endpoint: "/v5/asset/total-members-assets",
+		secType:  secTypeSigned,
+	}
+	data, err := SendRequest(ctx, opts, r, s, err)
+	return GetServerResponse(err, data)
+}
+
+func (s *BybitClientRequest) GetExecutionList(ctx context.Context, opts ...RequestOption) (res *ServerResponse, err error) {
+	if err = handlers.ValidateParams(s.params); err != nil {
+		return nil, err
+	}
+	r := &request{
+		method:   http.MethodGet,
+		endpoint: "/v5/execution/list",
+		secType:  secTypeSigned,
+	}
+	data, err := SendRequest(ctx, opts, r, s, err)
+	return GetServerResponse(err, data)
+}
+
+func (s *BybitClientRequest) GetSpreadExecutionList(ctx context.Context, opts ...RequestOption) (res *ServerResponse, err error) {
+	r := &request{
+		method:   http.MethodGet,
+		endpoint: "/v5/spread/execution/list",
+		secType:  secTypeSigned,
+	}
+	data, err := SendRequest(ctx, opts, r, s, err)
+	return GetServerResponse(err, data)
+}
+
+func (s *BybitClientRequest) GetSpreadMaxQty(ctx context.Context, opts ...RequestOption) (res *ServerResponse, err error) {
+	if err = handlers.ValidateParams(s.params); err != nil {
+		return nil, err
+	}
+	r := &request{
+		method:   http.MethodGet,
+		endpoint: "/v5/spread/max-qty",
+		secType:  secTypeSigned,
+	}
+	data, err := SendRequest(ctx, opts, r, s, err)
+	return GetServerResponse(err, data)
+}
+
+func (s *BybitClientRequest) GetSpreadOrderHistory(ctx context.Context, opts ...RequestOption) (res *ServerResponse, err error) {
+	r := &request{
+		method:   http.MethodGet,
+		endpoint: "/v5/spread/order/history",
+		secType:  secTypeSigned,
+	}
+	data, err := SendRequest(ctx, opts, r, s, err)
+	return GetServerResponse(err, data)
+}
+
+func (s *BybitClientRequest) GetSpreadOpenOrders(ctx context.Context, opts ...RequestOption) (res *ServerResponse, err error) {
+	r := &request{
+		method:   http.MethodGet,
+		endpoint: "/v5/spread/order/realtime",
+		secType:  secTypeSigned,
+	}
+	data, err := SendRequest(ctx, opts, r, s, err)
+	return GetServerResponse(err, data)
+}
+
+func (s *BybitClientRequest) CoinConvertLimitQuery(ctx context.Context, opts ...RequestOption) (res *ServerResponse, err error) {
+	if err = handlers.ValidateParams(s.params); err != nil {
+		return nil, err
+	}
+	r := &request{
+		method:   http.MethodGet,
+		endpoint: "/v5/asset/exchange/query-convert-limit",
+		secType:  secTypeSigned,
+	}
+	data, err := SendRequest(ctx, opts, r, s, err)
+	return GetServerResponse(err, data)
+}
+
+func (s *BybitClientRequest) LimitOrderCallback(ctx context.Context, opts ...RequestOption) (res *ServerResponse, err error) {
+	if err = handlers.ValidateParams(s.params); err != nil {
+		return nil, err
+	}
+	r := &request{
+		method:   http.MethodPost,
+		endpoint: "/v5/asset/exchange/limit-order/callback",
+		secType:  secTypeSigned,
+	}
+	data, err := SendRequest(ctx, opts, r, s, err)
+	return GetServerResponse(err, data)
+}
+
+func (s *BybitClientRequest) QueryOrderFromOpenApi(ctx context.Context, opts ...RequestOption) (res *ServerResponse, err error) {
+	r := &request{
+		method:   http.MethodGet,
+		endpoint: "/v5/asset/exchange/query-order-list",
+		secType:  secTypeSigned,
+	}
+	data, err := SendRequest(ctx, opts, r, s, err)
+	return GetServerResponse(err, data)
+}
+
+func (s *BybitClientRequest) TransferSubMemberSave(ctx context.Context, opts ...RequestOption) (res *ServerResponse, err error) {
+	if err = handlers.ValidateParams(s.params); err != nil {
+		return nil, err
+	}
+	r := &request{
+		method:   http.MethodPost,
+		endpoint: "/v5/asset/transfer/save-transfer-sub-member",
+		secType:  secTypeSigned,
+	}
+	data, err := SendRequest(ctx, opts, r, s, err)
+	return GetServerResponse(err, data)
+}
+
+func (s *BybitClientRequest) AccountNoConvertRepay(ctx context.Context, opts ...RequestOption) (res *ServerResponse, err error) {
+	r := &request{
+		method:   http.MethodPost,
+		endpoint: "/v5/account/no-convert-repay",
+		secType:  secTypeSigned,
+	}
+	data, err := SendRequest(ctx, opts, r, s, err)
+	return GetServerResponse(err, data)
+}
+
+func (s *BybitClientRequest) AccountRepay(ctx context.Context, opts ...RequestOption) (res *ServerResponse, err error) {
+	r := &request{
+		method:   http.MethodPost,
+		endpoint: "/v5/account/repay",
+		secType:  secTypeSigned,
+	}
+	data, err := SendRequest(ctx, opts, r, s, err)
+	return GetServerResponse(err, data)
+}
+
+func (s *BybitClientRequest) GetAssetList(ctx context.Context, opts ...RequestOption) (res *ServerResponse, err error) {
+	r := &request{
+		method:   http.MethodPost,
+		endpoint: "/v5/alpha/trade/asset-list",
+		secType:  secTypeSigned,
+	}
+	data, err := SendRequest(ctx, opts, r, s, err)
+	return GetServerResponse(err, data)
+}
