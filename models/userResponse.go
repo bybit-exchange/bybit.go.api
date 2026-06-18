@@ -27,9 +27,9 @@ type SubMember struct {
 }
 
 type GetAffiliateCustomOpenInfoV5SuccessResponse struct {
-	RetCode int                            `json:"retCode"`
-	RetMsg  string                         `json:"retMsg"`
-	Result  AffiliateCustomOpenInfoResult  `json:"result"`
+	RetCode int                           `json:"retCode"`
+	RetMsg  string                        `json:"retMsg"`
+	Result  AffiliateCustomOpenInfoResult `json:"result"`
 }
 
 type AffiliateCustomOpenInfoResult struct {
@@ -176,11 +176,11 @@ type QueryReferralsResponse struct {
 }
 
 type ReferralRecord struct {
-	Id          int `json:"id"`
-	InviteeUid  int `json:"inviteeUid"`
-	Status      int `json:"status"`
-	CreatedAt   int `json:"createdAt"`
-	UpdatedAt   int `json:"updatedAt"`
+	Id         int `json:"id"`
+	InviteeUid int `json:"inviteeUid"`
+	Status     int `json:"status"`
+	CreatedAt  int `json:"createdAt"`
+	UpdatedAt  int `json:"updatedAt"`
 }
 
 type QuerySubMembersV5Response struct {

@@ -8,17 +8,17 @@ type FeeRateEntity struct {
 }
 
 type GroupFeeRateEntity struct {
-	GroupName       string          `json:"groupName"`
-	WeightingFactor int             `json:"weightingFactor"`
-	SymbolsNumbers  int             `json:"symbolsNumbers"`
-	Symbols         []string        `json:"symbols"`
-	FeeRates        interface{}     `json:"feeRates"`
-	UpdateTime      int             `json:"updateTime"`
+	GroupName       string      `json:"groupName"`
+	WeightingFactor int         `json:"weightingFactor"`
+	SymbolsNumbers  int         `json:"symbolsNumbers"`
+	Symbols         []string    `json:"symbols"`
+	FeeRates        interface{} `json:"feeRates"`
+	UpdateTime      int         `json:"updateTime"`
 }
 
 type FeeRateDetailMap struct {
-	Pro          []FeeRateDetail `json:"pro"`
-	MarketMaker  []FeeRateDetail `json:"marketMaker"`
+	Pro         []FeeRateDetail `json:"pro"`
+	MarketMaker []FeeRateDetail `json:"marketMaker"`
 }
 
 type FeeRateDetail struct {

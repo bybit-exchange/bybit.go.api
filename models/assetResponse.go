@@ -486,10 +486,10 @@ type CryptoCoin struct {
 }
 
 type BalanceInfo struct {
-	TotalBalance   string      `json:"totalBalance"`
-	Balance        string      `json:"balance"`
-	FrozenBalance  string      `json:"frozenBalance"`
-	Currency       interface{} `json:"currency"`
+	TotalBalance  string      `json:"totalBalance"`
+	Balance       string      `json:"balance"`
+	FrozenBalance string      `json:"frozenBalance"`
+	Currency      interface{} `json:"currency"`
 }
 
 type CurrencyInfo struct {
@@ -574,33 +574,33 @@ type UpdateAdResponse struct {
 }
 
 type AdItem struct {
-	Id                  string        `json:"id"`
-	AccountId           string        `json:"accountId"`
-	UserId              string        `json:"userId"`
-	NickName            string        `json:"nickName"`
-	TokenId             string        `json:"tokenId"`
-	CurrencyId          string        `json:"currencyId"`
-	Side                int           `json:"side"`
-	PriceType           int           `json:"priceType"`
-	Price               string        `json:"price"`
-	Premium             string        `json:"premium"`
-	LastQuantity        string        `json:"lastQuantity"`
-	Quantity            string        `json:"quantity"`
-	FrozenQuantity      string        `json:"frozenQuantity"`
-	ExecutedQuantity    string        `json:"executedQuantity"`
-	MinAmount           string        `json:"minAmount"`
-	MaxAmount           string        `json:"maxAmount"`
-	Remark              string        `json:"remark"`
-	Status              int           `json:"status"`
-	CreateDate          string        `json:"createDate"`
-	Payments            []string      `json:"payments"`
-	HiddenReason        string        `json:"hiddenReason"`
-	TradingPreferenceSet interface{}  `json:"tradingPreferenceSet"`
-	UpdateDate          string        `json:"updateDate"`
-	FeeRate             string        `json:"feeRate"`
-	PaymentPeriod       int           `json:"paymentPeriod"`
-	ItemType            string        `json:"itemType"`
-	PaymentTerms        []interface{} `json:"paymentTerms"`
+	Id                   string        `json:"id"`
+	AccountId            string        `json:"accountId"`
+	UserId               string        `json:"userId"`
+	NickName             string        `json:"nickName"`
+	TokenId              string        `json:"tokenId"`
+	CurrencyId           string        `json:"currencyId"`
+	Side                 int           `json:"side"`
+	PriceType            int           `json:"priceType"`
+	Price                string        `json:"price"`
+	Premium              string        `json:"premium"`
+	LastQuantity         string        `json:"lastQuantity"`
+	Quantity             string        `json:"quantity"`
+	FrozenQuantity       string        `json:"frozenQuantity"`
+	ExecutedQuantity     string        `json:"executedQuantity"`
+	MinAmount            string        `json:"minAmount"`
+	MaxAmount            string        `json:"maxAmount"`
+	Remark               string        `json:"remark"`
+	Status               int           `json:"status"`
+	CreateDate           string        `json:"createDate"`
+	Payments             []string      `json:"payments"`
+	HiddenReason         string        `json:"hiddenReason"`
+	TradingPreferenceSet interface{}   `json:"tradingPreferenceSet"`
+	UpdateDate           string        `json:"updateDate"`
+	FeeRate              string        `json:"feeRate"`
+	PaymentPeriod        int           `json:"paymentPeriod"`
+	ItemType             string        `json:"itemType"`
+	PaymentTerms         []interface{} `json:"paymentTerms"`
 }
 
 type GetMyAdsResponse struct {
@@ -670,35 +670,35 @@ type GetChatMessageResponse struct {
 }
 
 type UserInfo struct {
-	NickName            string `json:"nickName"`
-	DefaultNickName     bool   `json:"defaultNickName"`
-	IsOnline            bool   `json:"isOnline"`
-	KycLevel            string `json:"kycLevel"`
-	Email               string `json:"email"`
-	Mobile              string `json:"mobile"`
-	LastLogoutTime      string `json:"lastLogoutTime"`
-	RecentRate          string `json:"recentRate"`
-	TotalFinishCount    int    `json:"totalFinishCount"`
-	TotalFinishSellCount int   `json:"totalFinishSellCount"`
-	TotalFinishBuyCount  int   `json:"totalFinishBuyCount"`
-	RecentFinishCount   int    `json:"recentFinishCount"`
-	AverageReleaseTime  string `json:"averageReleaseTime"`
-	AverageTransferTime string `json:"averageTransferTime"`
-	AccountCreateDays   int    `json:"accountCreateDays"`
-	FirstTradeDays      int    `json:"firstTradeDays"`
-	RealName            string `json:"realName"`
-	RecentTradeAmount   string `json:"recentTradeAmount"`
-	TotalTradeAmount    string `json:"totalTradeAmount"`
-	RegisterTime        string `json:"registerTime"`
-	AuthStatus          int    `json:"authStatus"`
-	KycCountryCode      string `json:"kycCountryCode"`
-	Blocked             string `json:"blocked"`
-	GoodAppraiseRate    string `json:"goodAppraiseRate"`
-	GoodAppraiseCount   int    `json:"goodAppraiseCount"`
-	BadAppraiseCount    int    `json:"badAppraiseCount"`
-	VipLevel            int    `json:"vipLevel"`
-	UserId              string `json:"userId"`
-	RealNameEn          string `json:"realNameEn"`
+	NickName             string `json:"nickName"`
+	DefaultNickName      bool   `json:"defaultNickName"`
+	IsOnline             bool   `json:"isOnline"`
+	KycLevel             string `json:"kycLevel"`
+	Email                string `json:"email"`
+	Mobile               string `json:"mobile"`
+	LastLogoutTime       string `json:"lastLogoutTime"`
+	RecentRate           string `json:"recentRate"`
+	TotalFinishCount     int    `json:"totalFinishCount"`
+	TotalFinishSellCount int    `json:"totalFinishSellCount"`
+	TotalFinishBuyCount  int    `json:"totalFinishBuyCount"`
+	RecentFinishCount    int    `json:"recentFinishCount"`
+	AverageReleaseTime   string `json:"averageReleaseTime"`
+	AverageTransferTime  string `json:"averageTransferTime"`
+	AccountCreateDays    int    `json:"accountCreateDays"`
+	FirstTradeDays       int    `json:"firstTradeDays"`
+	RealName             string `json:"realName"`
+	RecentTradeAmount    string `json:"recentTradeAmount"`
+	TotalTradeAmount     string `json:"totalTradeAmount"`
+	RegisterTime         string `json:"registerTime"`
+	AuthStatus           int    `json:"authStatus"`
+	KycCountryCode       string `json:"kycCountryCode"`
+	Blocked              string `json:"blocked"`
+	GoodAppraiseRate     string `json:"goodAppraiseRate"`
+	GoodAppraiseCount    int    `json:"goodAppraiseCount"`
+	BadAppraiseCount     int    `json:"badAppraiseCount"`
+	VipLevel             int    `json:"vipLevel"`
+	UserId               string `json:"userId"`
+	RealNameEn           string `json:"realNameEn"`
 }
 
 type GetCounterpartyInfoResponse struct {
@@ -708,35 +708,35 @@ type GetCounterpartyInfoResponse struct {
 }
 
 type PaymentMethod struct {
-	Id                       string        `json:"id"`
-	RealName                 string        `json:"realName"`
-	PaymentType              string        `json:"paymentType"`
-	BankName                 string        `json:"bankName"`
-	BranchName               string        `json:"branchName"`
-	AccountNo                string        `json:"accountNo"`
-	Qrcode                   string        `json:"qrcode"`
-	Online                   string        `json:"online"`
-	Visible                  int           `json:"visible"`
-	PayMessage               string        `json:"payMessage"`
-	FirstName                string        `json:"firstName"`
-	LastName                 string        `json:"lastName"`
-	SecondLastName           string        `json:"secondLastName"`
-	Clabe                    string        `json:"clabe"`
-	DebitCardNumber          string        `json:"debitCardNumber"`
-	Concept                  string        `json:"concept"`
-	CountNo                  string        `json:"countNo"`
-	PaymentExt1              string        `json:"paymentExt1"`
-	PaymentExt2              string        `json:"paymentExt2"`
-	PaymentExt3              string        `json:"paymentExt3"`
-	PaymentExt4              string        `json:"paymentExt4"`
-	PaymentExt5              string        `json:"paymentExt5"`
-	PaymentExt6              string        `json:"paymentExt6"`
-	PaymentTemplateVersion   int           `json:"paymentTemplateVersion"`
-	HasPaymentTemplateChanged bool         `json:"hasPaymentTemplateChanged"`
-	PaymentConfigVo          interface{}   `json:"paymentConfigVo"`
-	RealNameVerified         bool          `json:"realNameVerified"`
-	Channel                  string        `json:"channel"`
-	CurrencyBalance          []string      `json:"currencyBalance"`
+	Id                        string      `json:"id"`
+	RealName                  string      `json:"realName"`
+	PaymentType               string      `json:"paymentType"`
+	BankName                  string      `json:"bankName"`
+	BranchName                string      `json:"branchName"`
+	AccountNo                 string      `json:"accountNo"`
+	Qrcode                    string      `json:"qrcode"`
+	Online                    string      `json:"online"`
+	Visible                   int         `json:"visible"`
+	PayMessage                string      `json:"payMessage"`
+	FirstName                 string      `json:"firstName"`
+	LastName                  string      `json:"lastName"`
+	SecondLastName            string      `json:"secondLastName"`
+	Clabe                     string      `json:"clabe"`
+	DebitCardNumber           string      `json:"debitCardNumber"`
+	Concept                   string      `json:"concept"`
+	CountNo                   string      `json:"countNo"`
+	PaymentExt1               string      `json:"paymentExt1"`
+	PaymentExt2               string      `json:"paymentExt2"`
+	PaymentExt3               string      `json:"paymentExt3"`
+	PaymentExt4               string      `json:"paymentExt4"`
+	PaymentExt5               string      `json:"paymentExt5"`
+	PaymentExt6               string      `json:"paymentExt6"`
+	PaymentTemplateVersion    int         `json:"paymentTemplateVersion"`
+	HasPaymentTemplateChanged bool        `json:"hasPaymentTemplateChanged"`
+	PaymentConfigVo           interface{} `json:"paymentConfigVo"`
+	RealNameVerified          bool        `json:"realNameVerified"`
+	Channel                   string      `json:"channel"`
+	CurrencyBalance           []string    `json:"currencyBalance"`
 }
 
 type GetUserPaymentResponse struct {
@@ -754,21 +754,21 @@ type FundingDetailApiResponse struct {
 }
 
 type FundingDetailApiResult struct {
-	NextPageCursor string                `json:"nextPageCursor"`
-	List           []FundingDetailApiBO  `json:"list"`
+	NextPageCursor string               `json:"nextPageCursor"`
+	List           []FundingDetailApiBO `json:"list"`
 }
 
 type FundingDetailApiBO struct {
-	MemberId      string `json:"memberId"`
-	Currency      string `json:"currency"`
-	IoDirection   string `json:"ioDirection"`
-	TxnAmt        string `json:"txnAmt"`
-	AfterAmt      string `json:"afterAmt"`
-	CreateTime    string `json:"createTime"`
-	ShowBusiType  string `json:"showBusiType"`
+	MemberId       string `json:"memberId"`
+	Currency       string `json:"currency"`
+	IoDirection    string `json:"ioDirection"`
+	TxnAmt         string `json:"txnAmt"`
+	AfterAmt       string `json:"afterAmt"`
+	CreateTime     string `json:"createTime"`
+	ShowBusiType   string `json:"showBusiType"`
 	ShowBusiTypeEn string `json:"showBusiTypeEn"`
-	Description   string `json:"description"`
-	DescriptionEn string `json:"descriptionEn"`
+	Description    string `json:"description"`
+	DescriptionEn  string `json:"descriptionEn"`
 }
 
 type AssetBaseResponse struct {

@@ -541,42 +541,6 @@ func (s *BybitClientRequest) GetSpreadOpenOrders(ctx context.Context, opts ...Re
 	return GetServerResponse(err, data)
 }
 
-func (s *BybitClientRequest) CoinConvertLimitQuery(ctx context.Context, opts ...RequestOption) (res *ServerResponse, err error) {
-	if err = handlers.ValidateParams(s.params); err != nil {
-		return nil, err
-	}
-	r := &request{
-		method:   http.MethodGet,
-		endpoint: "/v5/asset/exchange/query-convert-limit",
-		secType:  secTypeSigned,
-	}
-	data, err := SendRequest(ctx, opts, r, s, err)
-	return GetServerResponse(err, data)
-}
-
-func (s *BybitClientRequest) LimitOrderCallback(ctx context.Context, opts ...RequestOption) (res *ServerResponse, err error) {
-	if err = handlers.ValidateParams(s.params); err != nil {
-		return nil, err
-	}
-	r := &request{
-		method:   http.MethodPost,
-		endpoint: "/v5/asset/exchange/limit-order/callback",
-		secType:  secTypeSigned,
-	}
-	data, err := SendRequest(ctx, opts, r, s, err)
-	return GetServerResponse(err, data)
-}
-
-func (s *BybitClientRequest) QueryOrderFromOpenApi(ctx context.Context, opts ...RequestOption) (res *ServerResponse, err error) {
-	r := &request{
-		method:   http.MethodGet,
-		endpoint: "/v5/asset/exchange/query-order-list",
-		secType:  secTypeSigned,
-	}
-	data, err := SendRequest(ctx, opts, r, s, err)
-	return GetServerResponse(err, data)
-}
-
 func (s *BybitClientRequest) TransferSubMemberSave(ctx context.Context, opts ...RequestOption) (res *ServerResponse, err error) {
 	if err = handlers.ValidateParams(s.params); err != nil {
 		return nil, err

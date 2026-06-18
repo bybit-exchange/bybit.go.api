@@ -117,7 +117,7 @@ type BorrowHistoryItem struct {
 	CreatedTime               int64  `json:"createdTime"` // Using int64 for milliseconds timestamp
 	BorrowCost                string `json:"borrowCost"`
 	HourlyBorrowRate          string `json:"hourlyBorrowRate"`
-	InterestBearingBorrowSize string `json:"InterestBearingBorrowSize"`
+	InterestBearingBorrowSize string `json:"interestBearingBorrowSize"`
 	CostExemption             string `json:"costExemption"`
 	BorrowAmount              string `json:"borrowAmount"`
 	UnrealisedLoss            string `json:"unrealisedLoss"`
@@ -280,20 +280,20 @@ type GetCollateralInfoResponse struct {
 }
 
 type CollateralInfoItem struct {
-	Currency             string `json:"currency"`
-	HourlyBorrowRate     string `json:"hourlyBorrowRate"`
-	MaxBorrowingAmount   string `json:"maxBorrowingAmount"`
-	FreeBorrowingLimit   string `json:"freeBorrowingLimit"`
-	FreeBorrowAmount     string `json:"freeBorrowAmount"`
-	BorrowAmount         string `json:"borrowAmount"`
-	OtherBorrowAmount    string `json:"otherBorrowAmount"`
-	AvailableToBorrow    string `json:"availableToBorrow"`
-	Borrowable           bool   `json:"borrowable"`
-	BorrowUsageRate      string `json:"borrowUsageRate"`
-	MarginCollateral     bool   `json:"marginCollateral"`
-	CollateralSwitch     bool   `json:"collateralSwitch"`
-	FreeBorrowingAmount  string `json:"freeBorrowingAmount"`
-	CollateralRatio      string `json:"collateralRatio"`
+	Currency            string `json:"currency"`
+	HourlyBorrowRate    string `json:"hourlyBorrowRate"`
+	MaxBorrowingAmount  string `json:"maxBorrowingAmount"`
+	FreeBorrowingLimit  string `json:"freeBorrowingLimit"`
+	FreeBorrowAmount    string `json:"freeBorrowAmount"`
+	BorrowAmount        string `json:"borrowAmount"`
+	OtherBorrowAmount   string `json:"otherBorrowAmount"`
+	AvailableToBorrow   string `json:"availableToBorrow"`
+	Borrowable          bool   `json:"borrowable"`
+	BorrowUsageRate     string `json:"borrowUsageRate"`
+	MarginCollateral    bool   `json:"marginCollateral"`
+	CollateralSwitch    bool   `json:"collateralSwitch"`
+	FreeBorrowingAmount string `json:"freeBorrowingAmount"`
+	CollateralRatio     string `json:"collateralRatio"`
 }
 
 type GetFeeRateResponse struct {
@@ -412,7 +412,7 @@ type OneClickRepayResponse struct {
 }
 
 type OneClickRepayResultItem struct {
-	Coin        string `json:"coin"`
+	Coin         string `json:"coin"`
 	RepaymentQty string `json:"repaymentQty"`
 }
 
@@ -552,7 +552,7 @@ type GetBorrowHistoryItem struct {
 	CreatedTime               int64  `json:"createdTime"`
 	BorrowCost                string `json:"borrowCost"`
 	HourlyBorrowRate          string `json:"hourlyBorrowRate"`
-	InterestBearingBorrowSize string `json:"InterestBearingBorrowSize"`
+	InterestBearingBorrowSize string `json:"interestBearingBorrowSize"`
 	CostExemption             string `json:"costExemption"`
 	BorrowAmount              string `json:"borrowAmount"`
 	UnrealisedLoss            string `json:"unrealisedLoss"`

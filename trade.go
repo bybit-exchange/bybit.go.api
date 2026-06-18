@@ -177,6 +177,8 @@ func (s *BybitClientRequest) GetTradeHistory(ctx context.Context, opts ...Reques
 	return GetServerResponse(err, data)
 }
 
+// Deprecated: RequestTestFund uses GET which is incorrect for this endpoint.
+// Use DemoApplyMoney in account.go instead.
 func (s *BybitClientRequest) RequestTestFund(ctx context.Context, opts ...RequestOption) (res *ServerResponse, err error) {
 	if err = handlers.ValidateParams(s.params); err != nil {
 		return nil, err

@@ -92,19 +92,19 @@ type BatchOrderServerResponse struct {
 }
 
 type CancelQuoteResponse struct {
-	RetCode    int    `json:"retCode"`
-	RetMsg     string `json:"retMsg"`
+	RetCode    int         `json:"retCode"`
+	RetMsg     string      `json:"retMsg"`
 	Result     interface{} `json:"result"`
 	RetExtInfo interface{} `json:"retExtInfo"`
-	Time       int    `json:"time"`
+	Time       int         `json:"time"`
 }
 
 type GetQuotesRealtimeResponse struct {
-	RetCode    int    `json:"retCode"`
-	RetMsg     string `json:"retMsg"`
+	RetCode    int         `json:"retCode"`
+	RetMsg     string      `json:"retMsg"`
 	Result     interface{} `json:"result"`
 	RetExtInfo interface{} `json:"retExtInfo"`
-	Time       int    `json:"time"`
+	Time       int         `json:"time"`
 }
 
 type GetQuotesRealtimeResult struct {
@@ -134,11 +134,11 @@ type QuoteLegItem struct {
 }
 
 type GetQuotesResponse struct {
-	RetCode    int    `json:"retCode"`
-	RetMsg     string `json:"retMsg"`
+	RetCode    int         `json:"retCode"`
+	RetMsg     string      `json:"retMsg"`
 	Result     interface{} `json:"result"`
 	RetExtInfo interface{} `json:"retExtInfo"`
-	Time       int    `json:"time"`
+	Time       int         `json:"time"`
 }
 
 type GetQuotesResult struct {
@@ -169,11 +169,11 @@ type QuoteLeg struct {
 }
 
 type GetRfqsResponse struct {
-	RetCode    int    `json:"retCode"`
-	RetMsg     string `json:"retMsg"`
+	RetCode    int         `json:"retCode"`
+	RetMsg     string      `json:"retMsg"`
 	Result     interface{} `json:"result"`
 	RetExtInfo interface{} `json:"retExtInfo"`
-	Time       int    `json:"time"`
+	Time       int         `json:"time"`
 }
 
 type GetRfqsResult struct {

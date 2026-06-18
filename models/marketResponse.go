@@ -119,7 +119,7 @@ type LotSizeFilter struct {
 	BasePrecision       string `json:"basePrecision"`
 	QuotePrecision      string `json:"quotePrecision"`
 	MaxOrderAmt         string `json:"maxOrderAmt"`
-	MinOrderAmt         string `jsoN:"minOrderAmt"`
+	MinOrderAmt         string `json:"minOrderAmt"`
 }
 
 type MarketOrderBookResponse struct {
@@ -356,19 +356,19 @@ type AdlAlertResponse struct {
 }
 
 type AdlAlertResult struct {
-	UpdatedTime string          `json:"updatedTime"`
+	UpdatedTime string           `json:"updatedTime"`
 	List        []AdlAlertRecord `json:"list"`
 }
 
 type AdlAlertRecord struct {
-	Coin                 string `json:"coin"`
-	Symbol               string `json:"symbol"`
-	Balance              string `json:"balance"`
-	MaxBalance           string `json:"maxBalance"`
-	InsurancePnlRatio    string `json:"insurancePnlRatio"`
-	PnlRatio             string `json:"pnlRatio"`
-	AdlTriggerThreshold  string `json:"adlTriggerThreshold"`
-	AdlStopRatio         string `json:"adlStopRatio"`
+	Coin                string `json:"coin"`
+	Symbol              string `json:"symbol"`
+	Balance             string `json:"balance"`
+	MaxBalance          string `json:"maxBalance"`
+	InsurancePnlRatio   string `json:"insurancePnlRatio"`
+	PnlRatio            string `json:"pnlRatio"`
+	AdlTriggerThreshold string `json:"adlTriggerThreshold"`
+	AdlStopRatio        string `json:"adlStopRatio"`
 }
 
 type DeliveryPriceResponse struct {
@@ -380,8 +380,8 @@ type DeliveryPriceResponse struct {
 }
 
 type DeliveryPriceResult struct {
-	Category       string               `json:"category"`
-	NextPageCursor string               `json:"nextPageCursor"`
+	Category       string                `json:"category"`
+	NextPageCursor string                `json:"nextPageCursor"`
 	List           []DeliveryPriceRecord `json:"list"`
 }
 
@@ -404,17 +404,17 @@ type FeeGroupInfoResult struct {
 }
 
 type FeeGroup struct {
-	GroupName       string   `json:"groupName"`
-	WeightingFactor int      `json:"weightingFactor"`
-	SymbolsNumbers  int      `json:"symbolsNumbers"`
-	Symbols         []string `json:"symbols"`
+	GroupName       string      `json:"groupName"`
+	WeightingFactor int         `json:"weightingFactor"`
+	SymbolsNumbers  int         `json:"symbolsNumbers"`
+	Symbols         []string    `json:"symbols"`
 	FeeRates        interface{} `json:"feeRates"`
-	UpdateTime      string   `json:"updateTime"`
+	UpdateTime      string      `json:"updateTime"`
 }
 
 type FeeRates struct {
-	Pro          []FeeRateLevel `json:"pro"`
-	MarketMaker  []FeeRateLevel `json:"marketMaker"`
+	Pro         []FeeRateLevel `json:"pro"`
+	MarketMaker []FeeRateLevel `json:"marketMaker"`
 }
 
 type FeeRateLevel struct {
@@ -444,11 +444,11 @@ type FundingRateRecord struct {
 }
 
 type HistoricalVolatilityResponse struct {
-	RetCode    int              `json:"retCode"`
-	RetMsg     string           `json:"retMsg"`
-	RetExtInfo interface{}      `json:"retExtInfo"`
-	Time       int              `json:"time"`
-	Category   string           `json:"category"`
+	RetCode    int                `json:"retCode"`
+	RetMsg     string             `json:"retMsg"`
+	RetExtInfo interface{}        `json:"retExtInfo"`
+	Time       int                `json:"time"`
+	Category   string             `json:"category"`
 	Result     []VolatilityRecord `json:"result"`
 }
 
@@ -517,12 +517,12 @@ type LotSizeFilterLinear struct {
 }
 
 type LotSizeFilterSpot struct {
-	BasePrecision         string `json:"basePrecision"`
-	QuotePrecision        string `json:"quotePrecision"`
-	MinOrderAmt           string `json:"minOrderAmt"`
-	MaxOrderAmt           string `json:"maxOrderAmt"`
-	MaxLimitOrderQty      string `json:"maxLimitOrderQty"`
-	MaxMarketOrderQty     string `json:"maxMarketOrderQty"`
+	BasePrecision             string `json:"basePrecision"`
+	QuotePrecision            string `json:"quotePrecision"`
+	MinOrderAmt               string `json:"minOrderAmt"`
+	MaxOrderAmt               string `json:"maxOrderAmt"`
+	MaxLimitOrderQty          string `json:"maxLimitOrderQty"`
+	MaxMarketOrderQty         string `json:"maxMarketOrderQty"`
 	PostOnlyMaxLimitOrderSize string `json:"postOnlyMaxLimitOrderSize"`
 }
 
@@ -623,8 +623,8 @@ type KlineResponse struct {
 }
 
 type KlineResult struct {
-	Category string      `json:"category"`
-	Symbol   string      `json:"symbol"`
+	Category string       `json:"category"`
+	Symbol   string       `json:"symbol"`
 	List     []KlineEntry `json:"list"`
 }
 
@@ -840,42 +840,42 @@ type RpiOrderbookLevel struct {
 }
 
 type TickerLinearInverse struct {
-	Symbol             string `json:"symbol"`
-	LastPrice          string `json:"lastPrice"`
-	IndexPrice         string `json:"indexPrice"`
-	MarkPrice          string `json:"markPrice"`
-	PrevPrice24h       string `json:"prevPrice24h"`
-	Price24hPcnt       string `json:"price24hPcnt"`
-	HighPrice24h       string `json:"highPrice24h"`
-	LowPrice24h        string `json:"lowPrice24h"`
-	PrevPrice1h        string `json:"prevPrice1h"`
-	OpenInterest       string `json:"openInterest"`
-	OpenInterestValue  string `json:"openInterestValue"`
-	Turnover24h        string `json:"turnover24h"`
-	Volume24h          string `json:"volume24h"`
-	FundingRate        string `json:"fundingRate"`
-	NextFundingTime    string `json:"nextFundingTime"`
-	Bid1Price          string `json:"bid1Price"`
-	Bid1Size           string `json:"bid1Size"`
-	Ask1Price          string `json:"ask1Price"`
-	Ask1Size           string `json:"ask1Size"`
+	Symbol              string `json:"symbol"`
+	LastPrice           string `json:"lastPrice"`
+	IndexPrice          string `json:"indexPrice"`
+	MarkPrice           string `json:"markPrice"`
+	PrevPrice24h        string `json:"prevPrice24h"`
+	Price24hPcnt        string `json:"price24hPcnt"`
+	HighPrice24h        string `json:"highPrice24h"`
+	LowPrice24h         string `json:"lowPrice24h"`
+	PrevPrice1h         string `json:"prevPrice1h"`
+	OpenInterest        string `json:"openInterest"`
+	OpenInterestValue   string `json:"openInterestValue"`
+	Turnover24h         string `json:"turnover24h"`
+	Volume24h           string `json:"volume24h"`
+	FundingRate         string `json:"fundingRate"`
+	NextFundingTime     string `json:"nextFundingTime"`
+	Bid1Price           string `json:"bid1Price"`
+	Bid1Size            string `json:"bid1Size"`
+	Ask1Price           string `json:"ask1Price"`
+	Ask1Size            string `json:"ask1Size"`
 	FundingIntervalHour string `json:"fundingIntervalHour"`
-	FundingCap         string `json:"fundingCap"`
+	FundingCap          string `json:"fundingCap"`
 }
 
 type TickerSpot struct {
-	Symbol       string `json:"symbol"`
-	Bid1Price    string `json:"bid1Price"`
-	Bid1Size     string `json:"bid1Size"`
-	Ask1Price    string `json:"ask1Price"`
-	Ask1Size     string `json:"ask1Size"`
-	LastPrice    string `json:"lastPrice"`
-	PrevPrice24h string `json:"prevPrice24h"`
-	Price24hPcnt string `json:"price24hPcnt"`
-	HighPrice24h string `json:"highPrice24h"`
-	LowPrice24h  string `json:"lowPrice24h"`
-	Turnover24h  string `json:"turnover24h"`
-	Volume24h    string `json:"volume24h"`
+	Symbol        string `json:"symbol"`
+	Bid1Price     string `json:"bid1Price"`
+	Bid1Size      string `json:"bid1Size"`
+	Ask1Price     string `json:"ask1Price"`
+	Ask1Size      string `json:"ask1Size"`
+	LastPrice     string `json:"lastPrice"`
+	PrevPrice24h  string `json:"prevPrice24h"`
+	Price24hPcnt  string `json:"price24hPcnt"`
+	HighPrice24h  string `json:"highPrice24h"`
+	LowPrice24h   string `json:"lowPrice24h"`
+	Turnover24h   string `json:"turnover24h"`
+	Volume24h     string `json:"volume24h"`
 	UsdIndexPrice string `json:"usdIndexPrice"`
 }
 
@@ -916,11 +916,11 @@ type TickersResponse struct {
 }
 
 type ServerTimeResponse struct {
-	RetCode    int              `json:"retCode"`
-	RetMsg     string           `json:"retMsg"`
-	RetExtInfo interface{}      `json:"retExtInfo"`
-	Time       int              `json:"time"`
-	Result     interface{}      `json:"result"`
+	RetCode    int         `json:"retCode"`
+	RetMsg     string      `json:"retMsg"`
+	RetExtInfo interface{} `json:"retExtInfo"`
+	Time       int         `json:"time"`
+	Result     interface{} `json:"result"`
 }
 
 type SpreadInstrumentsInfoResponse struct {
@@ -937,21 +937,21 @@ type SpreadInstrumentsInfoResult struct {
 }
 
 type SpreadInstrument struct {
-	Symbol       string       `json:"symbol"`
-	ContractType string       `json:"contractType"`
-	Status       string       `json:"status"`
-	BaseCoin     string       `json:"baseCoin"`
-	QuoteCoin    string       `json:"quoteCoin"`
-	SettleCoin   string       `json:"settleCoin"`
-	TickSize     string       `json:"tickSize"`
-	MinPrice     string       `json:"minPrice"`
-	MaxPrice     string       `json:"maxPrice"`
-	LotSize      string       `json:"lotSize"`
-	MinSize      string       `json:"minSize"`
-	MaxSize      string       `json:"maxSize"`
-	LaunchTime   string       `json:"launchTime"`
-	DeliveryTime string       `json:"deliveryTime"`
-	Legs         []SpreadLeg  `json:"legs"`
+	Symbol       string      `json:"symbol"`
+	ContractType string      `json:"contractType"`
+	Status       string      `json:"status"`
+	BaseCoin     string      `json:"baseCoin"`
+	QuoteCoin    string      `json:"quoteCoin"`
+	SettleCoin   string      `json:"settleCoin"`
+	TickSize     string      `json:"tickSize"`
+	MinPrice     string      `json:"minPrice"`
+	MaxPrice     string      `json:"maxPrice"`
+	LotSize      string      `json:"lotSize"`
+	MinSize      string      `json:"minSize"`
+	MaxSize      string      `json:"maxSize"`
+	LaunchTime   string      `json:"launchTime"`
+	DeliveryTime string      `json:"deliveryTime"`
+	Legs         []SpreadLeg `json:"legs"`
 }
 
 type SpreadLeg struct {

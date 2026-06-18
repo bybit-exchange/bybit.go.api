@@ -9,15 +9,15 @@ type GetAffiliateSubListResponse struct {
 }
 
 type AffiliateSubItem struct {
-	SubAffId            string      `json:"subAffId"`
-	UserId              string      `json:"userId"`
-	Name                string      `json:"name"`
-	Email               string      `json:"email"`
-	CommissionsVol      interface{} `json:"commissionsVol"`
-	CommissionsForUsdt  string      `json:"commissionsForUsdt"`
-	BecameAffTime       string      `json:"becameAffTime"`
-	StartDate           string      `json:"startDate"`
-	EndDate             string      `json:"endDate"`
+	SubAffId           string      `json:"subAffId"`
+	UserId             string      `json:"userId"`
+	Name               string      `json:"name"`
+	Email              string      `json:"email"`
+	CommissionsVol     interface{} `json:"commissionsVol"`
+	CommissionsForUsdt string      `json:"commissionsForUsdt"`
+	BecameAffTime      string      `json:"becameAffTime"`
+	StartDate          string      `json:"startDate"`
+	EndDate            string      `json:"endDate"`
 }
 
 type GetAffiliateUserListResponse struct {

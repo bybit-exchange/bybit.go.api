@@ -136,11 +136,11 @@ type ClosedPnlInfoEntry struct {
 }
 
 type AddReduceMarginResponse struct {
-	RetCode    int                  `json:"retCode"`
-	RetMsg     string               `json:"retMsg"`
-	Result     AddReduceMarginResult `json:"result"`
+	RetCode    int                    `json:"retCode"`
+	RetMsg     string                 `json:"retMsg"`
+	Result     AddReduceMarginResult  `json:"result"`
 	RetExtInfo map[string]interface{} `json:"retExtInfo"`
-	Time       int64                `json:"time"`
+	Time       int64                  `json:"time"`
 }
 
 type AddReduceMarginResult struct {
@@ -178,9 +178,9 @@ type GetClosePositionResponse struct {
 }
 
 type GetClosePositionResult struct {
-	Category       string                `json:"category"`
+	Category       string                 `json:"category"`
 	List           []GetClosePositionItem `json:"list"`
-	NextPageCursor string                `json:"nextPageCursor"`
+	NextPageCursor string                 `json:"nextPageCursor"`
 }
 
 type GetClosePositionItem struct {
@@ -235,11 +235,11 @@ type ClosedPnlItem struct {
 }
 
 type GetMovePositionHistoryResponse struct {
-	RetCode    int                            `json:"retCode"`
-	RetMsg     string                         `json:"retMsg"`
-	Result     GetMovePositionHistoryResult   `json:"result"`
-	RetExtInfo map[string]interface{}         `json:"retExtInfo"`
-	Time       int64                          `json:"time"`
+	RetCode    int                          `json:"retCode"`
+	RetMsg     string                       `json:"retMsg"`
+	Result     GetMovePositionHistoryResult `json:"result"`
+	RetExtInfo map[string]interface{}       `json:"retExtInfo"`
+	Time       int64                        `json:"time"`
 }
 
 type GetMovePositionHistoryResult struct {
@@ -340,11 +340,11 @@ type SetTradingStopResponse struct {
 }
 
 type GetClosedPositionHistoryResponse struct {
-	RetCode    int                            `json:"retCode"`
-	RetMsg     string                         `json:"retMsg"`
-	Result     map[string]interface{}         `json:"result"`
-	RetExtInfo map[string]interface{}         `json:"retExtInfo"`
-	Time       int64                          `json:"time"`
+	RetCode    int                    `json:"retCode"`
+	RetMsg     string                 `json:"retMsg"`
+	Result     map[string]interface{} `json:"result"`
+	RetExtInfo map[string]interface{} `json:"retExtInfo"`
+	Time       int64                  `json:"time"`
 }
 
 type ClosedPositionHistoryItem struct {

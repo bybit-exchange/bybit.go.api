@@ -113,16 +113,16 @@ type PositionTiersResult struct {
 }
 
 type PositionTierItem struct {
-	Currency             string              `json:"currency"`
+	Currency               string              `json:"currency"`
 	PositionTiersRatioList []PositionTierRatio `json:"positionTiersRatioList"`
 }
 
 type PositionTierRatio struct {
-	Tier         string `json:"tier"`
-	BorrowLimit  string `json:"borrowLimit"`
-	PositionMMR  string `json:"positionMMR"`
-	PositionIMR  string `json:"positionIMR"`
-	MaxLeverage  string `json:"maxLeverage"`
+	Tier        string `json:"tier"`
+	BorrowLimit string `json:"borrowLimit"`
+	PositionMMR string `json:"positionMMR"`
+	PositionIMR string `json:"positionIMR"`
+	MaxLeverage string `json:"maxLeverage"`
 }
 
 type TieredCollateralRatioResult struct {
@@ -130,7 +130,7 @@ type TieredCollateralRatioResult struct {
 }
 
 type CollateralTierItem struct {
-	Currency            string                  `json:"currency"`
+	Currency            string                    `json:"currency"`
 	CollateralRatioList []SpotCollateralRatioTier `json:"collateralRatioList"`
 }
 
@@ -177,8 +177,8 @@ type GetSpotMarginCoinStateResponse struct {
 }
 
 type CoinStateItem struct {
-	Currency      string `json:"currency"`
-	SpotLeverage  string `json:"spotLeverage"`
+	Currency     string `json:"currency"`
+	SpotLeverage string `json:"spotLeverage"`
 }
 
 type GetAutoRepayModeResponse struct {
@@ -227,19 +227,19 @@ type QueryFixedBorrowContractsResponse struct {
 }
 
 type FixedBorrowContractItem struct {
-	LoanId                 string `json:"loanId"`
-	OrderId                string `json:"orderId"`
-	BorrowCurrency         string `json:"borrowCurrency"`
-	AnnualRate             string `json:"annualRate"`
-	Term                   string `json:"term"`
-	ResidualPrincipal      string `json:"residualPrincipal"`
-	InterestPaid           string `json:"interestPaid"`
+	LoanId                  string `json:"loanId"`
+	OrderId                 string `json:"orderId"`
+	BorrowCurrency          string `json:"borrowCurrency"`
+	AnnualRate              string `json:"annualRate"`
+	Term                    string `json:"term"`
+	ResidualPrincipal       string `json:"residualPrincipal"`
+	InterestPaid            string `json:"interestPaid"`
 	ResidualPenaltyInterest string `json:"residualPenaltyInterest"`
-	BorrowTime             string `json:"borrowTime"`
-	RepaymentTime          string `json:"repaymentTime"`
-	Status                 int    `json:"status"`
-	RepayType              string `json:"repayType"`
-	StrategyType           string `json:"strategyType"`
+	BorrowTime              string `json:"borrowTime"`
+	RepaymentTime           string `json:"repaymentTime"`
+	Status                  int    `json:"status"`
+	RepayType               string `json:"repayType"`
+	StrategyType            string `json:"strategyType"`
 }
 
 type QueryFixedBorrowOrdersResponse struct {
@@ -301,4 +301,3 @@ type SetAutoRepayModeResponse struct {
 	RetExtInfo interface{} `json:"retExtInfo"`
 	Time       int         `json:"time"`
 }
-

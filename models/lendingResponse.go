@@ -501,15 +501,15 @@ type LtvConvertResponse struct {
 }
 
 type LtvConvertInfo struct {
-	Ltv             string               `json:"ltv"`
-	ParentUid       string               `json:"parentUid"`
-	SubAccountUids  []int                `json:"subAccountUids"`
-	UnpaidAmount    string               `json:"unpaidAmount"`
-	UnpaidInfo      []UnpaidInfo         `json:"unpaidInfo"`
-	Balance         string               `json:"balance"`
-	BalanceInfo     []BalanceConvertInfo `json:"balanceInfo"`
-	Rst             string               `json:"rst"`
-	LiqStatus       int                  `json:"liqStatus"`
+	Ltv            string               `json:"ltv"`
+	ParentUid      string               `json:"parentUid"`
+	SubAccountUids []int                `json:"subAccountUids"`
+	UnpaidAmount   string               `json:"unpaidAmount"`
+	UnpaidInfo     []UnpaidInfo         `json:"unpaidInfo"`
+	Balance        string               `json:"balance"`
+	BalanceInfo    []BalanceConvertInfo `json:"balanceInfo"`
+	Rst            string               `json:"rst"`
+	LiqStatus      int                  `json:"liqStatus"`
 }
 
 type UnpaidInfo struct {
@@ -603,24 +603,24 @@ type GetAdvanceProductResponse struct {
 }
 
 type DualAssetsProduct struct {
-	Category                    string  `json:"category"`
-	ProductId                   string  `json:"productId"`
-	BaseCoin                    string  `json:"baseCoin"`
-	QuoteCoin                   string  `json:"quoteCoin"`
-	ExpectReceiveAt             string  `json:"expectReceiveAt"`
-	Duration                    string  `json:"duration"`
-	Status                      string  `json:"status"`
-	IsVipProduct                bool    `json:"isVipProduct"`
-	SubscribeStartAt            string  `json:"subscribeStartAt"`
-	SubscribeEndAt              string  `json:"subscribeEndAt"`
-	ApplyStartAt                string  `json:"applyStartAt"`
-	SettlementTime              string  `json:"settlementTime"`
-	MinPurchaseQuoteAmount      string  `json:"minPurchaseQuoteAmount"`
-	MinPurchaseBaseAmount       string  `json:"minPurchaseBaseAmount"`
-	RemainingAmountQuote        string  `json:"remainingAmountQuote"`
-	RemainingAmountBase         string  `json:"remainingAmountBase"`
-	OrderPrecisionDigitalQuote  int     `json:"orderPrecisionDigitalQuote"`
-	OrderPrecisionDigitalBase   int     `json:"orderPrecisionDigitalBase"`
+	Category                   string `json:"category"`
+	ProductId                  string `json:"productId"`
+	BaseCoin                   string `json:"baseCoin"`
+	QuoteCoin                  string `json:"quoteCoin"`
+	ExpectReceiveAt            string `json:"expectReceiveAt"`
+	Duration                   string `json:"duration"`
+	Status                     string `json:"status"`
+	IsVipProduct               bool   `json:"isVipProduct"`
+	SubscribeStartAt           string `json:"subscribeStartAt"`
+	SubscribeEndAt             string `json:"subscribeEndAt"`
+	ApplyStartAt               string `json:"applyStartAt"`
+	SettlementTime             string `json:"settlementTime"`
+	MinPurchaseQuoteAmount     string `json:"minPurchaseQuoteAmount"`
+	MinPurchaseBaseAmount      string `json:"minPurchaseBaseAmount"`
+	RemainingAmountQuote       string `json:"remainingAmountQuote"`
+	RemainingAmountBase        string `json:"remainingAmountBase"`
+	OrderPrecisionDigitalQuote int    `json:"orderPrecisionDigitalQuote"`
+	OrderPrecisionDigitalBase  int    `json:"orderPrecisionDigitalBase"`
 }
 
 type GetProductExtraInfoResponse struct {
@@ -655,26 +655,26 @@ type GetAdvancePositionResponse struct {
 }
 
 type DualAssetsPosition struct {
-	PositionId       string `json:"positionId"`
-	ProductId        string `json:"productId"`
-	Category         string `json:"category"`
-	BaseCoin         string `json:"baseCoin"`
-	QuoteCoin        string `json:"quoteCoin"`
-	InvestCoin       string `json:"investCoin"`
-	Amount           string `json:"amount"`
-	ApyE8            string `json:"apyE8"`
-	Direction        string `json:"direction"`
-	TargetPrice      string `json:"targetPrice"`
-	SettlementTime   string `json:"settlementTime"`
-	Status           string `json:"status"`
-	OrderId          string `json:"orderId"`
-	Duration         string `json:"duration"`
-	ExpectReturnCoin string `json:"expectReturnCoin"`
+	PositionId         string `json:"positionId"`
+	ProductId          string `json:"productId"`
+	Category           string `json:"category"`
+	BaseCoin           string `json:"baseCoin"`
+	QuoteCoin          string `json:"quoteCoin"`
+	InvestCoin         string `json:"investCoin"`
+	Amount             string `json:"amount"`
+	ApyE8              string `json:"apyE8"`
+	Direction          string `json:"direction"`
+	TargetPrice        string `json:"targetPrice"`
+	SettlementTime     string `json:"settlementTime"`
+	Status             string `json:"status"`
+	OrderId            string `json:"orderId"`
+	Duration           string `json:"duration"`
+	ExpectReturnCoin   string `json:"expectReturnCoin"`
 	ExpectReturnAmount string `json:"expectReturnAmount"`
-	AccountType      string `json:"accountType"`
-	ToAccountType    string `json:"toAccountType"`
-	YieldStartAt     string `json:"yieldStartAt"`
-	YieldEndAt       string `json:"yieldEndAt"`
+	AccountType        string `json:"accountType"`
+	ToAccountType      string `json:"toAccountType"`
+	YieldStartAt       string `json:"yieldStartAt"`
+	YieldEndAt         string `json:"yieldEndAt"`
 }
 
 type GetAdvanceOrderResponse struct {
@@ -725,11 +725,11 @@ type GetRedeemEstAmountListResponse struct {
 }
 
 type RedeemEstItem struct {
-	Success          bool   `json:"success"`
-	PositionId       string `json:"positionId"`
-	EstRedeemAmount  string `json:"estRedeemAmount"`
-	EstRedeemTime    string `json:"estRedeemTime"`
-	SlippageRate     string `json:"slippageRate"`
+	Success         bool   `json:"success"`
+	PositionId      string `json:"positionId"`
+	EstRedeemAmount string `json:"estRedeemAmount"`
+	EstRedeemTime   string `json:"estRedeemTime"`
+	SlippageRate    string `json:"slippageRate"`
 }
 
 type GetDoubleWinLeverageResponse struct {
@@ -820,27 +820,27 @@ type GetSmartLeverageOrderResponse struct {
 }
 
 type SmartLeverageOrder struct {
-	OrderId          string `json:"orderId"`
-	OrderLinkId      string `json:"orderLinkId"`
-	ProductId        string `json:"productId"`
-	Category         string `json:"category"`
-	OrderType        string `json:"orderType"`
-	InvestCoin       string `json:"investCoin"`
-	Amount           string `json:"amount"`
-	UnderlyingAsset  string `json:"underlyingAsset"`
-	Direction        string `json:"direction"`
-	Leverage         string `json:"leverage"`
-	BreakevenPrice   string `json:"breakevenPrice"`
-	InitialPrice     string `json:"initialPrice"`
-	SettlementTime   string `json:"settlementTime"`
-	Duration         string `json:"duration"`
-	CreatedTime      string `json:"createdTime"`
-	Status           string `json:"status"`
-	SettlementPrice  string `json:"settlementPrice"`
-	Pnl              string `json:"pnl"`
-	RefundStatus     string `json:"refundStatus"`
-	AccountType      string `json:"accountType"`
-	ToAccountType    string `json:"toAccountType"`
+	OrderId         string `json:"orderId"`
+	OrderLinkId     string `json:"orderLinkId"`
+	ProductId       string `json:"productId"`
+	Category        string `json:"category"`
+	OrderType       string `json:"orderType"`
+	InvestCoin      string `json:"investCoin"`
+	Amount          string `json:"amount"`
+	UnderlyingAsset string `json:"underlyingAsset"`
+	Direction       string `json:"direction"`
+	Leverage        string `json:"leverage"`
+	BreakevenPrice  string `json:"breakevenPrice"`
+	InitialPrice    string `json:"initialPrice"`
+	SettlementTime  string `json:"settlementTime"`
+	Duration        string `json:"duration"`
+	CreatedTime     string `json:"createdTime"`
+	Status          string `json:"status"`
+	SettlementPrice string `json:"settlementPrice"`
+	Pnl             string `json:"pnl"`
+	RefundStatus    string `json:"refundStatus"`
+	AccountType     string `json:"accountType"`
+	ToAccountType   string `json:"toAccountType"`
 }
 
 type GetDoubleWinProductResponse struct {
@@ -1093,20 +1093,20 @@ type TokenProductResponse struct {
 }
 
 type TokenProduct struct {
-	ProductId        int    `json:"productId"`
-	Coin             string `json:"coin"`
-	MintFeeRateE8    int    `json:"mintFeeRateE8"`
-	RedeemFeeRateE8  int    `json:"redeemFeeRateE8"`
-	MinInvestment    string `json:"minInvestment"`
-	UserHolding      string `json:"userHolding"`
-	LeftQuota        string `json:"leftQuota"`
-	CanMint          bool   `json:"canMint"`
-	SavingsBalance   string `json:"savingsBalance"`
-	AprE8            int    `json:"aprE8"`
-	BonusAprE8       int    `json:"bonusAprE8"`
-	BonusMaxAmount   string `json:"bonusMaxAmount"`
-	BaseCoinPrecision int   `json:"baseCoinPrecision"`
-	TokenPrecision   int    `json:"tokenPrecision"`
+	ProductId         int    `json:"productId"`
+	Coin              string `json:"coin"`
+	MintFeeRateE8     int    `json:"mintFeeRateE8"`
+	RedeemFeeRateE8   int    `json:"redeemFeeRateE8"`
+	MinInvestment     string `json:"minInvestment"`
+	UserHolding       string `json:"userHolding"`
+	LeftQuota         string `json:"leftQuota"`
+	CanMint           bool   `json:"canMint"`
+	SavingsBalance    string `json:"savingsBalance"`
+	AprE8             int    `json:"aprE8"`
+	BonusAprE8        int    `json:"bonusAprE8"`
+	BonusMaxAmount    string `json:"bonusMaxAmount"`
+	BaseCoinPrecision int    `json:"baseCoinPrecision"`
+	TokenPrecision    int    `json:"tokenPrecision"`
 }
 
 type TokenPositionResponse struct {
@@ -1276,10 +1276,10 @@ type TieredApy struct {
 }
 
 type InterestCoinApy struct {
-	Coin               string `json:"coin"`
-	Apy                string `json:"apy"`
-	ExpectUnitEarning  string `json:"expectUnitEarning"`
-	CurrentPrice       string `json:"currentPrice"`
+	Coin              string `json:"coin"`
+	Apy               string `json:"apy"`
+	ExpectUnitEarning string `json:"expectUnitEarning"`
+	CurrentPrice      string `json:"currentPrice"`
 }
 
 type PositionInterestCoinApy struct {
@@ -1298,9 +1298,9 @@ type YieldInfo struct {
 }
 
 type EarlyRedeemInfo struct {
-	AllowEarlyRedeem       bool   `json:"allowEarlyRedeem"`
-	EarlyRedeemEarning     string `json:"earlyRedeemEarning"`
-	ReturnCoin             string `json:"returnCoin"`
+	AllowEarlyRedeem        bool   `json:"allowEarlyRedeem"`
+	EarlyRedeemEarning      string `json:"earlyRedeemEarning"`
+	ReturnCoin              string `json:"returnCoin"`
 	RedemptionLimitDuration string `json:"redemptionLimitDuration"`
 }
 
@@ -1340,25 +1340,25 @@ type RwaProductListResponse struct {
 }
 
 type RwaProduct struct {
-	ProductId        int    `json:"productId"`
-	Coin             string `json:"coin"`
-	AssetSymbol      string `json:"assetSymbol"`
-	Manager          string `json:"manager"`
-	BaseApr          string `json:"baseApr"`
-	BonusApr         string `json:"bonusApr"`
-	SavingType       string `json:"savingType"`
-	Duration         int    `json:"duration"`
-	Nav              string `json:"nav"`
-	MinStakeAmount   string `json:"minStakeAmount"`
-	MaxStakeAmount   string `json:"maxStakeAmount"`
-	UserMaxAmount    string `json:"userMaxAmount"`
-	UserQuota        string `json:"userQuota"`
-	MinRedeemShare   string `json:"minRedeemShare"`
-	RedeemFeeRate    string `json:"redeemFeeRate"`
-	SubscriptionFee  string `json:"subscriptionFee"`
-	ExtLink          string `json:"extLink"`
-	AmountPrecision  int    `json:"amountPrecision"`
-	SharePrecision   int    `json:"sharePrecision"`
+	ProductId       int    `json:"productId"`
+	Coin            string `json:"coin"`
+	AssetSymbol     string `json:"assetSymbol"`
+	Manager         string `json:"manager"`
+	BaseApr         string `json:"baseApr"`
+	BonusApr        string `json:"bonusApr"`
+	SavingType      string `json:"savingType"`
+	Duration        int    `json:"duration"`
+	Nav             string `json:"nav"`
+	MinStakeAmount  string `json:"minStakeAmount"`
+	MaxStakeAmount  string `json:"maxStakeAmount"`
+	UserMaxAmount   string `json:"userMaxAmount"`
+	UserQuota       string `json:"userQuota"`
+	MinRedeemShare  string `json:"minRedeemShare"`
+	RedeemFeeRate   string `json:"redeemFeeRate"`
+	SubscriptionFee string `json:"subscriptionFee"`
+	ExtLink         string `json:"extLink"`
+	AmountPrecision int    `json:"amountPrecision"`
+	SharePrecision  int    `json:"sharePrecision"`
 }
 
 type PlaceRwaOrderResponse struct {
@@ -1378,16 +1378,16 @@ type RwaPositionListResponse struct {
 }
 
 type RwaPosition struct {
-	ProductId              int    `json:"productId"`
-	Coin                   string `json:"coin"`
-	AssetSymbol            string `json:"assetSymbol"`
-	EffectiveShare         string `json:"effectiveShare"`
-	ProcessingStakeAmount  string `json:"processingStakeAmount"`
-	ProcessingRedeemShare  string `json:"processingRedeemShare"`
-	BonusEarned            string `json:"bonusEarned"`
-	Nav                    string `json:"nav"`
-	HoldAmount             string `json:"holdAmount"`
-	Duration               int    `json:"duration"`
+	ProductId             int    `json:"productId"`
+	Coin                  string `json:"coin"`
+	AssetSymbol           string `json:"assetSymbol"`
+	EffectiveShare        string `json:"effectiveShare"`
+	ProcessingStakeAmount string `json:"processingStakeAmount"`
+	ProcessingRedeemShare string `json:"processingRedeemShare"`
+	BonusEarned           string `json:"bonusEarned"`
+	Nav                   string `json:"nav"`
+	HoldAmount            string `json:"holdAmount"`
+	Duration              int    `json:"duration"`
 }
 
 type RwaOrderListResponse struct {
@@ -1399,19 +1399,19 @@ type RwaOrderListResponse struct {
 }
 
 type RwaOrder struct {
-	OrderId        string `json:"orderId"`
-	OrderLinkId    string `json:"orderLinkId"`
-	OrderType      string `json:"orderType"`
-	ProductId      int    `json:"productId"`
-	Coin           string `json:"coin"`
-	StakeAmount    string `json:"stakeAmount"`
-	RedeemShares   string `json:"redeemShares"`
-	Status         string `json:"status"`
-	AccountType    string `json:"accountType"`
-	CreatedTime    int    `json:"createdTime"`
-	UpdatedTime    int    `json:"updatedTime"`
-	SettledShares  string `json:"settledShares"`
-	SettledAmount  string `json:"settledAmount"`
+	OrderId       string `json:"orderId"`
+	OrderLinkId   string `json:"orderLinkId"`
+	OrderType     string `json:"orderType"`
+	ProductId     int    `json:"productId"`
+	Coin          string `json:"coin"`
+	StakeAmount   string `json:"stakeAmount"`
+	RedeemShares  string `json:"redeemShares"`
+	Status        string `json:"status"`
+	AccountType   string `json:"accountType"`
+	CreatedTime   int    `json:"createdTime"`
+	UpdatedTime   int    `json:"updatedTime"`
+	SettledShares string `json:"settledShares"`
+	SettledAmount string `json:"settledAmount"`
 }
 
 type RwaNavChartResponse struct {
@@ -1428,28 +1428,28 @@ type RwaNavPoint struct {
 }
 
 type EarnProduct struct {
-	Category                   string        `json:"category"`
-	EstimateApr                string        `json:"estimateApr"`
-	Coin                       string        `json:"coin"`
-	MinStakeAmount             string        `json:"minStakeAmount"`
-	MaxStakeAmount             string        `json:"maxStakeAmount"`
-	Precision                  string        `json:"precision"`
-	ProductId                  string        `json:"productId"`
-	Status                     string        `json:"status"`
-	Duration                   string        `json:"duration"`
-	Term                       int           `json:"term"`
-	SwapCoin                   string        `json:"swapCoin"`
-	SwapCoinPrecision          string        `json:"swapCoinPrecision"`
-	StakeExchangeRate          string        `json:"stakeExchangeRate"`
-	RedeemExchangeRate         string        `json:"redeemExchangeRate"`
-	MinRedeemAmount            string        `json:"minRedeemAmount"`
-	MaxRedeemAmount            string        `json:"maxRedeemAmount"`
-	RedeemProcessingMinute     string        `json:"redeemProcessingMinute"`
-	StakeTime                  string        `json:"stakeTime"`
-	InterestCalculationTime    string        `json:"interestCalculationTime"`
-	RewardDistributionType     string        `json:"rewardDistributionType"`
-	RewardIntervalMinute       int           `json:"rewardIntervalMinute"`
-	BonusEvents                []interface{} `json:"bonusEvents"`
+	Category                string        `json:"category"`
+	EstimateApr             string        `json:"estimateApr"`
+	Coin                    string        `json:"coin"`
+	MinStakeAmount          string        `json:"minStakeAmount"`
+	MaxStakeAmount          string        `json:"maxStakeAmount"`
+	Precision               string        `json:"precision"`
+	ProductId               string        `json:"productId"`
+	Status                  string        `json:"status"`
+	Duration                string        `json:"duration"`
+	Term                    int           `json:"term"`
+	SwapCoin                string        `json:"swapCoin"`
+	SwapCoinPrecision       string        `json:"swapCoinPrecision"`
+	StakeExchangeRate       string        `json:"stakeExchangeRate"`
+	RedeemExchangeRate      string        `json:"redeemExchangeRate"`
+	MinRedeemAmount         string        `json:"minRedeemAmount"`
+	MaxRedeemAmount         string        `json:"maxRedeemAmount"`
+	RedeemProcessingMinute  string        `json:"redeemProcessingMinute"`
+	StakeTime               string        `json:"stakeTime"`
+	InterestCalculationTime string        `json:"interestCalculationTime"`
+	RewardDistributionType  string        `json:"rewardDistributionType"`
+	RewardIntervalMinute    int           `json:"rewardIntervalMinute"`
+	BonusEvents             []interface{} `json:"bonusEvents"`
 }
 
 type GetProductResponse struct {
@@ -1482,18 +1482,18 @@ type PlaceOrderResponse struct {
 }
 
 type EarnOrder struct {
-	Coin                 string `json:"coin"`
-	OrderValue           string `json:"orderValue"`
-	OrderType            string `json:"orderType"`
-	OrderId              string `json:"orderId"`
-	OrderLinkId          string `json:"orderLinkId"`
-	Status               string `json:"status"`
-	CreatedAt            string `json:"createdAt"`
-	UpdatedAt            string `json:"updatedAt"`
-	ProductId            string `json:"productId"`
-	SwapOrderValue       string `json:"swapOrderValue"`
-	EstimateRedeemTime   string `json:"estimateRedeemTime"`
-	EstimateStakeTime    string `json:"estimateStakeTime"`
+	Coin               string `json:"coin"`
+	OrderValue         string `json:"orderValue"`
+	OrderType          string `json:"orderType"`
+	OrderId            string `json:"orderId"`
+	OrderLinkId        string `json:"orderLinkId"`
+	Status             string `json:"status"`
+	CreatedAt          string `json:"createdAt"`
+	UpdatedAt          string `json:"updatedAt"`
+	ProductId          string `json:"productId"`
+	SwapOrderValue     string `json:"swapOrderValue"`
+	EstimateRedeemTime string `json:"estimateRedeemTime"`
+	EstimateStakeTime  string `json:"estimateStakeTime"`
 }
 
 type OrderHistoryResponse struct {
@@ -1505,19 +1505,19 @@ type OrderHistoryResponse struct {
 }
 
 type EarnPosition struct {
-	Coin                              string `json:"coin"`
-	ProductId                         string `json:"productId"`
-	Amount                            string `json:"amount"`
-	TotalPnl                          string `json:"totalPnl"`
-	ClaimableYield                    string `json:"claimableYield"`
-	Id                                string `json:"id"`
-	Status                            string `json:"status"`
-	OrderId                           string `json:"orderId"`
-	EstimateRedeemTime                string `json:"estimateRedeemTime"`
-	EstimateStakeTime                 string `json:"estimateStakeTime"`
-	EstimateInterestCalculationTime   string `json:"estimateInterestCalculationTime"`
-	SettlementTime                    string `json:"settlementTime"`
-	AutoReinvest                      string `json:"autoReinvest"`
+	Coin                            string `json:"coin"`
+	ProductId                       string `json:"productId"`
+	Amount                          string `json:"amount"`
+	TotalPnl                        string `json:"totalPnl"`
+	ClaimableYield                  string `json:"claimableYield"`
+	Id                              string `json:"id"`
+	Status                          string `json:"status"`
+	OrderId                         string `json:"orderId"`
+	EstimateRedeemTime              string `json:"estimateRedeemTime"`
+	EstimateStakeTime               string `json:"estimateStakeTime"`
+	EstimateInterestCalculationTime string `json:"estimateInterestCalculationTime"`
+	SettlementTime                  string `json:"settlementTime"`
+	AutoReinvest                    string `json:"autoReinvest"`
 }
 
 type YieldRecord struct {
@@ -1582,18 +1582,18 @@ type InterestCard struct {
 }
 
 type AwardCard struct {
-	AwardId             int    `json:"awardId"`
-	SpecCode            string `json:"specCode"`
-	ClaimedAt           int    `json:"claimedAt"`
-	UsedAt              int    `json:"usedAt"`
-	ExpireAt            int    `json:"expireAt"`
-	Status              string `json:"status"`
-	Amount              string `json:"amount"`
-	LimitPnlPercentage  string `json:"limitPnlPercentage"`
-	BaseCoin            string `json:"baseCoin"`
-	QuoteCoin           string `json:"quoteCoin"`
-	Direction           int    `json:"direction"`
-	Category            string `json:"category"`
+	AwardId            int    `json:"awardId"`
+	SpecCode           string `json:"specCode"`
+	ClaimedAt          int    `json:"claimedAt"`
+	UsedAt             int    `json:"usedAt"`
+	ExpireAt           int    `json:"expireAt"`
+	Status             string `json:"status"`
+	Amount             string `json:"amount"`
+	LimitPnlPercentage string `json:"limitPnlPercentage"`
+	BaseCoin           string `json:"baseCoin"`
+	QuoteCoin          string `json:"quoteCoin"`
+	Direction          int    `json:"direction"`
+	Category           string `json:"category"`
 }
 
 type ListCouponsResponse struct {
@@ -1652,34 +1652,34 @@ type PaginatedResult struct {
 }
 
 type CoinApy struct {
-	Coin   int  `json:"coin"`
-	ApyE8  int  `json:"apy_e8"`
-	Reward bool `json:"reward"`
+	Coin   string `json:"coin"`
+	ApyE8  int    `json:"apyE8"`
+	Reward bool   `json:"reward"`
 }
 
 type LMProduct struct {
-	ProductId              string        `json:"productId"`
-	BaseCoin               string        `json:"baseCoin"`
-	QuoteCoin              string        `json:"quoteCoin"`
-	Status                 string        `json:"status"`
-	MaxLeverage            int           `json:"maxLeverage"`
-	MinInvestmentQuote     string        `json:"minInvestmentQuote"`
-	MinInvestmentBase      string        `json:"minInvestmentBase"`
-	MaxInvestmentQuote     string        `json:"maxInvestmentQuote"`
-	MaxInvestmentBase      string        `json:"maxInvestmentBase"`
-	MinWithdrawalAmount    string        `json:"minWithdrawalAmount"`
-	BaseCoinPrecision      int           `json:"baseCoinPrecision"`
-	QuoteCoinPrecision     int           `json:"quoteCoinPrecision"`
-	MinReinvestAmount      string        `json:"minReinvestAmount"`
-	YieldCoins             []string      `json:"yieldCoins"`
-	ApyE8                  int           `json:"apyE8"`
-	Apy7dE8                int           `json:"apy7dE8"`
-	PoolLiquidityValue     string        `json:"poolLiquidityValue"`
-	DailyYield             string        `json:"dailyYield"`
-	SlippageLevels         []string      `json:"slippageLevels"`
-	SlippageRateE8List     []int         `json:"slippageRateE8List"`
-	ApyBreakdown           []interface{} `json:"apyBreakdown"`
-	Apy7dBreakdown         []interface{} `json:"apy7dBreakdown"`
+	ProductId           string        `json:"productId"`
+	BaseCoin            string        `json:"baseCoin"`
+	QuoteCoin           string        `json:"quoteCoin"`
+	Status              string        `json:"status"`
+	MaxLeverage         int           `json:"maxLeverage"`
+	MinInvestmentQuote  string        `json:"minInvestmentQuote"`
+	MinInvestmentBase   string        `json:"minInvestmentBase"`
+	MaxInvestmentQuote  string        `json:"maxInvestmentQuote"`
+	MaxInvestmentBase   string        `json:"maxInvestmentBase"`
+	MinWithdrawalAmount string        `json:"minWithdrawalAmount"`
+	BaseCoinPrecision   int           `json:"baseCoinPrecision"`
+	QuoteCoinPrecision  int           `json:"quoteCoinPrecision"`
+	MinReinvestAmount   string        `json:"minReinvestAmount"`
+	YieldCoins          []string      `json:"yieldCoins"`
+	ApyE8               int           `json:"apyE8"`
+	Apy7dE8             int           `json:"apy7dE8"`
+	PoolLiquidityValue  string        `json:"poolLiquidityValue"`
+	DailyYield          string        `json:"dailyYield"`
+	SlippageLevels      []string      `json:"slippageLevels"`
+	SlippageRateE8List  []int         `json:"slippageRateE8List"`
+	ApyBreakdown        []interface{} `json:"apyBreakdown"`
+	Apy7dBreakdown      []interface{} `json:"apy7dBreakdown"`
 }
 
 type GetLMProductsResponse struct {
@@ -1729,20 +1729,20 @@ type GetLMPositionsResponse struct {
 }
 
 type LMOrder struct {
-	OrderId      string `json:"orderId"`
-	OrderLinkId  string `json:"orderLinkId"`
-	ProductId    string `json:"productId"`
-	OrderType    string `json:"orderType"`
-	BaseCoin     string `json:"baseCoin"`
-	QuoteCoin    string `json:"quoteCoin"`
-	QuoteAmount  string `json:"quoteAmount"`
-	BaseAmount   string `json:"baseAmount"`
-	Status       string `json:"status"`
-	RemoveType   string `json:"removeType"`
-	RemoveRate   int    `json:"removeRate"`
-	Leverage     string `json:"leverage"`
+	OrderId       string `json:"orderId"`
+	OrderLinkId   string `json:"orderLinkId"`
+	ProductId     string `json:"productId"`
+	OrderType     string `json:"orderType"`
+	BaseCoin      string `json:"baseCoin"`
+	QuoteCoin     string `json:"quoteCoin"`
+	QuoteAmount   string `json:"quoteAmount"`
+	BaseAmount    string `json:"baseAmount"`
+	Status        string `json:"status"`
+	RemoveType    string `json:"removeType"`
+	RemoveRate    int    `json:"removeRate"`
+	Leverage      string `json:"leverage"`
 	SlippageValue string `json:"slippageValue"`
-	CreatedTime  string `json:"createdTime"`
+	CreatedTime   string `json:"createdTime"`
 }
 
 type GetLMOrdersResponse struct {
@@ -1848,16 +1848,16 @@ type PwmInstGetInvestmentPlansResponse struct {
 }
 
 type PwmInstInvestmentPlanInfo struct {
-	PlanId                  string        `json:"planId"`
-	PlanName                string        `json:"planName"`
-	PlanType                string        `json:"planType"`
-	SubscriptionUid         string        `json:"subscriptionUid"`
-	Status                  string        `json:"status"`
-	Source                  string        `json:"source"`
-	CurrentAssetUsd         string        `json:"currentAssetUsd"`
-	AccumulateYieldUsd      string        `json:"accumulateYieldUsd"`
-	InvestmentDistribution  []interface{} `json:"investmentDistribution"`
-	CreatedTime             string        `json:"createdTime"`
+	PlanId                 string        `json:"planId"`
+	PlanName               string        `json:"planName"`
+	PlanType               string        `json:"planType"`
+	SubscriptionUid        string        `json:"subscriptionUid"`
+	Status                 string        `json:"status"`
+	Source                 string        `json:"source"`
+	CurrentAssetUsd        string        `json:"currentAssetUsd"`
+	AccumulateYieldUsd     string        `json:"accumulateYieldUsd"`
+	InvestmentDistribution []interface{} `json:"investmentDistribution"`
+	CreatedTime            string        `json:"createdTime"`
 }
 
 type PwmInstManageInvestmentPlanResponse struct {
@@ -2046,18 +2046,18 @@ type PwmInvestmentDistribution struct {
 }
 
 type PwmPositionItem struct {
-	Category         string `json:"category"`
-	ProductId        string `json:"productId"`
-	Coin             string `json:"coin"`
-	CurrentAmount    string `json:"currentAmount"`
-	AccumulateYield  string `json:"accumulateYield"`
-	Apr              string `json:"apr"`
-	Duration         int    `json:"duration"`
-	MaturityTime     string `json:"maturityTime"`
-	AutoReinvest     bool   `json:"autoReinvest"`
-	StakeAmount      string `json:"stakeAmount"`
-	PositionId       int    `json:"positionId"`
-	Status           string `json:"status"`
+	Category        string `json:"category"`
+	ProductId       string `json:"productId"`
+	Coin            string `json:"coin"`
+	CurrentAmount   string `json:"currentAmount"`
+	AccumulateYield string `json:"accumulateYield"`
+	Apr             string `json:"apr"`
+	Duration        int    `json:"duration"`
+	MaturityTime    string `json:"maturityTime"`
+	AutoReinvest    bool   `json:"autoReinvest"`
+	StakeAmount     string `json:"stakeAmount"`
+	PositionId      int    `json:"positionId"`
+	Status          string `json:"status"`
 }
 
 type PwmEquityFundPositionItem struct {
@@ -2082,10 +2082,10 @@ type PwmEquityFundPositionItem struct {
 }
 
 type PwmCategoryPositionGroup struct {
-	TotalInvestmentUsd  string        `json:"totalInvestmentUsd"`
-	AccumulateYieldUsd  string        `json:"accumulateYieldUsd"`
-	WeightedAvgApr      string        `json:"weightedAvgApr"`
-	Items               []interface{} `json:"items"`
+	TotalInvestmentUsd string        `json:"totalInvestmentUsd"`
+	AccumulateYieldUsd string        `json:"accumulateYieldUsd"`
+	WeightedAvgApr     string        `json:"weightedAvgApr"`
+	Items              []interface{} `json:"items"`
 }
 
 type PwmEquityFundPositionGroup struct {
@@ -2109,24 +2109,24 @@ type PwmCoinAmount struct {
 }
 
 type PwmFundIntroduction struct {
-	Description              string `json:"description"`
-	HistoricalYieldRateMax   string `json:"historicalYieldRateMax"`
-	HistoricalYieldRateMin   string `json:"historicalYieldRateMin"`
-	SharpRatio               string `json:"sharpRatio"`
-	MaxDrawback              string `json:"maxDrawback"`
-	LockupPeriod             string `json:"lockupPeriod"`
+	Description            string `json:"description"`
+	HistoricalYieldRateMax string `json:"historicalYieldRateMax"`
+	HistoricalYieldRateMin string `json:"historicalYieldRateMin"`
+	SharpRatio             string `json:"sharpRatio"`
+	MaxDrawback            string `json:"maxDrawback"`
+	LockupPeriod           string `json:"lockupPeriod"`
 }
 
 type PwmConfiguredProductItem struct {
-	Category        string        `json:"category"`
-	ProductId       string        `json:"productId"`
-	FundName        string        `json:"fundName"`
-	Coin            string        `json:"coin"`
-	ConfiguredAmount string       `json:"configuredAmount"`
-	Apr             string        `json:"apr"`
-	Duration        int           `json:"duration"`
-	Tags            []string      `json:"tags"`
-	Introduction    interface{}   `json:"introduction"`
+	Category         string      `json:"category"`
+	ProductId        string      `json:"productId"`
+	FundName         string      `json:"fundName"`
+	Coin             string      `json:"coin"`
+	ConfiguredAmount string      `json:"configuredAmount"`
+	Apr              string      `json:"apr"`
+	Duration         int         `json:"duration"`
+	Tags             []string    `json:"tags"`
+	Introduction     interface{} `json:"introduction"`
 }
 
 type PwmConfiguredProductGroup struct {
@@ -2173,8 +2173,8 @@ type PwmRedeemRequest struct {
 }
 
 type PwmAssetDataPoint struct {
-	Date           string `json:"date"`
-	AssetValueUsd  string `json:"assetValueUsd"`
+	Date          string `json:"date"`
+	AssetValueUsd string `json:"assetValueUsd"`
 }
 
 type PwmNavDataPoint struct {
@@ -2241,28 +2241,28 @@ type LPOrderListResponse struct {
 }
 
 type LPOrderDto struct {
-	OrderType      int    `json:"orderType"`
-	OrderNo        string `json:"orderNo"`
-	OrderStatus    int    `json:"orderStatus"`
-	PoolAddress    string `json:"poolAddress"`
-	PoolName       string `json:"poolName"`
-	PositionId     int    `json:"positionId"`
-	TokenCode      string `json:"tokenCode"`
-	TokenSymbol    string `json:"tokenSymbol"`
+	OrderType         int    `json:"orderType"`
+	OrderNo           string `json:"orderNo"`
+	OrderStatus       int    `json:"orderStatus"`
+	PoolAddress       string `json:"poolAddress"`
+	PoolName          string `json:"poolName"`
+	PositionId        int    `json:"positionId"`
+	TokenCode         string `json:"tokenCode"`
+	TokenSymbol       string `json:"tokenSymbol"`
 	TokenIconUrlDay   string `json:"tokenIconUrlDay"`
 	TokenIconUrlNight string `json:"tokenIconUrlNight"`
-	Amount         string `json:"amount"`
-	ChainCode      string `json:"chainCode"`
-	ChainIconUrl   string `json:"chainIconUrl"`
-	GasTokenSymbol string `json:"gasTokenSymbol"`
-	GasOnchain     string `json:"gasOnchain"`
-	GasUsd         string `json:"gasUsd"`
-	PlatformFee    string `json:"platformFee"`
-	PlatformFeeUsd string `json:"platformFeeUsd"`
-	CreateTime     int    `json:"createTime"`
-	ExecutionTime  int    `json:"executionTime"`
-	FailureReason  string `json:"failureReason"`
-	DercRatio      string `json:"dercRatio"`
+	Amount            string `json:"amount"`
+	ChainCode         string `json:"chainCode"`
+	ChainIconUrl      string `json:"chainIconUrl"`
+	GasTokenSymbol    string `json:"gasTokenSymbol"`
+	GasOnchain        string `json:"gasOnchain"`
+	GasUsd            string `json:"gasUsd"`
+	PlatformFee       string `json:"platformFee"`
+	PlatformFeeUsd    string `json:"platformFeeUsd"`
+	CreateTime        int    `json:"createTime"`
+	ExecutionTime     int    `json:"executionTime"`
+	FailureReason     string `json:"failureReason"`
+	DercRatio         string `json:"dercRatio"`
 }
 
 type LPPayTokenListResponse struct {
@@ -2345,26 +2345,26 @@ type LPPositionListResponse struct {
 }
 
 type LPPositionDto struct {
-	PositionId       int    `json:"positionId"`
-	PoolAddress      string `json:"poolAddress"`
-	PoolName         string `json:"poolName"`
-	StakedAmount     string `json:"stakedAmount"`
-	StakedTokenCode  string `json:"stakedTokenCode"`
+	PositionId        int    `json:"positionId"`
+	PoolAddress       string `json:"poolAddress"`
+	PoolName          string `json:"poolName"`
+	StakedAmount      string `json:"stakedAmount"`
+	StakedTokenCode   string `json:"stakedTokenCode"`
 	StakedTokenSymbol string `json:"stakedTokenSymbol"`
-	CurrentValueUsd  string `json:"currentValueUsd"`
-	EarnedRewardsUsd string `json:"earnedRewardsUsd"`
-	UnrealizedPnl    string `json:"unrealizedPnl"`
-	RealizedPnl      string `json:"realizedPnl"`
-	Apy              string `json:"apy"`
-	Token0Amount     string `json:"token0Amount"`
-	Token0Symbol     string `json:"token0Symbol"`
-	Token1Amount     string `json:"token1Amount"`
-	Token1Symbol     string `json:"token1Symbol"`
-	RangeUpper       string `json:"rangeUpper"`
-	RangeLower       string `json:"rangeLower"`
-	CreateTime       int    `json:"createTime"`
-	UpdateTime       int    `json:"updateTime"`
-	Status           int    `json:"status"`
+	CurrentValueUsd   string `json:"currentValueUsd"`
+	EarnedRewardsUsd  string `json:"earnedRewardsUsd"`
+	UnrealizedPnl     string `json:"unrealizedPnl"`
+	RealizedPnl       string `json:"realizedPnl"`
+	Apy               string `json:"apy"`
+	Token0Amount      string `json:"token0Amount"`
+	Token0Symbol      string `json:"token0Symbol"`
+	Token1Amount      string `json:"token1Amount"`
+	Token1Symbol      string `json:"token1Symbol"`
+	RangeUpper        string `json:"rangeUpper"`
+	RangeLower        string `json:"rangeLower"`
+	CreateTime        int    `json:"createTime"`
+	UpdateTime        int    `json:"updateTime"`
+	Status            int    `json:"status"`
 }
 
 type LPRedeemResponse struct {

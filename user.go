@@ -182,7 +182,6 @@ func (s *BybitClientRequest) GetUidWalletType(ctx context.Context, opts ...Reque
 	return GetServerResponse(err, data)
 }
 
-
 func (s *BybitClientRequest) QueryReferrals(ctx context.Context, opts ...RequestOption) (res *ServerResponse, err error) {
 	if err = handlers.ValidateParams(s.params); err != nil {
 		return nil, err

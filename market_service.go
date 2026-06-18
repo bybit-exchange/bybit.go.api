@@ -199,7 +199,7 @@ func (s *BybitClientRequest) GetOrderBookInfo(ctx context.Context, opts ...Reque
 func (s *BybitClientRequest) GetRPIOrderBook(ctx context.Context, opts ...RequestOption) (res *ServerResponse, err error) {
 	r := &request{
 		method:   http.MethodGet,
-		endpoint: "/v5/market/rpi-orderbook",
+		endpoint: "/v5/market/rpi_orderbook",
 		secType:  secTypeNone,
 	}
 	data, err := SendRequest(ctx, opts, r, s, err)
@@ -345,16 +345,6 @@ func (s *BybitClientRequest) GetFeeGroupStructure(ctx context.Context, opts ...R
 		method:   http.MethodGet,
 		endpoint: "/v5/market/fee-group-info",
 		secType:  secTypeSigned,
-	}
-	data, err := SendRequest(ctx, opts, r, s, err)
-	return GetServerResponse(err, data)
-}
-
-func (s *BybitClientRequest) GetRpiOrderbook(ctx context.Context, opts ...RequestOption) (res *ServerResponse, err error) {
-	r := &request{
-		method:   http.MethodGet,
-		endpoint: "/v5/market/rpi_orderbook",
-		secType:  secTypeNone,
 	}
 	data, err := SendRequest(ctx, opts, r, s, err)
 	return GetServerResponse(err, data)
