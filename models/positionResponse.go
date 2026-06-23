@@ -466,3 +466,114 @@ type SetAutoAddMarginResponse struct {
 	RetExtInfo map[string]interface{} `json:"retExtInfo"`
 	Time       int64                  `json:"time"`
 }
+
+type ClosedPnlResponse struct {
+	RetCode    int                    `json:"retCode"`
+	RetMsg     string                 `json:"retMsg"`
+	Result     ClosedPnlResult        `json:"result"`
+	RetExtInfo map[string]interface{} `json:"retExtInfo"`
+	Time       int64                  `json:"time"`
+}
+
+type ClosedPnlResult struct {
+	Category       string          `json:"category"`
+	List           []ClosedPnlItem `json:"list"`
+	NextPageCursor string          `json:"nextPageCursor"`
+}
+
+type MovePositionHistoryResponse struct {
+	RetCode    int                       `json:"retCode"`
+	RetMsg     string                    `json:"retMsg"`
+	Result     MovePositionHistoryResult `json:"result"`
+	RetExtInfo map[string]interface{}    `json:"retExtInfo"`
+	Time       int64                     `json:"time"`
+}
+
+type MovePositionHistoryResult struct {
+	List           []MovePositionHistoryItem `json:"list"`
+	NextPageCursor string                    `json:"nextPageCursor"`
+}
+
+type MovePositionHistoryItem struct {
+	BlockTradeId  string `json:"blockTradeId"`
+	Category      string `json:"category"`
+	OrderId       string `json:"orderId"`
+	UserId        int    `json:"userId"`
+	Symbol        string `json:"symbol"`
+	Side          string `json:"side"`
+	Price         string `json:"price"`
+	Qty           string `json:"qty"`
+	ExecFee       string `json:"execFee"`
+	Status        string `json:"status"`
+	ExecId        string `json:"execId"`
+	ResultCode    int    `json:"resultCode"`
+	ResultMessage string `json:"resultMessage"`
+	CreatedAt     int64  `json:"createdAt"`
+	UpdatedAt     int64  `json:"updatedAt"`
+	RejectParty   string `json:"rejectParty"`
+}
+
+type GetPositionInfoResult struct {
+	Category       string         `json:"category"`
+	List           []PositionInfo `json:"list"`
+	NextPageCursor string         `json:"nextPageCursor"`
+}
+
+type PositionInfo struct {
+	PositionIdx            int    `json:"positionIdx"`
+	RiskId                 int    `json:"riskId"`
+	RiskLimitValue         string `json:"riskLimitValue"`
+	Symbol                 string `json:"symbol"`
+	Side                   string `json:"side"`
+	Size                   string `json:"size"`
+	AvgPrice               string `json:"avgPrice"`
+	PositionValue          string `json:"positionValue"`
+	TradeMode              int    `json:"tradeMode"`
+	AutoAddMargin          int    `json:"autoAddMargin"`
+	PositionStatus         string `json:"positionStatus"`
+	Leverage               string `json:"leverage"`
+	MarkPrice              string `json:"markPrice"`
+	LiqPrice               string `json:"liqPrice"`
+	BustPrice              string `json:"bustPrice"`
+	PositionIM             string `json:"positionIM"`
+	PositionMM             string `json:"positionMM"`
+	PositionBalance        string `json:"positionBalance"`
+	TpslMode               string `json:"tpslMode"`
+	TakeProfit             string `json:"takeProfit"`
+	StopLoss               string `json:"stopLoss"`
+	TrailingStop           string `json:"trailingStop"`
+	UnrealisedPnl          string `json:"unrealisedPnl"`
+	CurRealisedPnl         string `json:"curRealisedPnl"`
+	CumRealisedPnl         string `json:"cumRealisedPnl"`
+	BreakEvenPrice         string `json:"breakEvenPrice"`
+	AdlRankIndicator       int    `json:"adlRankIndicator"`
+	IsReduceOnly           bool   `json:"isReduceOnly"`
+	MmrSysUpdatedTime      string `json:"mmrSysUpdatedTime"`
+	LeverageSysUpdatedTime string `json:"leverageSysUpdatedTime"`
+	PositionIMByMp         string `json:"positionIMByMp"`
+	PositionMMByMp         string `json:"positionMMByMp"`
+	SessionAvgPrice        string `json:"sessionAvgPrice"`
+	Delta                  string `json:"delta"`
+	Gamma                  string `json:"gamma"`
+	Vega                   string `json:"vega"`
+	Theta                  string `json:"theta"`
+	Seq                    int64  `json:"seq"`
+	CreatedTime            string `json:"createdTime"`
+	UpdatedTime            string `json:"updatedTime"`
+}
+
+type MovePositionRequestLeg struct {
+	Category string `json:"category"`
+	Symbol   string `json:"symbol"`
+	Price    string `json:"price"`
+	Side     string `json:"side"`
+	Qty      string `json:"qty"`
+}
+
+type SwitchPositionModeResponse struct {
+	RetCode    int                    `json:"retCode"`
+	RetMsg     string                 `json:"retMsg"`
+	Result     map[string]interface{} `json:"result"`
+	RetExtInfo map[string]interface{} `json:"retExtInfo"`
+	Time       int64                  `json:"time"`
+}

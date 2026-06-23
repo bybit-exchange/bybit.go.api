@@ -1636,3 +1636,222 @@ type TradeUserAssetDto struct {
 	EstimatedOfflineTime int    `json:"estimatedOfflineTime"`
 	DelistingTime        int    `json:"delistingTime"`
 }
+
+type Good struct {
+	ShoppingName string `json:"shoppingName"`
+	MccCode      string `json:"mccCode"`
+	GoodsName    string `json:"goodsName"`
+	GoodsDetail  string `json:"goodsDetail"`
+}
+
+type RiskInfo struct {
+	TerminalType string `json:"terminalType"`
+}
+
+type RefundOrderItem struct {
+	RefundType       string                  `json:"refundType"`
+	MerchantTradeNo  string                  `json:"merchantTradeNo"`
+	PayId            string                  `json:"payId"`
+	MerchantRefundNo string                  `json:"merchantRefundNo"`
+	RefundAmount     string                  `json:"refundAmount"`
+	Env              RefundOrderItemEnv      `json:"env"`
+	RiskInfo         RiskInfo                `json:"riskInfo"`
+	Customer         RefundOrderItemCustomer `json:"customer"`
+}
+
+type RefundOrderItemEnv struct {
+}
+
+type RefundOrderItemCustomer struct {
+}
+
+type AgreementLimitConfig struct {
+	Amount       string `json:"amount"`
+	Currency     string `json:"currency"`
+	CurrencyType string `json:"currency_type"`
+	Chain        string `json:"chain"`
+}
+
+type AgreementPeriodLimit struct {
+	Amount       string `json:"amount"`
+	Currency     string `json:"currency"`
+	CurrencyType string `json:"currency_type"`
+	Chain        string `json:"chain"`
+	PeriodType   string `json:"period_type"`
+}
+
+type AgreementCryptoPaymentInfo struct {
+	Currency     string `json:"currency"`
+	Amount       string `json:"amount"`
+	Chain        string `json:"chain"`
+	ExchangeRate string `json:"exchange_rate"`
+	RateTime     string `json:"rate_time"`
+}
+
+type AgreementOrderInfo struct {
+	OrderTitle    string `json:"order_title"`
+	OrderDesc     string `json:"order_desc"`
+	GoodsName     string `json:"goods_name"`
+	GoodsId       string `json:"goods_id"`
+	GoodsCategory string `json:"goods_category"`
+}
+
+type AgreementSceneInfo struct {
+	DeviceId string                     `json:"device_id"`
+	DeviceIp string                     `json:"device_ip"`
+	Location AgreementSceneInfoLocation `json:"location"`
+}
+
+type AgreementSceneInfoLocation struct {
+}
+
+type AgreementRiskInfo struct {
+	UserIp            string `json:"user_ip"`
+	DeviceFingerprint string `json:"device_fingerprint"`
+	UserAgent         string `json:"user_agent"`
+}
+
+type AgreementSignParams struct {
+	MerchantUserId      string                         `json:"merchant_user_id"`
+	SceneCode           string                         `json:"scene_code"`
+	ProductCode         string                         `json:"product_code"`
+	ExternalAgreementNo string                         `json:"external_agreement_no"`
+	SignValidTime       string                         `json:"sign_valid_time"`
+	SingleLimit         AgreementLimitConfig           `json:"single_limit"`
+	PeriodLimits        []AgreementPeriodLimit         `json:"period_limits"`
+	SignNotifyUrl       string                         `json:"sign_notify_url"`
+	ReturnUrl           string                         `json:"return_url"`
+	SignExpireMinutes   int                            `json:"sign_expire_minutes"`
+	ExtraParams         AgreementSignParamsExtraParams `json:"extra_params"`
+}
+
+type AgreementSignParamsExtraParams struct {
+}
+
+type AgreementPayParams struct {
+	AgreementNo  string                     `json:"agreement_no"`
+	OutTradeNo   string                     `json:"out_trade_no"`
+	SceneCode    string                     `json:"scene_code"`
+	Amount       AgreementCryptoPaymentInfo `json:"amount"`
+	OrderInfo    AgreementOrderInfo         `json:"order_info"`
+	SceneInfo    AgreementSceneInfo         `json:"scene_info"`
+	PayNotifyUrl string                     `json:"pay_notify_url"`
+	RiskInfo     AgreementRiskInfo          `json:"risk_info"`
+}
+
+type GetAdsRequest struct {
+	TokenId    string `json:"tokenId"`
+	CurrencyId string `json:"currencyId"`
+	Side       string `json:"side"`
+	Page       string `json:"page"`
+	Size       string `json:"size"`
+}
+
+type PostAdRequest struct {
+	TokenId              string                            `json:"tokenId"`
+	CurrencyId           string                            `json:"currencyId"`
+	Side                 string                            `json:"side"`
+	PriceType            string                            `json:"priceType"`
+	Premium              string                            `json:"premium"`
+	Price                string                            `json:"price"`
+	MinAmount            string                            `json:"minAmount"`
+	MaxAmount            string                            `json:"maxAmount"`
+	Remark               string                            `json:"remark"`
+	TradingPreferenceSet PostAdRequestTradingPreferenceSet `json:"tradingPreferenceSet"`
+	PaymentIds           []string                          `json:"paymentIds"`
+	Quantity             string                            `json:"quantity"`
+	PaymentPeriod        string                            `json:"paymentPeriod"`
+	ItemType             string                            `json:"itemType"`
+}
+
+type PostAdRequestTradingPreferenceSet struct {
+}
+
+type RemoveAdRequest struct {
+	ItemId string `json:"itemId"`
+}
+
+type UpdateAdRequest struct {
+	Id                   string                              `json:"id"`
+	PriceType            string                              `json:"priceType"`
+	Premium              string                              `json:"premium"`
+	Price                string                              `json:"price"`
+	MinAmount            string                              `json:"minAmount"`
+	MaxAmount            string                              `json:"maxAmount"`
+	Remark               string                              `json:"remark"`
+	TradingPreferenceSet UpdateAdRequestTradingPreferenceSet `json:"tradingPreferenceSet"`
+	PaymentIds           []string                            `json:"paymentIds"`
+	ActionType           string                              `json:"actionType"`
+	Quantity             string                              `json:"quantity"`
+	PaymentPeriod        string                              `json:"paymentPeriod"`
+}
+
+type UpdateAdRequestTradingPreferenceSet struct {
+}
+
+type GetMyAdsRequest struct {
+	ItemId     string `json:"itemId"`
+	Status     string `json:"status"`
+	Side       string `json:"side"`
+	TokenId    string `json:"tokenId"`
+	Page       string `json:"page"`
+	Size       string `json:"size"`
+	CurrencyId string `json:"currencyId"`
+}
+
+type GetAdDetailRequest struct {
+	ItemId string `json:"itemId"`
+}
+
+type GetAllOrdersRequest struct {
+	Page      int    `json:"page"`
+	Size      int    `json:"size"`
+	Status    int    `json:"status"`
+	BeginTime string `json:"beginTime"`
+	EndTime   string `json:"endTime"`
+	TokenId   string `json:"tokenId"`
+	Side      int    `json:"side"`
+}
+
+type GetPendingOrdersRequest struct {
+	Status    int    `json:"status"`
+	BeginTime string `json:"beginTime"`
+	EndTime   string `json:"endTime"`
+	TokenId   string `json:"tokenId"`
+	Side      int    `json:"side"`
+	Page      int    `json:"page"`
+	Size      int    `json:"size"`
+}
+
+type GetOrderDetailRequest struct {
+	OrderId string `json:"orderId"`
+}
+
+type MarkOrderPaidRequest struct {
+	OrderId     string `json:"orderId"`
+	PaymentType string `json:"paymentType"`
+	PaymentId   string `json:"paymentId"`
+}
+
+type ReleaseAssetsRequest struct {
+	OrderId string `json:"orderId"`
+}
+
+type SendChatMessageRequest struct {
+	Message     string `json:"message"`
+	ContentType string `json:"contentType"`
+	OrderId     string `json:"orderId"`
+	MsgUuid     string `json:"msgUuid"`
+	FileName    string `json:"fileName"`
+}
+
+type GetChatMessageRequest struct {
+	OrderId     string `json:"orderId"`
+	CurrentPage string `json:"currentPage"`
+	Size        string `json:"size"`
+}
+
+type GetCounterpartyInfoRequest struct {
+	OriginalUid string `json:"originalUid"`
+	OrderId     string `json:"orderId"`
+}

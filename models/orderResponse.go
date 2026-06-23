@@ -788,3 +788,387 @@ type TradeQuoteRequest struct {
 	ToTokenCode     string `json:"toTokenCode"`
 	QuoteMode       int    `json:"quoteMode,omitempty"`
 }
+
+type DcpSetTimewindowRequest struct {
+	Product    string `json:"product"`
+	TimeWindow int    `json:"timeWindow"`
+}
+
+type AmendOrderRequest struct {
+	Category     string `json:"category"`
+	Symbol       string `json:"symbol"`
+	OrderId      string `json:"orderId"`
+	OrderLinkId  string `json:"orderLinkId"`
+	OrderIv      string `json:"orderIv"`
+	TriggerPrice string `json:"triggerPrice"`
+	Qty          string `json:"qty"`
+	Price        string `json:"price"`
+	TpslMode     string `json:"tpslMode"`
+	TakeProfit   string `json:"takeProfit"`
+	StopLoss     string `json:"stopLoss"`
+	TpTriggerBy  string `json:"tpTriggerBy"`
+	SlTriggerBy  string `json:"slTriggerBy"`
+	TriggerBy    string `json:"triggerBy"`
+	TpLimitPrice string `json:"tpLimitPrice"`
+	SlLimitPrice string `json:"slLimitPrice"`
+}
+
+type AmendOrderResult struct {
+	OrderId     string `json:"orderId"`
+	OrderLinkId string `json:"orderLinkId"`
+}
+
+type CancelAllOrdersRequest struct {
+	Category      string `json:"category"`
+	Symbol        string `json:"symbol"`
+	BaseCoin      string `json:"baseCoin"`
+	SettleCoin    string `json:"settleCoin"`
+	OrderFilter   string `json:"orderFilter"`
+	StopOrderType string `json:"stopOrderType"`
+}
+
+type CancelOrderRequest struct {
+	Category    string `json:"category"`
+	Symbol      string `json:"symbol"`
+	OrderId     string `json:"orderId"`
+	OrderLinkId string `json:"orderLinkId"`
+	OrderFilter string `json:"orderFilter"`
+}
+
+type CreateOrderResult struct {
+	OrderId     string `json:"orderId"`
+	OrderLinkId string `json:"orderLinkId"`
+}
+
+type PreCheckOrderRequest struct {
+	Category     string `json:"category"`
+	Symbol       string `json:"symbol"`
+	Side         string `json:"side"`
+	OrderType    string `json:"orderType"`
+	Qty          string `json:"qty"`
+	Price        string `json:"price"`
+	IsLeverage   int    `json:"isLeverage"`
+	TimeInForce  string `json:"timeInForce"`
+	PositionIdx  int    `json:"positionIdx"`
+	OrderLinkId  string `json:"orderLinkId"`
+	TakeProfit   string `json:"takeProfit"`
+	StopLoss     string `json:"stopLoss"`
+	TpTriggerBy  string `json:"tpTriggerBy"`
+	SlTriggerBy  string `json:"slTriggerBy"`
+	ReduceOnly   bool   `json:"reduceOnly"`
+	TpslMode     string `json:"tpslMode"`
+	TpLimitPrice string `json:"tpLimitPrice"`
+	SlLimitPrice string `json:"slLimitPrice"`
+	TpOrderType  string `json:"tpOrderType"`
+	SlOrderType  string `json:"slOrderType"`
+	OrderIv      string `json:"orderIv"`
+}
+
+type SetDcpRequest struct {
+	Product    string `json:"product"`
+	TimeWindow int    `json:"timeWindow"`
+}
+
+type AcceptNonLpQuoteResponse struct {
+	RetCode    int                    `json:"retCode"`
+	RetMsg     string                 `json:"retMsg"`
+	Result     AcceptNonLpQuoteResult `json:"result"`
+	RetExtInfo map[string]interface{} `json:"retExtInfo"`
+	Time       int64                  `json:"time"`
+}
+
+type AcceptNonLpQuoteResult struct {
+	RfqId string `json:"rfqId"`
+}
+
+type CancelAllQuotesResponse struct {
+	RetCode    int                         `json:"retCode"`
+	RetMsg     string                      `json:"retMsg"`
+	Result     []CancelAllQuotesResultItem `json:"result"`
+	RetExtInfo map[string]interface{}      `json:"retExtInfo"`
+	Time       int64                       `json:"time"`
+}
+
+type CancelAllQuotesResultItem struct {
+	RfqId       string `json:"rfqId"`
+	QuoteId     string `json:"quoteId"`
+	QuoteLinkId string `json:"quoteLinkId"`
+	Code        string `json:"code"`
+	Msg         string `json:"msg"`
+}
+
+type CancelAllRfqsResponse struct {
+	RetCode    int                       `json:"retCode"`
+	RetMsg     string                    `json:"retMsg"`
+	Result     []CancelAllRfqsResultItem `json:"result"`
+	RetExtInfo map[string]interface{}    `json:"retExtInfo"`
+	Time       int64                     `json:"time"`
+}
+
+type CancelAllRfqsResultItem struct {
+	RfqId     string `json:"rfqId"`
+	RfqLinkId string `json:"rfqLinkId"`
+	Code      string `json:"code"`
+	Msg       string `json:"msg"`
+}
+
+type CancelQuoteResult struct {
+	RfqId       string `json:"rfqId"`
+	QuoteId     string `json:"quoteId"`
+	QuoteLinkId string `json:"quoteLinkId"`
+}
+
+type CancelRfqResponse struct {
+	RetCode    int                    `json:"retCode"`
+	RetMsg     string                 `json:"retMsg"`
+	Result     CancelRfqResult        `json:"result"`
+	RetExtInfo map[string]interface{} `json:"retExtInfo"`
+	Time       int64                  `json:"time"`
+}
+
+type CancelRfqResult struct {
+	RfqId     string `json:"rfqId"`
+	RfqLinkId string `json:"rfqLinkId"`
+}
+
+type CreateQuoteResponse struct {
+	RetCode    int                    `json:"retCode"`
+	RetMsg     string                 `json:"retMsg"`
+	Result     CreateQuoteResult      `json:"result"`
+	RetExtInfo map[string]interface{} `json:"retExtInfo"`
+	Time       int64                  `json:"time"`
+}
+
+type CreateQuoteResult struct {
+	RfqId       string `json:"rfqId"`
+	QuoteId     string `json:"quoteId"`
+	QuoteLinkId string `json:"quoteLinkId"`
+	ExpiresAt   string `json:"expiresAt"`
+	DeskCode    string `json:"deskCode"`
+	Status      string `json:"status"`
+}
+
+type CreateRfqResponse struct {
+	RetCode    int                    `json:"retCode"`
+	RetMsg     string                 `json:"retMsg"`
+	Result     CreateRfqResult        `json:"result"`
+	RetExtInfo map[string]interface{} `json:"retExtInfo"`
+	Time       int64                  `json:"time"`
+}
+
+type CreateRfqResult struct {
+	RfqId     string `json:"rfqId"`
+	RfqLinkId string `json:"rfqLinkId"`
+	Status    string `json:"status"`
+	ExpiresAt string `json:"expiresAt"`
+	DeskCode  string `json:"deskCode"`
+}
+
+type CreateRfqLeg struct {
+	Category string `json:"category"`
+	Symbol   string `json:"symbol"`
+	Side     string `json:"side"`
+	Qty      string `json:"qty"`
+}
+
+type ExecuteQuoteResponse struct {
+	RetCode    int                    `json:"retCode"`
+	RetMsg     string                 `json:"retMsg"`
+	Result     ExecuteQuoteResult     `json:"result"`
+	RetExtInfo map[string]interface{} `json:"retExtInfo"`
+	Time       int64                  `json:"time"`
+}
+
+type ExecuteQuoteResult struct {
+	RfqId     string `json:"rfqId"`
+	RfqLinkId string `json:"rfqLinkId"`
+	QuoteId   string `json:"quoteId"`
+	Status    string `json:"status"`
+}
+
+type GetPublicTradesResponse struct {
+	RetCode    int                    `json:"retCode"`
+	RetMsg     string                 `json:"retMsg"`
+	Result     GetPublicTradesResult  `json:"result"`
+	RetExtInfo map[string]interface{} `json:"retExtInfo"`
+	Time       int64                  `json:"time"`
+}
+
+type GetPublicTradesResult struct {
+	Cursor string        `json:"cursor"`
+	List   []PublicTrade `json:"list"`
+}
+
+type PublicTrade struct {
+	RfqId        string           `json:"rfqId"`
+	StrategyType string           `json:"strategyType"`
+	CreatedAt    string           `json:"createdAt"`
+	UpdatedAt    string           `json:"updatedAt"`
+	Legs         []PublicTradeLeg `json:"legs"`
+}
+
+type PublicTradeLeg struct {
+	Category  string `json:"category"`
+	Symbol    string `json:"symbol"`
+	Side      string `json:"side"`
+	Price     string `json:"price"`
+	Qty       string `json:"qty"`
+	MarkPrice string `json:"markPrice"`
+}
+
+type GetQuotesRealtimeItem struct {
+	RfqId         string     `json:"rfqId"`
+	RfqLinkId     string     `json:"rfqLinkId"`
+	QuoteId       string     `json:"quoteId"`
+	QuoteLinkId   string     `json:"quoteLinkId"`
+	ExpiresAt     string     `json:"expiresAt"`
+	Status        string     `json:"status"`
+	DeskCode      string     `json:"deskCode"`
+	ExecQuoteSide string     `json:"execQuoteSide"`
+	CreatedAt     string     `json:"createdAt"`
+	UpdatedAt     string     `json:"updatedAt"`
+	QuoteBuyList  []QuoteLeg `json:"quoteBuyList"`
+	QuoteSellList []QuoteLeg `json:"quoteSellList"`
+}
+
+type GetQuotesItem struct {
+	RfqId         string         `json:"rfqId"`
+	RfqLinkId     string         `json:"rfqLinkId"`
+	QuoteId       string         `json:"quoteId"`
+	QuoteLinkId   string         `json:"quoteLinkId"`
+	ExpiresAt     string         `json:"expiresAt"`
+	DeskCode      string         `json:"deskCode"`
+	Status        string         `json:"status"`
+	ExecQuoteSide string         `json:"execQuoteSide"`
+	CreatedAt     string         `json:"createdAt"`
+	UpdatedAt     string         `json:"updatedAt"`
+	QuoteBuyList  []GetQuotesLeg `json:"quoteBuyList"`
+	QuoteSellList []GetQuotesLeg `json:"quoteSellList"`
+}
+
+type GetQuotesLeg struct {
+	Category string `json:"category"`
+	Symbol   string `json:"symbol"`
+	Price    string `json:"price"`
+	Qty      string `json:"qty"`
+}
+
+type GetRfqConfigResponse struct {
+	RetCode    int                    `json:"retCode"`
+	RetMsg     string                 `json:"retMsg"`
+	Result     GetRfqConfigResult     `json:"result"`
+	RetExtInfo map[string]interface{} `json:"retExtInfo"`
+	Time       int64                  `json:"time"`
+}
+
+type GetRfqConfigResult struct {
+	DeskCode                 string            `json:"deskCode"`
+	MaxLegs                  int               `json:"maxLegs"`
+	MaxLP                    int               `json:"maxLP"`
+	MaxActiveRfq             int               `json:"maxActiveRfq"`
+	RfqExpireTime            int               `json:"rfqExpireTime"`
+	MinLimitQtySpotOrder     int               `json:"minLimitQtySpotOrder"`
+	MinLimitQtyContractOrder int               `json:"minLimitQtyContractOrder"`
+	MinLimitQtyOptionOrder   int               `json:"minLimitQtyOptionOrder"`
+	StrategyTypes            []RfqStrategyType `json:"strategyTypes"`
+	Counterparties           []RfqCounterparty `json:"counterparties"`
+}
+
+type RfqStrategyType struct {
+	StrategyName string `json:"strategyName"`
+}
+
+type RfqCounterparty struct {
+	TraderName string `json:"traderName"`
+	DeskCode   string `json:"deskCode"`
+	Type       string `json:"type"`
+}
+
+type GetRfqsRealtimeResponse struct {
+	RetCode    int                    `json:"retCode"`
+	RetMsg     string                 `json:"retMsg"`
+	Result     GetRfqsRealtimeResult  `json:"result"`
+	RetExtInfo map[string]interface{} `json:"retExtInfo"`
+	Time       int64                  `json:"time"`
+}
+
+type GetRfqsRealtimeResult struct {
+	List []RfqRealtimeItem `json:"list"`
+}
+
+type RfqRealtimeItem struct {
+	RfqId                  string           `json:"rfqId"`
+	RfqLinkId              string           `json:"rfqLinkId"`
+	Counterparties         []string         `json:"counterparties"`
+	ExpiresAt              string           `json:"expiresAt"`
+	StrategyType           string           `json:"strategyType"`
+	Status                 string           `json:"status"`
+	AcceptOtherQuoteStatus string           `json:"acceptOtherQuoteStatus"`
+	DeskCode               string           `json:"deskCode"`
+	CreatedAt              string           `json:"createdAt"`
+	UpdatedAt              string           `json:"updatedAt"`
+	Legs                   []RfqRealtimeLeg `json:"legs"`
+}
+
+type RfqRealtimeLeg struct {
+	Category string `json:"category"`
+	Symbol   string `json:"symbol"`
+	Side     string `json:"side"`
+	Qty      string `json:"qty"`
+}
+
+type GetRfqsItem struct {
+	RfqId                  string       `json:"rfqId"`
+	RfqLinkId              string       `json:"rfqLinkId"`
+	Counterparties         []string     `json:"counterparties"`
+	StrategyType           string       `json:"strategyType"`
+	ExpiresAt              string       `json:"expiresAt"`
+	Status                 string       `json:"status"`
+	AcceptOtherQuoteStatus string       `json:"acceptOtherQuoteStatus"`
+	DeskCode               string       `json:"deskCode"`
+	CreatedAt              string       `json:"createdAt"`
+	UpdatedAt              string       `json:"updatedAt"`
+	Legs                   []GetRfqsLeg `json:"legs"`
+}
+
+type GetRfqsLeg struct {
+	Category string `json:"category"`
+	Symbol   string `json:"symbol"`
+	Side     string `json:"side"`
+	Qty      string `json:"qty"`
+}
+
+type GetTradeHistoryResult struct {
+	Cursor string                `json:"cursor"`
+	List   []GetTradeHistoryItem `json:"list"`
+}
+
+type GetTradeHistoryItem struct {
+	RfqId         string               `json:"rfqId"`
+	RfqLinkId     string               `json:"rfqLinkId"`
+	QuoteId       string               `json:"quoteId"`
+	QuoteLinkId   string               `json:"quoteLinkId"`
+	QuoteSide     string               `json:"quoteSide"`
+	StrategyType  string               `json:"strategyType"`
+	Status        string               `json:"status"`
+	RfqDeskCode   string               `json:"rfqDeskCode"`
+	QuoteDeskCode string               `json:"quoteDeskCode"`
+	CreatedAt     string               `json:"createdAt"`
+	UpdatedAt     string               `json:"updatedAt"`
+	Legs          []GetTradeHistoryLeg `json:"legs"`
+}
+
+type GetTradeHistoryLeg struct {
+	Category      string `json:"category"`
+	OrderId       string `json:"orderId"`
+	Symbol        string `json:"symbol"`
+	Side          string `json:"side"`
+	Price         string `json:"price"`
+	Qty           string `json:"qty"`
+	MarkPrice     string `json:"markPrice"`
+	ExecFee       string `json:"execFee"`
+	ExecId        string `json:"execId"`
+	ResultCode    int    `json:"resultCode"`
+	ResultMessage string `json:"resultMessage"`
+	RejectParty   string `json:"rejectParty"`
+}
