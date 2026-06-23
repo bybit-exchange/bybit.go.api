@@ -610,3 +610,186 @@ type SetMarginModeReason struct {
 	ReasonCode string `json:"reasonCode"`
 	ReasonMsg  string `json:"reasonMsg"`
 }
+
+type GetAccountInstrumentsResponse struct {
+	RetCode    int                         `json:"retCode"`
+	RetMsg     string                      `json:"retMsg"`
+	Result     GetAccountInstrumentsResult `json:"result"`
+	RetExtInfo map[string]interface{}      `json:"retExtInfo"`
+	Time       int64                       `json:"time"`
+}
+
+type GetAccountInstrumentsResult struct {
+	Category       string                  `json:"category"`
+	NextPageCursor string                  `json:"nextPageCursor"`
+	List           []AccountInstrumentItem `json:"list"`
+}
+
+type AccountInstrumentItem struct {
+	Symbol             string                          `json:"symbol"`
+	ContractType       string                          `json:"contractType"`
+	Status             string                          `json:"status"`
+	BaseCoin           string                          `json:"baseCoin"`
+	QuoteCoin          string                          `json:"quoteCoin"`
+	LaunchTime         string                          `json:"launchTime"`
+	DeliveryTime       string                          `json:"deliveryTime"`
+	DeliveryFeeRate    string                          `json:"deliveryFeeRate"`
+	PriceScale         string                          `json:"priceScale"`
+	LeverageFilter     AccountInstrumentLeverageFilter `json:"leverageFilter"`
+	PriceFilter        AccountInstrumentPriceFilter    `json:"priceFilter"`
+	LotSizeFilter      AccountInstrumentLotSizeFilter  `json:"lotSizeFilter"`
+	UnifiedMarginTrade bool                            `json:"unifiedMarginTrade"`
+	FundingInterval    int                             `json:"fundingInterval"`
+	SettleCoin         string                          `json:"settleCoin"`
+	CopyTrading        string                          `json:"copyTrading"`
+	UpperFundingRate   string                          `json:"upperFundingRate"`
+	LowerFundingRate   string                          `json:"lowerFundingRate"`
+	MarginTrading      string                          `json:"marginTrading"`
+	StTag              string                          `json:"stTag"`
+	RiskParameters     AccountInstrumentRiskParameters `json:"riskParameters"`
+	SymbolType         string                          `json:"symbolType"`
+	DisplayName        string                          `json:"displayName"`
+	Innovation         string                          `json:"innovation"`
+	PreListingInfo     map[string]interface{}          `json:"preListingInfo"`
+	IsPreListing       bool                            `json:"isPreListing"`
+	MyRpiPermission    bool                            `json:"myRpiPermission"`
+	IsPublicRpi        bool                            `json:"isPublicRpi"`
+}
+
+type AccountInstrumentLeverageFilter struct {
+	MinLeverage  string `json:"minLeverage"`
+	MaxLeverage  string `json:"maxLeverage"`
+	LeverageStep string `json:"leverageStep"`
+}
+
+type AccountInstrumentPriceFilter struct {
+	MinPrice string `json:"minPrice"`
+	MaxPrice string `json:"maxPrice"`
+	TickSize string `json:"tickSize"`
+}
+
+type AccountInstrumentLotSizeFilter struct {
+	MaxOrderQty               string `json:"maxOrderQty"`
+	MaxMktOrderQty            string `json:"maxMktOrderQty"`
+	MinOrderQty               string `json:"minOrderQty"`
+	QtyStep                   string `json:"qtyStep"`
+	MinNotionalValue          string `json:"minNotionalValue"`
+	BasePrecision             string `json:"basePrecision"`
+	QuotePrecision            string `json:"quotePrecision"`
+	MinOrderAmt               string `json:"minOrderAmt"`
+	MaxLimitOrderQty          string `json:"maxLimitOrderQty"`
+	MaxMarketOrderQty         string `json:"maxMarketOrderQty"`
+	PostOnlyMaxLimitOrderSize string `json:"postOnlyMaxLimitOrderSize"`
+	MaxOrderAmt               string `json:"maxOrderAmt"`
+	PostOnlyMaxOrderQty       string `json:"postOnlyMaxOrderQty"`
+}
+
+type AccountInstrumentRiskParameters struct {
+	PriceLimitRatioX string `json:"priceLimitRatioX"`
+	PriceLimitRatioY string `json:"priceLimitRatioY"`
+}
+
+type BorrowHistoryRecord struct {
+	Currency                  string `json:"currency"`
+	CreatedTime               int64  `json:"createdTime"`
+	BorrowCost                string `json:"borrowCost"`
+	HourlyBorrowRate          string `json:"hourlyBorrowRate"`
+	InterestBearingBorrowSize string `json:"InterestBearingBorrowSize"`
+	CostExemption             string `json:"costExemption"`
+	BorrowAmount              string `json:"borrowAmount"`
+	UnrealisedLoss            string `json:"unrealisedLoss"`
+	FreeBorrowedAmount        string `json:"freeBorrowedAmount"`
+}
+
+type GetCollateralInfoResult struct {
+	List []GetCollateralInfoItem `json:"list"`
+}
+
+type GetCollateralInfoItem struct {
+	Currency            string `json:"currency"`
+	HourlyBorrowRate    string `json:"hourlyBorrowRate"`
+	MaxBorrowingAmount  string `json:"maxBorrowingAmount"`
+	FreeBorrowingLimit  string `json:"freeBorrowingLimit"`
+	FreeBorrowAmount    string `json:"freeBorrowAmount"`
+	BorrowAmount        string `json:"borrowAmount"`
+	OtherBorrowAmount   string `json:"otherBorrowAmount"`
+	AvailableToBorrow   string `json:"availableToBorrow"`
+	Borrowable          bool   `json:"borrowable"`
+	BorrowUsageRate     string `json:"borrowUsageRate"`
+	MarginCollateral    bool   `json:"marginCollateral"`
+	CollateralSwitch    bool   `json:"collateralSwitch"`
+	FreeBorrowingAmount string `json:"freeBorrowingAmount"`
+	CollateralRatio     string `json:"collateralRatio"`
+}
+
+type DcpInfoResult struct {
+	DcpInfos []DcpInfoItem `json:"dcpInfos"`
+}
+
+type DcpInfoItem struct {
+	Product    string `json:"product"`
+	DcpStatus  string `json:"dcpStatus"`
+	TimeWindow string `json:"timeWindow"`
+}
+
+type GetFeeRateItem struct {
+	Symbol       string `json:"symbol"`
+	BaseCoin     string `json:"baseCoin"`
+	TakerFeeRate string `json:"takerFeeRate"`
+	MakerFeeRate string `json:"makerFeeRate"`
+}
+
+type GetMmpStateResult struct {
+	Result []MmpStateItem `json:"result"`
+}
+
+type GetSmpGroupResult struct {
+	SmpGroup int `json:"smpGroup"`
+}
+
+type GetTransactionLogResult struct {
+	List           []TransactionLogEntry `json:"list"`
+	NextPageCursor string                `json:"nextPageCursor"`
+}
+
+type GetTransferableAmountResult struct {
+	AvailableWithdrawal    string            `json:"availableWithdrawal"`
+	AvailableWithdrawalMap map[string]string `json:"availableWithdrawalMap"`
+}
+
+type OneClickRepayResult struct {
+	List []OneClickRepayItem `json:"list"`
+}
+
+type OneClickRepayItem struct {
+	Coin         string `json:"coin"`
+	RepaymentQty string `json:"repaymentQty"`
+}
+
+type ResetMmpResponse struct {
+	RetCode    int                    `json:"retCode"`
+	RetMsg     string                 `json:"retMsg"`
+	Result     map[string]interface{} `json:"result"`
+	RetExtInfo map[string]interface{} `json:"retExtInfo"`
+	Time       int64                  `json:"time"`
+}
+
+type SetPriceLimitResponse struct {
+	RetCode    int                    `json:"retCode"`
+	RetMsg     string                 `json:"retMsg"`
+	Result     map[string]interface{} `json:"result"`
+	RetExtInfo map[string]interface{} `json:"retExtInfo"`
+	Time       int64                  `json:"time"`
+}
+
+type SetSpotHedgingResponse struct {
+	RetCode    int                    `json:"retCode"`
+	RetMsg     string                 `json:"retMsg"`
+	Result     map[string]interface{} `json:"result"`
+	RetExtInfo map[string]interface{} `json:"retExtInfo"`
+	Time       int64                  `json:"time"`
+}
+
+type UpgradeToUtaProMsg struct {
+	Msg []string `json:"msg"`
+}

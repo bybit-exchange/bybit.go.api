@@ -2382,3 +2382,315 @@ type LPStakeResponse struct {
 	RetExtInfo interface{} `json:"retExtInfo"`
 	Time       int         `json:"time"`
 }
+
+type AdjustLtvRequest struct {
+	Currency  string `json:"currency"`
+	Amount    string `json:"amount"`
+	Direction int    `json:"direction"`
+}
+
+type AdjustmentHistoryRequest struct {
+	AdjustId           int    `json:"adjustId"`
+	CollateralCurrency string `json:"collateralCurrency"`
+	Limit              int    `json:"limit"`
+	Cursor             int    `json:"cursor"`
+}
+
+type CollateralDataRequest struct {
+	Currency string `json:"currency"`
+}
+
+type LoanCommonLoanableDataRequest struct {
+	Currency string `json:"currency"`
+	VipLevel string `json:"vipLevel"`
+}
+
+type MaxCollateralAmountRequest struct {
+	Currency string `json:"currency"`
+}
+
+type BorrowOrderQuoteRequest struct {
+	OrderCurrency string `json:"orderCurrency"`
+	Term          string `json:"term"`
+	OrderBy       string `json:"orderBy"`
+	Sort          int    `json:"sort"`
+	Limit         int    `json:"limit"`
+}
+
+type FixedBorrowRequest struct {
+	OrderCurrency  string       `json:"orderCurrency"`
+	OrderAmount    string       `json:"orderAmount"`
+	AnnualRate     string       `json:"annualRate"`
+	Term           string       `json:"term"`
+	AutoRepay      string       `json:"autoRepay"`
+	CollateralList []Collateral `json:"collateralList"`
+	RepayType      string       `json:"repayType"`
+}
+
+type Collateral struct {
+	Currency string `json:"currency"`
+	Amount   string `json:"amount"`
+}
+
+type CryptoLoanFixedFullyRepayResponse struct {
+	RetCode int                             `json:"retCode"`
+	RetMsg  string                          `json:"retMsg"`
+	Result  CryptoLoanFixedFullyRepayResult `json:"result"`
+	Time    int64                           `json:"time"`
+}
+
+type CryptoLoanFixedFullyRepayResult struct {
+	RepayId string `json:"repayId"`
+}
+
+type CryptoLoanFixedRenewResponse struct {
+	RetCode int                        `json:"retCode"`
+	RetMsg  string                     `json:"retMsg"`
+	Result  CryptoLoanFixedRenewResult `json:"result"`
+	Time    int64                      `json:"time"`
+}
+
+type CryptoLoanFixedRenewResult struct {
+	OrderId string `json:"orderId"`
+}
+
+type CryptoLoanFixedRenewCollateralItem struct {
+	Currency string `json:"currency"`
+	Amount   string `json:"amount"`
+}
+
+type CryptoLoanFixedRepayCollateralResponse struct {
+	RetCode int                                  `json:"retCode"`
+	RetMsg  string                               `json:"retMsg"`
+	Result  CryptoLoanFixedRepayCollateralResult `json:"result"`
+	Time    int64                                `json:"time"`
+}
+
+type CryptoLoanFixedRepayCollateralResult struct {
+	RepayId string `json:"repayId"`
+}
+
+type CryptoLoanFixedSupplyOrderCancelResponse struct {
+	RetCode int         `json:"retCode"`
+	RetMsg  string      `json:"retMsg"`
+	Result  interface{} `json:"result"`
+	Time    int64       `json:"time"`
+}
+
+type CryptoLoanFlexibleRepayResponse struct {
+	RetCode int                           `json:"retCode"`
+	RetMsg  string                        `json:"retMsg"`
+	Result  CryptoLoanFlexibleRepayResult `json:"result"`
+	Time    int64                         `json:"time"`
+}
+
+type CryptoLoanFlexibleRepayResult struct {
+	RepayId string `json:"repayId"`
+}
+
+type GetCryptoLoanFlexibleRepaymentHistoryResult struct {
+	List           []CryptoLoanFlexibleRepaymentHistoryItem `json:"list"`
+	NextPageCursor string                                   `json:"nextPageCursor"`
+}
+
+type CryptoLoanFlexibleRepaymentHistoryItem struct {
+	RepayId         string `json:"repayId"`
+	LoanCurrency    string `json:"loanCurrency"`
+	RepayAmount     string `json:"repayAmount"`
+	PrincipalAmount string `json:"principalAmount"`
+	InterestAmount  string `json:"interestAmount"`
+	RepayTime       int64  `json:"repayTime"`
+	RepayType       int    `json:"repayType"`
+	Status          int    `json:"status"`
+}
+
+type DualAssetsExtra struct {
+	OrderDirection string `json:"orderDirection"`
+	SelectPrice    string `json:"selectPrice"`
+	ApyE8          int    `json:"apyE8"`
+}
+
+type PlaceAdvanceOrderRequest struct {
+	Category                 string                    `json:"category"`
+	ProductId                int                       `json:"productId"`
+	OrderType                string                    `json:"orderType"`
+	Amount                   string                    `json:"amount"`
+	AccountType              string                    `json:"accountType"`
+	Coin                     string                    `json:"coin"`
+	OrderLinkId              string                    `json:"orderLinkId"`
+	DualAssetsExtra          *DualAssetsExtra          `json:"dualAssetsExtra,omitempty"`
+	InterestCard             *InterestCard             `json:"interestCard,omitempty"`
+	SmartLeverageStakeExtra  *SmartLeverageStakeExtra  `json:"smartLeverageStakeExtra,omitempty"`
+	SmartLeverageRedeemExtra *SmartLeverageRedeemExtra `json:"smartLeverageRedeemExtra,omitempty"`
+	DoubleWinStakeExtra      *DoubleWinStakeExtra      `json:"doubleWinStakeExtra,omitempty"`
+	DoubleWinRedeemExtra     *DoubleWinRedeemExtra     `json:"doubleWinRedeemExtra,omitempty"`
+	DiscountBuyExtra         *DiscountBuyExtra         `json:"discountBuyExtra,omitempty"`
+}
+
+type SmartLeverageStakeExtra struct {
+	InitialPrice   string `json:"initialPrice"`
+	BreakevenPrice string `json:"breakevenPrice"`
+}
+
+type SmartLeverageRedeemExtra struct {
+	PositionId          string `json:"positionId"`
+	EstRedeemAmount     string `json:"estRedeemAmount"`
+	IsSlippageProtected bool   `json:"isSlippageProtected,omitempty"`
+}
+
+type DoubleWinStakeExtra struct {
+	Leverage     string `json:"leverage"`
+	InitialPrice string `json:"initialPrice"`
+	LowerPrice   string `json:"lowerPrice,omitempty"`
+	UpperPrice   string `json:"upperPrice,omitempty"`
+}
+
+type DoubleWinRedeemExtra struct {
+	PositionId          string `json:"positionId"`
+	EstRedeemAmount     string `json:"estRedeemAmount"`
+	IsSlippageProtected bool   `json:"isSlippageProtected,omitempty"`
+}
+
+type DiscountBuyProductExtraInfo struct {
+	Offers []DiscountBuyPriceOfferItem `json:"offers,omitempty"`
+}
+
+type DiscountBuyExtra struct {
+	InitialPrice     string `json:"initialPrice"`
+	PurchasePrice    string `json:"purchasePrice"`
+	KnockoutPrice    string `json:"knockoutPrice"`
+	KnockoutCouponE8 int    `json:"knockoutCouponE8"`
+	InstUid          int    `json:"instUid"`
+	SettleType       string `json:"settleType"`
+}
+
+type PlaceTokenOrderRequest struct {
+	Coin        string `json:"coin"`
+	OrderLinkId string `json:"orderLinkId"`
+	OrderType   string `json:"orderType"`
+	Amount      string `json:"amount"`
+	AccountType string `json:"accountType"`
+}
+
+type PlaceRwaOrderRequest struct {
+	ProductId    int    `json:"productId"`
+	OrderType    string `json:"orderType"`
+	Coin         string `json:"coin"`
+	StakeAmount  string `json:"stakeAmount,omitempty"`
+	RedeemShares string `json:"redeemShares,omitempty"`
+	AccountType  string `json:"accountType,omitempty"`
+	OrderLinkId  string `json:"orderLinkId"`
+}
+
+type AddLiquidityRequest struct {
+	ProductId        string `json:"productId"`
+	OrderLinkId      string `json:"orderLinkId"`
+	QuoteAccountType string `json:"quoteAccountType,omitempty"`
+	BaseAccountType  string `json:"baseAccountType,omitempty"`
+	QuoteAmount      string `json:"quoteAmount,omitempty"`
+	BaseAmount       string `json:"baseAmount,omitempty"`
+	Leverage         string `json:"leverage,omitempty"`
+}
+
+type RemoveLiquidityRequest struct {
+	ProductId   string `json:"productId"`
+	OrderLinkId string `json:"orderLinkId"`
+	PositionId  string `json:"positionId"`
+	RemoveRate  int    `json:"removeRate,omitempty"`
+	RemoveType  string `json:"removeType,omitempty"`
+}
+
+type ReinvestRequest struct {
+	ProductId   string `json:"productId"`
+	OrderLinkId string `json:"orderLinkId"`
+	PositionId  string `json:"positionId"`
+}
+
+type AddMarginRequest struct {
+	ProductId        string `json:"productId"`
+	OrderLinkId      string `json:"orderLinkId"`
+	PositionId       string `json:"positionId"`
+	Amount           string `json:"amount"`
+	QuoteAccountType string `json:"quoteAccountType"`
+}
+
+type ClaimInterestRequest struct {
+	ProductId string `json:"productId"`
+}
+
+type PwmInstSettleProfitResult struct {
+	FundId            string `json:"fundId"`
+	Status            string `json:"status"`
+	TotalProfitShared string `json:"totalProfitShared"`
+	InstIncome        string `json:"instIncome"`
+	Coin              string `json:"coin"`
+	CreatedTime       string `json:"createdTime"`
+}
+
+type PwmInstCreateFundResult struct {
+	FundId            string `json:"fundId"`
+	FundName          string `json:"fundName"`
+	Coin              string `json:"coin"`
+	Status            string `json:"status"`
+	ProfitShareRate   string `json:"profitShareRate"`
+	ManagementFeeRate string `json:"managementFeeRate"`
+	AccountUid        string `json:"accountUid"`
+	CreatedTime       string `json:"createdTime"`
+}
+
+type PwmInstInvestmentDistributionItem struct {
+	ProductId string `json:"productId"`
+	Amount    string `json:"amount"`
+}
+
+type PwmInstCreateInvestmentPlanResult struct {
+	PlanId      string `json:"planId"`
+	PlanType    string `json:"planType"`
+	AccountUid  string `json:"accountUid"`
+	Status      string `json:"status"`
+	CreatedTime string `json:"createdTime"`
+}
+
+type PwmInstInvestmentDistribution struct {
+	Category      string `json:"category"`
+	ProductId     string `json:"productId"`
+	Coin          string `json:"coin"`
+	CurrentAmount string `json:"currentAmount"`
+}
+
+type PwmInstUpdateFundItem struct {
+	FundId string `json:"fundId"`
+	Amount string `json:"amount"`
+}
+
+type PwmInstManageInvestmentPlanResult struct {
+	PlanId      string                  `json:"planId"`
+	Status      string                  `json:"status"`
+	UpdateFunds []PwmInstUpdateFundItem `json:"updateFunds"`
+	UpdatedTime string                  `json:"updatedTime"`
+}
+
+type PwmInstManageOrderResult struct {
+	OrderId     string `json:"orderId"`
+	FundId      string `json:"fundId"`
+	AccountUid  string `json:"accountUid"`
+	OrderStatus string `json:"orderStatus"`
+	OrderType   string `json:"orderType"`
+	Action      string `json:"action"`
+	Coin        string `json:"coin"`
+	Amount      string `json:"amount"`
+	Shares      string `json:"shares"`
+	UpdatedTime string `json:"updatedTime"`
+}
+
+type PwmInstCreateSubAccountResult struct {
+	FundId        string `json:"fundId"`
+	SubAccountUid string `json:"subAccountUid"`
+	Status        string `json:"status"`
+	CreatedTime   string `json:"createdTime"`
+}
+
+type PwmFundTransferResult struct {
+	TransferId string `json:"transferId"`
+	Status     string `json:"status"`
+}

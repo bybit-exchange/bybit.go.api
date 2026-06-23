@@ -242,3 +242,8 @@ type UpdateSubAPIKeyResponse struct {
 	RetExtInfo interface{} `json:"retExtInfo"`
 	Time       int         `json:"time"`
 }
+
+type GetAffiliateSubListResult struct {
+	List           []AffiliateSubItem `json:"list"`
+	NextPageCursor string             `json:"nextPageCursor"`
+}
