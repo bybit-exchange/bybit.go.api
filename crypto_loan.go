@@ -3,6 +3,8 @@ package bybit_connector
 import (
 	"context"
 	"net/http"
+
+	"github.com/bybit-exchange/bybit.go.api/handlers"
 )
 
 // Crypto Loan
@@ -290,6 +292,19 @@ func (s *BybitClientRequest) GetCryptoLoanMaxCollateralAmount(ctx context.Contex
 	r := &request{
 		method:   http.MethodGet,
 		endpoint: "/v5/crypto-loan/max-collateral-amount",
+		secType:  secTypeSigned,
+	}
+	data, err := SendRequest(ctx, opts, r, s, err)
+	return GetServerResponse(err, data)
+}
+
+func (s *BybitClientRequest) PostCryptoLoanCommonMaxLoan(ctx context.Context, opts ...RequestOption) (res *ServerResponse, err error) {
+	if err = handlers.ValidateParams(s.params); err != nil {
+		return nil, err
+	}
+	r := &request{
+		method:   http.MethodPost,
+		endpoint: "/v5/crypto-loan-common/max-loan",
 		secType:  secTypeSigned,
 	}
 	data, err := SendRequest(ctx, opts, r, s, err)

@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl -s \"https://api-testnet.bybit.com/v5/market/instruments-info?category=inverse&limit=20\")",
+      "Bash(python3 -c ' *)",
+      "Bash(curl -s \"https://api-testnet.bybit.com/v5/market/delivery-price?category=inverse&symbol=BTCUSDM26\")",
+      "Bash(go test *)",
+      "Bash(gofmt -l . ./models/)",
+      "Bash(go build *)",
+      "Read(//tmp/**)",
+      "Bash(git clone *)",
+      "Bash(grep -rh 'endpoint:.*\"/v5/' /Users/sh01591ml/bybit/bybit.go.api/*.go | sed 's/.*endpoint: *\"//' | sed 's/\".*//' | sort -u > /tmp/project_endpoints_final.txt *)"
+    ],
+    "additionalDirectories": [
+      "/tmp"
+    ]
+  }
+}
