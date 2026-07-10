@@ -1,0 +1,31 @@
+spot_margin.go
+  fd39a846ad513105 5
+bybit_websocket.go
+  fd39a846ad513105 8
+bybit_api_client.go
+  fd39a846ad513105 9,21
+order.go
+  fd39a846ad513105 5
+request.go
+  fd39a846ad513105 4
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.3.2-bit.10+672fbf0",
+  "base_commit_sha": "50464352ff44b3d163f416cd632dc649f6e97ee0",
+  "prompts": {
+    "fd39a846ad513105": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "cff76c49-3adc-4ca5-80d5-8b6f1c9fb54e",
+        "model": "claude-opus-4-7"
+      },
+      "human_author": "paul.yang",
+      "messages": [],
+      "total_additions": 6,
+      "total_deletions": 12,
+      "accepted_lines": 1012,
+      "overriden_lines": 0
+    }
+  }
+}
