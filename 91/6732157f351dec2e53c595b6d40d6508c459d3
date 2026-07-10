@@ -1,0 +1,33 @@
+go.mod
+  fd39a846ad513105 11
+bybit_api_client.go
+  fd39a846ad513105 9,21
+spot_margin.go
+  fd39a846ad513105 5
+request.go
+  fd39a846ad513105 4
+bybit_websocket.go
+  fd39a846ad513105 8
+order.go
+  fd39a846ad513105 5
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.3.2-bit.10+672fbf0",
+  "base_commit_sha": "916732157f351dec2e53c595b6d40d6508c459d3",
+  "prompts": {
+    "fd39a846ad513105": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "cff76c49-3adc-4ca5-80d5-8b6f1c9fb54e",
+        "model": "claude-opus-4-7"
+      },
+      "human_author": null,
+      "messages": [],
+      "total_additions": 3,
+      "total_deletions": 5,
+      "accepted_lines": 1013,
+      "overriden_lines": 0
+    }
+  }
+}
