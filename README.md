@@ -174,7 +174,7 @@ ws := bybit.NewBybitPublicWebSocket("wss://stream.bybit.com/v5/public/spot", fun
 fmt.Println("Received:", message)
 return nil
 })
-_ = ws.Connect([]string{"orderbook.1.BTCUSDT"})
+_, _ = ws.Connect().SendSubscription([]string{"orderbook.1.BTCUSDT"})
 select {}
 ```
 
@@ -184,7 +184,7 @@ ws := bybit.NewBybitPrivateWebSocket("wss://stream-testnet.bybit.com/v5/private"
 	fmt.Println("Received:", message)
 	return nil
 })
-_ = ws.Connect([]string{"order"})
+_, _ = ws.Connect().SendSubscription([]string{"order"})
 select {}
 ```
 
