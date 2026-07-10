@@ -37,7 +37,7 @@ type UnifiedUpdateMsg struct {
 }
 
 type WalletBalanceInfo struct {
-	List []AccountInfo `json:"list"`
+	List []WalletAccountInfo `json:"list"`
 }
 
 type WalletAccountInfo struct {
