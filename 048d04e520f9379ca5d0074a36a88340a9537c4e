@@ -1,0 +1,23 @@
+bybit_websocket.go
+  fd39a846ad513105 127-130,133
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.3.2-bit.10+672fbf0",
+  "base_commit_sha": "048d04e520f9379ca5d0074a36a88340a9537c4e",
+  "prompts": {
+    "fd39a846ad513105": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "cff76c49-3adc-4ca5-80d5-8b6f1c9fb54e",
+        "model": "claude-opus-4-7"
+      },
+      "human_author": "paul.yang",
+      "messages": [],
+      "total_additions": 800,
+      "total_deletions": 2,
+      "accepted_lines": 1011,
+      "overriden_lines": 0
+    }
+  }
+}
