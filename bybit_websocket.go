@@ -241,7 +241,9 @@ func (b *WebSocket) Disconnect() error {
 
 func (b *WebSocket) requiresAuthentication() bool {
 	return b.url == WEBSOCKET_PRIVATE_MAINNET || b.url == WEBSOCKET_PRIVATE_TESTNET ||
+		b.url == WEBSOCKET_PRIVATE_EU_MAINNET || b.url == WEBSOCKET_PRIVATE_EU_TESTNET ||
 		b.url == WEBSOCKET_TRADE_MAINNET || b.url == WEBSOCKET_TRADE_TESTNET ||
+		b.url == WEBSOCKET_TRADE_EU_MAINNET || b.url == WEBSOCKET_TRADE_EU_TESTNET ||
 		b.url == WEBSOCKET_TRADE_DEMO || b.url == WEBSOCKET_PRIVATE_DEMO
 	// v3 offline
 	/*
