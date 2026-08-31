@@ -7,6 +7,7 @@ import (
 	"encoding/hex"
 	"encoding/json"
 	"fmt"
+	"sync"
 	"time"
 
 	"github.com/google/uuid"
@@ -20,7 +21,7 @@ func (b *WebSocket) handleIncomingMessages() {
 		_, message, err := b.conn.ReadMessage()
 		if err != nil {
 			fmt.Println("Error reading:", err)
-			b.isConnected = false
+			b.setConnected(false)
 			return
 		}
 
@@ -40,13 +41,13 @@ func (b *WebSocket) monitorConnection() {
 
 	for {
 		<-ticker.C
-		if !b.isConnected && b.ctx.Err() == nil { // Check if disconnected and context not done
+		if !b.getConnected() && b.ctx.Err() == nil { // Check if disconnected and context not done
 			fmt.Println("Attempting to reconnect...")
 			con := b.Connect() // Example, adjust parameters as needed
 			if con == nil {
 				fmt.Println("Reconnection failed:")
 			} else {
-				b.isConnected = true
+				b.setConnected(true)
 				go b.handleIncomingMessages() // Restart message handling
 			}
 		}
@@ -74,6 +75,21 @@ type WebSocket struct {
 	ctx          context.Context
 	cancel       context.CancelFunc
 	isConnected  bool
+	mu           sync.RWMutex
+}
+
+// setConnected / getConnected guard isConnected, which is accessed concurrently
+// from Connect, Disconnect, handleIncomingMessages and monitorConnection.
+func (b *WebSocket) setConnected(v bool) {
+	b.mu.Lock()
+	b.isConnected = v
+	b.mu.Unlock()
+}
+
+func (b *WebSocket) getConnected() bool {
+	b.mu.RLock()
+	defer b.mu.RUnlock()
+	return b.isConnected
 }
 
 type WebsocketOption func(*WebSocket)
@@ -135,7 +151,7 @@ func (b *WebSocket) Connect() *WebSocket {
 			return nil
 		}
 	}
-	b.isConnected = true
+	b.setConnected(true)
 
 	go b.handleIncomingMessages()
 	go b.monitorConnection()
@@ -235,7 +251,7 @@ func ping(b *WebSocket) {
 
 func (b *WebSocket) Disconnect() error {
 	b.cancel()
-	b.isConnected = false
+	b.setConnected(false)
 	return b.conn.Close()
 }
 
