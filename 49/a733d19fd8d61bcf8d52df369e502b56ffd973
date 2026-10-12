@@ -1,0 +1,39 @@
+RELEASE_NOTE.md
+  s_14731aa45014cc::t_fda38fb79b5f50 1-27
+consts.go
+  s_14731aa45014cc::t_2cd7f0df93bb00 5
+ins_loan.go
+  s_14731aa45014cc::t_c804f5dfd01636 324-349
+market_service.go
+  s_14731aa45014cc::t_5e9a96f598c884 392-401
+models/lendingResponse.go
+  s_14731aa45014cc::t_4cedf826b0db70 2697-2725
+models/marketResponse.go
+  s_14731aa45014cc::t_c3c14d683a7189 1026-1047
+models/spotMarginResponse.go
+  s_14731aa45014cc::t_7c8d8650110cba 304-327
+models/userResponse.go
+  s_14731aa45014cc::t_5d4b7d88c7f881 250-267
+saving.go
+  s_14731aa45014cc::t_3ccb6877682f09 964-989
+spot_margin.go
+  s_14731aa45014cc::t_f0a36999585893 302-327
+user.go
+  s_14731aa45014cc::t_248c88d6060e22 210-222
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.2-bit.2+419f699",
+  "base_commit_sha": "49a733d19fd8d61bcf8d52df369e502b56ffd973",
+  "prompts": {},
+  "sessions": {
+    "s_14731aa45014cc": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a11a25-078f-7d13-b8c5-a1f8f61777b2",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "doris-xiao-bybit <doris.xiao@bybit.com>"
+    }
+  }
+}
