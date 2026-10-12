@@ -1,0 +1,19 @@
+docs/superpowers/specs/2026-10-12-get-array-query-params-design.md
+  s_8738369e1a2756::t_081fdbf43f44d4 1-28
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.2-bit.2+419f699",
+  "base_commit_sha": "18e0ec9b7016222c8ecb0a954980b5f2df2d6925",
+  "prompts": {},
+  "sessions": {
+    "s_8738369e1a2756": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a12f15-adcc-79b3-96b7-dbf99d89fd9a",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "doris-xiao-bybit <doris.xiao@bybit.com>"
+    }
+  }
+}
