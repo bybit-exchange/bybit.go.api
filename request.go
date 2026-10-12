@@ -7,6 +7,7 @@ import (
 	"log"
 	"net/http"
 	"net/url"
+	"reflect"
 )
 
 type secType int
@@ -52,8 +53,15 @@ func (r *request) setParam(key string, value interface{}) *request {
 // setParams set params with key/values to query string or body
 func (r *request) setParams(m params) *request {
 	if r.method == http.MethodGet {
-		for k, v := range m {
-			r.setParam(k, v)
+		for key, value := range m {
+			rv := reflect.ValueOf(value)
+			if rv.IsValid() && (rv.Kind() == reflect.Slice || rv.Kind() == reflect.Array) {
+				for i := 0; i < rv.Len(); i++ {
+					r.addParam(key, rv.Index(i).Interface())
+				}
+				continue
+			}
+			r.setParam(key, value)
 		}
 	} else if r.method == http.MethodPost {
 		jsonData, err := json.Marshal(m)
