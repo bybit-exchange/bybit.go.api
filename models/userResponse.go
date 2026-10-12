@@ -247,3 +247,21 @@ type GetAffiliateSubListResult struct {
 	List           []AffiliateSubItem `json:"list"`
 	NextPageCursor string             `json:"nextPageCursor"`
 }
+
+type QueryReferralCodeApiResponse struct {
+	RetCode    int                     `json:"retCode"`
+	RetMsg     string                  `json:"retMsg"`
+	Result     QueryReferralCodeResult `json:"result"`
+	RetExtInfo interface{}             `json:"retExtInfo"`
+	Time       int                     `json:"time"`
+}
+
+type QueryReferralCodeResult struct {
+	ReferralCodes []ReferralCodeItem `json:"referralCodes"`
+}
+
+type ReferralCodeItem struct {
+	ReferralCode string `json:"referralCode"`
+	ReferralLink string `json:"referralLink"`
+	Scene        int    `json:"scene"`
+}

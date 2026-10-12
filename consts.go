@@ -2,7 +2,7 @@ package bybit_connector
 
 const (
 	Name    = "bybit.api.go"
-	Version = "1.1.0"
+	Version = "1.1.1"
 	// Https
 	MAINNET        = "https://api.bybit.com"
 	MAINNET_BACKT  = "https://api.bytick.com"

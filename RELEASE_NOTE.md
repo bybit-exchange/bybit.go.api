@@ -1,3 +1,30 @@
+## 2026-10-12
+
+### New Functions (8)
+- GetOptionBaseCoins
+- ListEarnAutoSavings
+- EditEarnAutoSavings
+- GetSpotMarginTradeFlexibleAvailableInventory
+- QueryFixedAvailableInventory
+- InsLoanCoinDeltaAmount
+- InsLoanDelayLiqStatus
+- QueryReferralCode
+
+### New Structs (13)
+- OptionBaseCoinsResponse
+- OptionBaseCoinsResult
+- OptionBaseCoin
+- ListAutoSavingsResponse
+- EditAutoSavingsRequest
+- GetFlexibleAvailableInventoryResponse
+- QueryFixedAvailableInventoryResponse
+- FixedAvailableInventoryResult
+- DelayLiqStatusResponse
+- DelayLiqStatusResult
+- QueryReferralCodeApiResponse
+- QueryReferralCodeResult
+- ReferralCodeItem
+
 bybit.go.api 1.1.0
 
 Rest
