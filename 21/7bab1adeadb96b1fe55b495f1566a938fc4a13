@@ -1,0 +1,24 @@
+request_test.go
+  s_8738369e1a2756::t_6dad107714c61c 1-30
+docs/superpowers/plans/2026-10-12-get-array-query-params.md
+  s_8738369e1a2756::t_3ed832114285b5 19,46,52,69,83,87
+  s_8738369e1a2756::t_19d35498e8d557 1-18,20-45,47-51,53-68,70-82,84-86,88-92
+request.go
+  s_8738369e1a2756::t_2cb089ee2662ca 10,56-64
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.2-bit.2+419f699",
+  "base_commit_sha": "217bab1adeadb96b1fe55b495f1566a938fc4a13",
+  "prompts": {},
+  "sessions": {
+    "s_8738369e1a2756": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a12f15-adcc-79b3-96b7-dbf99d89fd9a",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "doris-xiao-bybit <doris.xiao@bybit.com>"
+    }
+  }
+}
