@@ -1,0 +1,21 @@
+request_test.go
+  s_8738369e1a2756::t_6dad107714c61c 1-30
+request.go
+  s_8738369e1a2756::t_2cb089ee2662ca 10,56-64
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.2-bit.2+419f699",
+  "base_commit_sha": "ea1e804fcb9f23d8be6ca5ef8843a24e5b183ee3",
+  "prompts": {},
+  "sessions": {
+    "s_8738369e1a2756": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a12f15-adcc-79b3-96b7-dbf99d89fd9a",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "doris-xiao-bybit <doris.xiao@bybit.com>"
+    }
+  }
+}
