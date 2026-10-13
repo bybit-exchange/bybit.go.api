@@ -253,7 +253,7 @@ type QueryReferralCodeApiResponse struct {
 	RetMsg     string                  `json:"retMsg"`
 	Result     QueryReferralCodeResult `json:"result"`
 	RetExtInfo interface{}             `json:"retExtInfo"`
-	Time       int                     `json:"time"`
+	Time       int64                   `json:"time"`
 }
 
 type QueryReferralCodeResult struct {

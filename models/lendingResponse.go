@@ -2699,7 +2699,7 @@ type ListAutoSavingsResponse struct {
 	RetCode    int         `json:"retCode"`
 	RetMsg     string      `json:"retMsg"`
 	RetExtInfo interface{} `json:"retExtInfo"`
-	Time       int         `json:"time"`
+	Time       int64       `json:"time"`
 	Result     interface{} `json:"result"`
 }
 
@@ -2714,7 +2714,7 @@ type DelayLiqStatusResponse struct {
 	RetMsg     string               `json:"retMsg"`
 	Result     DelayLiqStatusResult `json:"result"`
 	RetExtInfo interface{}          `json:"retExtInfo"`
-	Time       int                  `json:"time"`
+	Time       int64                `json:"time"`
 }
 
 type DelayLiqStatusResult struct {

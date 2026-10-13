@@ -1028,7 +1028,7 @@ type OptionBaseCoinsResponse struct {
 	RetCode    int                   `json:"retCode"`
 	RetMsg     string                `json:"retMsg"`
 	RetExtInfo interface{}           `json:"retExtInfo"`
-	Time       int                   `json:"time"`
+	Time       int64                 `json:"time"`
 	Result     OptionBaseCoinsResult `json:"result"`
 }
 
@@ -1041,7 +1041,7 @@ type OptionBaseCoin struct {
 	QuoteCoin        string `json:"quoteCoin"`
 	SettleCoin       string `json:"settleCoin"`
 	OptionShowName   string `json:"optionShowName"`
-	OptionOnlineTime int    `json:"optionOnlineTime"`
+	OptionOnlineTime int64  `json:"optionOnlineTime"`
 	HasSymbol        int    `json:"hasSymbol"`
 	UnderlyingType   int    `json:"underlyingType"`
 }

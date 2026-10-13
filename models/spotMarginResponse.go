@@ -307,7 +307,7 @@ type GetFlexibleAvailableInventoryResponse struct {
 	RetMsg     string      `json:"retMsg"`
 	Result     interface{} `json:"result"`
 	RetExtInfo interface{} `json:"retExtInfo"`
-	Time       int         `json:"time"`
+	Time       int64       `json:"time"`
 }
 
 type QueryFixedAvailableInventoryResponse struct {
@@ -315,7 +315,7 @@ type QueryFixedAvailableInventoryResponse struct {
 	RetMsg     string                        `json:"retMsg"`
 	Result     FixedAvailableInventoryResult `json:"result"`
 	RetExtInfo interface{}                   `json:"retExtInfo"`
-	Time       int                           `json:"time"`
+	Time       int64                         `json:"time"`
 }
 
 type FixedAvailableInventoryResult struct {
