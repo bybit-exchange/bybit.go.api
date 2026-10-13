@@ -1,0 +1,32 @@
+models/marketResponse.go
+  s_48b06d93e34bae::t_bcab0a7c9e8fe7 1031,1044
+models/spotMarginResponse.go
+  s_48b06d93e34bae::t_dde56d30d52138 310
+  s_48b06d93e34bae::t_b86fa023729866 318
+models/marketResponse_test.go
+  s_48b06d93e34bae::t_1bf859a633eff7 39-52,54-76
+  s_48b06d93e34bae::t_11d8aa977c5ab5 32,35
+  s_48b06d93e34bae::t_87d23219935465 1-31,33-34,36-38
+  s_48b06d93e34bae::t_87d1ffb52f2465 53
+models/lendingResponse.go
+  s_48b06d93e34bae::t_dde56d30d52138 2702
+  s_48b06d93e34bae::t_b86fa023729866 2717
+models/userResponse.go
+  s_48b06d93e34bae::t_b86fa023729866 256
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.2-bit.2+419f699",
+  "base_commit_sha": "6fbbf1267e1025bab4254b8b7b890d638dd01cc5",
+  "prompts": {},
+  "sessions": {
+    "s_48b06d93e34bae": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a134b3-8f23-79a0-8b41-79594406e286",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "doris-xiao-bybit <doris.xiao@bybit.com>"
+    }
+  }
+}
