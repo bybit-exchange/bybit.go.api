@@ -2694,3 +2694,32 @@ type PwmFundTransferResult struct {
 	TransferId string `json:"transferId"`
 	Status     string `json:"status"`
 }
+
+type ListAutoSavingsResponse struct {
+	RetCode    int         `json:"retCode"`
+	RetMsg     string      `json:"retMsg"`
+	RetExtInfo interface{} `json:"retExtInfo"`
+	Time       int64       `json:"time"`
+	Result     interface{} `json:"result"`
+}
+
+type EditAutoSavingsRequest struct {
+	Coin                string `json:"coin"`
+	IsSelected          bool   `json:"isSelected"`
+	PurchaseImmediately bool   `json:"purchaseImmediately"`
+}
+
+type DelayLiqStatusResponse struct {
+	RetCode    int                  `json:"retCode"`
+	RetMsg     string               `json:"retMsg"`
+	Result     DelayLiqStatusResult `json:"result"`
+	RetExtInfo interface{}          `json:"retExtInfo"`
+	Time       int64                `json:"time"`
+}
+
+type DelayLiqStatusResult struct {
+	Ltv                  string `json:"ltv"`
+	LiquidationStatus    int    `json:"liquidationStatus"`
+	DelayLiqStartTime    string `json:"delayLiqStartTime"`
+	DelayLiqRemainingSec string `json:"delayLiqRemainingSec"`
+}

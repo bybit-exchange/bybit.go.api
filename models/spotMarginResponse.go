@@ -301,3 +301,27 @@ type SetAutoRepayModeResponse struct {
 	RetExtInfo interface{} `json:"retExtInfo"`
 	Time       int         `json:"time"`
 }
+
+type GetFlexibleAvailableInventoryResponse struct {
+	RetCode    int         `json:"retCode"`
+	RetMsg     string      `json:"retMsg"`
+	Result     interface{} `json:"result"`
+	RetExtInfo interface{} `json:"retExtInfo"`
+	Time       int64       `json:"time"`
+}
+
+type QueryFixedAvailableInventoryResponse struct {
+	RetCode    int                           `json:"retCode"`
+	RetMsg     string                        `json:"retMsg"`
+	Result     FixedAvailableInventoryResult `json:"result"`
+	RetExtInfo interface{}                   `json:"retExtInfo"`
+	Time       int64                         `json:"time"`
+}
+
+type FixedAvailableInventoryResult struct {
+	Currency           string `json:"currency"`
+	Term               string `json:"term"`
+	AnnualRate         string `json:"annualRate"`
+	AvailableInventory string `json:"availableInventory"`
+	UpdateTime         string `json:"updateTime"`
+}

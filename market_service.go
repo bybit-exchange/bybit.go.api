@@ -389,3 +389,13 @@ func (s *BybitClientRequest) GetSpreadTickers(ctx context.Context, opts ...Reque
 	data, err := SendRequest(ctx, opts, r, s, err)
 	return GetServerResponse(err, data)
 }
+
+func (s *BybitClientRequest) GetOptionBaseCoins(ctx context.Context, opts ...RequestOption) (res *ServerResponse, err error) {
+	r := &request{
+		method:   http.MethodGet,
+		endpoint: "/v5/market/option-base-coins",
+		secType:  secTypeNone,
+	}
+	data, err := SendRequest(ctx, opts, r, s, err)
+	return GetServerResponse(err, data)
+}
