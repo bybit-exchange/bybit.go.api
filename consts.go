@@ -8,6 +8,7 @@ const (
 	MAINNET_BACKT  = "https://api.bytick.com"
 	TESTNET        = "https://api-testnet.bybit.com"
 	DEMO_ENV       = "https://api-demo.bybit.com"
+	EU_TESTNET     = "https://api-testnet.bybit.eu"
 	NETHERLAND_ENV = "https://api.bybit.nl"
 	HONGKONG_ENV   = "https://api.byhkbit.com"
 	TURKEY_ENV     = "https://api.bybit-tr.com"
@@ -26,13 +27,30 @@ const (
 	OPTION_TESTNET  = "wss://stream-testnet.bybit.com/v5/public/option"
 	SPREAD_TESTNET  = "wss://stream-testnet.bybit.com/v5/public/spread"
 
-	// WebSocket private channel
-	WEBSOCKET_PRIVATE_MAINNET = "wss://stream.bybit.com/v5/private"
-	WEBSOCKET_TRADE_MAINNET   = "wss://stream.bybit.com/v5/trade"
-	WEBSOCKET_PRIVATE_TESTNET = "wss://stream-testnet.bybit.com/v5/private"
-	WEBSOCKET_TRADE_TESTNET   = "wss://stream-testnet.bybit.com/v5/trade"
-	WEBSOCKET_PRIVATE_DEMO    = "wss://stream-demo.bybit.com/v5/private"
-	WEBSOCKET_TRADE_DEMO      = "wss://stream-demo.bybit.com/v5/trade"
+	// WebSocket public channel - EU Mainnet
+	SPOT_EU_MAINNET    = "wss://stream.bybit.eu/v5/public/spot"
+	LINEAR_EU_MAINNET  = "wss://stream.bybit.eu/v5/public/linear"
+	INVERSE_EU_MAINNET = "wss://stream.bybit.eu/v5/public/inverse"
+	SPREAD_EU_MAINNET  = "wss://stream.bybit.eu/v5/public/spread"
+
+	// WebSocket public channel - EU Testnet
+	SPOT_EU_TESTNET    = "wss://stream-testnet.bybit.eu/v5/public/spot"
+	LINEAR_EU_TESTNET  = "wss://stream-testnet.bybit.eu/v5/public/linear"
+	INVERSE_EU_TESTNET = "wss://stream-testnet.bybit.eu/v5/public/inverse"
+	OPTION_EU_TESTNET  = "wss://stream-testnet.bybit.eu/v5/public/option"
+	SPREAD_EU_TESTNET  = "wss://stream-testnet.bybit.eu/v5/public/spread"
+
+	// WebSocket private channelWEBSOCKET_PRIVATE_TESTNET = "wss://stream-testnet.bybit.com/v5/private"
+	WEBSOCKET_PRIVATE_MAINNET    = "wss://stream.bybit.com/v5/private"
+	WEBSOCKET_TRADE_MAINNET      = "wss://stream.bybit.com/v5/trade"
+	WEBSOCKET_PRIVATE_TESTNET    = "wss://stream-testnet.bybit.com/v5/private"
+	WEBSOCKET_TRADE_TESTNET      = "wss://stream-testnet.bybit.com/v5/trade"
+	WEBSOCKET_PRIVATE_EU_MAINNET = "wss://stream.bybit.eu/v5/private"
+	WEBSOCKET_TRADE_EU_MAINNET   = "wss://stream.bybit.eu/v5/trade"
+	WEBSOCKET_PRIVATE_EU_TESTNET = "wss://stream-testnet.bybit.eu/v5/private"
+	WEBSOCKET_TRADE_EU_TESTNET   = "wss://stream-testnet.bybit.eu/v5/trade"
+	WEBSOCKET_PRIVATE_DEMO       = "wss://stream-demo.bybit.com/v5/private"
+	WEBSOCKET_TRADE_DEMO         = "wss://stream-demo.bybit.com/v5/trade"
 
 	// Deprecated: V3 is deprecated and replaced by v5
 	V3_CONTRACT_PRIVATE = "wss://stream.bybit.com/contract/private/v3"
