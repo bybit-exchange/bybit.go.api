@@ -118,10 +118,15 @@ type PredictionPortfolioSummaryResponse struct {
 }
 
 type PredictionPositionHistoryRequest struct {
-	Limit     int    `json:"limit"`
-	PageIndex int    `json:"pageIndex"`
-	Direction string `json:"direction"`
+	TokenId   string                   `json:"tokenId"`
+	EventId   string                   `json:"eventId"`
+	Result    PredictionPositionResult `json:"result"`
+	Days      int                      `json:"days"`
+	Limit     int                      `json:"limit"`
+	PageIndex int                      `json:"pageIndex"`
 }
+
+type PredictionPositionResult int
 
 type PredictionPositionHistoryResponse struct {
 	RetCode    int         `json:"retCode"`
@@ -132,9 +137,10 @@ type PredictionPositionHistoryResponse struct {
 }
 
 type PredictionPositionListRequest struct {
+	TokenId   string `json:"tokenId"`
+	EventId   string `json:"eventId"`
 	Limit     int    `json:"limit"`
 	PageIndex int    `json:"pageIndex"`
-	Direction string `json:"direction"`
 }
 
 type PredictionPositionListResponse struct {
@@ -146,10 +152,8 @@ type PredictionPositionListResponse struct {
 }
 
 type PredictionPriceHistoryRequest struct {
-	TokenIds []string                `json:"tokenIds"`
-	EventId  string                  `json:"eventId"`
+	TokenId  string                  `json:"tokenId"`
 	Interval PredictionPriceInterval `json:"interval"`
-	Fidelity int                     `json:"fidelity"`
 }
 
 type PredictionPriceInterval string
@@ -180,8 +184,16 @@ type PredictionSellResponse struct {
 }
 
 type PredictionSideMarketListRequest struct {
-	EventType PredictionEventType `json:"eventType"`
+	EventId    string               `json:"eventId"`
+	SortBy     PredictionSortBy     `json:"sortBy"`
+	MarketType PredictionMarketType `json:"marketType"`
+	Limit      int                  `json:"limit"`
+	PageIndex  int                  `json:"pageIndex"`
 }
+
+type PredictionSortBy string
+
+type PredictionMarketType int
 
 type PredictionEventType int
 
@@ -195,7 +207,7 @@ type PredictionSideMarketListResponse struct {
 
 type PredictionGroupStageDetailRequest struct {
 	EventType PredictionEventType `json:"eventType"`
-	StageCode PredictionStageCode `json:"stageCode"`
+	GroupName string              `json:"groupName"`
 }
 
 type PredictionStageCode string
@@ -209,8 +221,16 @@ type PredictionGroupStageDetailResponse struct {
 }
 
 type PredictionMatchListRequest struct {
-	EventType PredictionEventType `json:"eventType"`
+	EventType PredictionEventType   `json:"eventType"`
+	Status    PredictionMatchStatus `json:"status"`
+	StartTime int64                 `json:"startTime"`
+	EndTime   int64                 `json:"endTime"`
+	StageCode PredictionStageCode   `json:"stageCode"`
+	Limit     int                   `json:"limit"`
+	PageIndex int                   `json:"pageIndex"`
 }
+
+type PredictionMatchStatus int
 
 type PredictionMatchListResponse struct {
 	RetCode    int         `json:"retCode"`
