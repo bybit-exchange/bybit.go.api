@@ -54,7 +54,7 @@ type GetReferralCommissionRecordsResult struct {
 
 type ReferralCommissionRecord struct {
 	UserId                 string           `json:"userId"`
-	PaymentTime            int              `json:"paymentTime"`
+	PaymentTime            int64            `json:"paymentTime"`
 	Rate                   string           `json:"rate"`
 	BusinessUnit           BusinessUnit     `json:"businessUnit"`
 	CommissionOriginCoin   string           `json:"commissionOriginCoin"`
@@ -74,7 +74,7 @@ type GetReferralUserIdentityProfileResponse struct {
 	RetMsg     string                               `json:"retMsg"`
 	Result     GetReferralUserIdentityProfileResult `json:"result"`
 	RetExtInfo interface{}                          `json:"retExtInfo"`
-	Time       int                                  `json:"time"`
+	Time       int64                                `json:"time"`
 }
 
 type GetReferralUserIdentityProfileResult struct {
@@ -126,7 +126,7 @@ type GetReferralUserInvitationsResult struct {
 
 type ReferralUserInvitationRecord struct {
 	UserIdMask        string       `json:"userIdMask"`
-	SignTime          int          `json:"signTime"`
+	SignTime          int64        `json:"signTime"`
 	UserStatus        FriendStatus `json:"userStatus"`
 	TotalCommission   string       `json:"totalCommission"`
 	UserId            string       `json:"userId"`

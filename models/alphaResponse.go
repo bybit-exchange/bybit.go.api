@@ -16,7 +16,7 @@ type PredictionBuyResponse struct {
 	RetMsg     string      `json:"retMsg"`
 	Result     interface{} `json:"result"`
 	RetExtInfo interface{} `json:"retExtInfo"`
-	Time       int         `json:"time"`
+	Time       int64       `json:"time"`
 }
 
 type PredictionEngineStatusResponse struct {
@@ -24,7 +24,7 @@ type PredictionEngineStatusResponse struct {
 	RetMsg     string      `json:"retMsg"`
 	Result     interface{} `json:"result"`
 	RetExtInfo interface{} `json:"retExtInfo"`
-	Time       int         `json:"time"`
+	Time       int64       `json:"time"`
 }
 
 type PredictionEventDetailRequest struct {
@@ -38,7 +38,7 @@ type PredictionEventDetailResponse struct {
 	RetMsg     string      `json:"retMsg"`
 	Result     interface{} `json:"result"`
 	RetExtInfo interface{} `json:"retExtInfo"`
-	Time       int         `json:"time"`
+	Time       int64       `json:"time"`
 }
 
 type PredictionOrderBookRequest struct {
@@ -50,7 +50,7 @@ type PredictionOrderBookResponse struct {
 	RetMsg     string        `json:"retMsg"`
 	Result     []interface{} `json:"result"`
 	RetExtInfo interface{}   `json:"retExtInfo"`
-	Time       int           `json:"time"`
+	Time       int64         `json:"time"`
 }
 
 type PredictionOrderEstimateRequest struct {
@@ -69,7 +69,7 @@ type PredictionOrderEstimateResponse struct {
 	RetMsg     string      `json:"retMsg"`
 	Result     interface{} `json:"result"`
 	RetExtInfo interface{} `json:"retExtInfo"`
-	Time       int         `json:"time"`
+	Time       int64       `json:"time"`
 }
 
 type PredictionOrderListRequest struct {
@@ -89,7 +89,7 @@ type PredictionOrderListResponse struct {
 	RetMsg     string      `json:"retMsg"`
 	Result     interface{} `json:"result"`
 	RetExtInfo interface{} `json:"retExtInfo"`
-	Time       int         `json:"time"`
+	Time       int64       `json:"time"`
 }
 
 type PredictionPayTokenListResponse struct {
@@ -97,7 +97,7 @@ type PredictionPayTokenListResponse struct {
 	RetMsg     string                  `json:"retMsg"`
 	Result     []PredictionPayTokenDto `json:"result"`
 	RetExtInfo interface{}             `json:"retExtInfo"`
-	Time       int                     `json:"time"`
+	Time       int64                   `json:"time"`
 }
 
 type PredictionPayTokenDto struct {
@@ -114,7 +114,7 @@ type PredictionPortfolioSummaryResponse struct {
 	RetMsg     string      `json:"retMsg"`
 	Result     interface{} `json:"result"`
 	RetExtInfo interface{} `json:"retExtInfo"`
-	Time       int         `json:"time"`
+	Time       int64       `json:"time"`
 }
 
 type PredictionPositionHistoryRequest struct {
@@ -133,7 +133,7 @@ type PredictionPositionHistoryResponse struct {
 	RetMsg     string      `json:"retMsg"`
 	Result     interface{} `json:"result"`
 	RetExtInfo interface{} `json:"retExtInfo"`
-	Time       int         `json:"time"`
+	Time       int64       `json:"time"`
 }
 
 type PredictionPositionListRequest struct {
@@ -148,7 +148,7 @@ type PredictionPositionListResponse struct {
 	RetMsg     string      `json:"retMsg"`
 	Result     interface{} `json:"result"`
 	RetExtInfo interface{} `json:"retExtInfo"`
-	Time       int         `json:"time"`
+	Time       int64       `json:"time"`
 }
 
 type PredictionPriceHistoryRequest struct {
@@ -163,7 +163,7 @@ type PredictionPriceHistoryResponse struct {
 	RetMsg     string        `json:"retMsg"`
 	Result     []interface{} `json:"result"`
 	RetExtInfo interface{}   `json:"retExtInfo"`
-	Time       int           `json:"time"`
+	Time       int64         `json:"time"`
 }
 
 type PredictionSellRequest struct {
@@ -180,7 +180,7 @@ type PredictionSellResponse struct {
 	RetMsg     string      `json:"retMsg"`
 	Result     interface{} `json:"result"`
 	RetExtInfo interface{} `json:"retExtInfo"`
-	Time       int         `json:"time"`
+	Time       int64       `json:"time"`
 }
 
 type PredictionSideMarketListRequest struct {
@@ -202,7 +202,7 @@ type PredictionSideMarketListResponse struct {
 	RetMsg     string      `json:"retMsg"`
 	Result     interface{} `json:"result"`
 	RetExtInfo interface{} `json:"retExtInfo"`
-	Time       int         `json:"time"`
+	Time       int64       `json:"time"`
 }
 
 type PredictionGroupStageDetailRequest struct {
@@ -217,7 +217,7 @@ type PredictionGroupStageDetailResponse struct {
 	RetMsg     string      `json:"retMsg"`
 	Result     interface{} `json:"result"`
 	RetExtInfo interface{} `json:"retExtInfo"`
-	Time       int         `json:"time"`
+	Time       int64       `json:"time"`
 }
 
 type PredictionMatchListRequest struct {
@@ -237,7 +237,7 @@ type PredictionMatchListResponse struct {
 	RetMsg     string      `json:"retMsg"`
 	Result     interface{} `json:"result"`
 	RetExtInfo interface{} `json:"retExtInfo"`
-	Time       int         `json:"time"`
+	Time       int64       `json:"time"`
 }
 
 type PredictionTimelineStagesResponse struct {
@@ -245,7 +245,7 @@ type PredictionTimelineStagesResponse struct {
 	RetMsg     string      `json:"retMsg"`
 	Result     interface{} `json:"result"`
 	RetExtInfo interface{} `json:"retExtInfo"`
-	Time       int         `json:"time"`
+	Time       int64       `json:"time"`
 }
 
 type PredictionTokenPriceRequest struct {
@@ -257,5 +257,5 @@ type PredictionTokenPriceResponse struct {
 	RetMsg     string        `json:"retMsg"`
 	Result     []interface{} `json:"result"`
 	RetExtInfo interface{}   `json:"retExtInfo"`
-	Time       int           `json:"time"`
+	Time       int64         `json:"time"`
 }

@@ -6,8 +6,8 @@ type ApiError struct {
 }
 
 type TaxBatchCreateRequest struct {
-	StartTime         int             `json:"startTime"`
-	EndTime           int             `json:"endTime"`
+	StartTime         int64           `json:"startTime"`
+	EndTime           int64           `json:"endTime"`
 	Items             []TaxExportItem `json:"items"`
 	SourceInstitution string          `json:"sourceInstitution"`
 	ExportFileType    string          `json:"exportFileType"`

@@ -331,7 +331,7 @@ type QueryFixedBorrowPenaltyInterestResponse struct {
 	RetMsg     string      `json:"retMsg"`
 	Result     interface{} `json:"result"`
 	RetExtInfo interface{} `json:"retExtInfo"`
-	Time       int         `json:"time"`
+	Time       int64       `json:"time"`
 }
 
 type CancelFixedBorrowOrderRequest struct {
@@ -343,5 +343,5 @@ type CancelFixedBorrowOrderResponse struct {
 	RetMsg     string      `json:"retMsg"`
 	Result     interface{} `json:"result"`
 	RetExtInfo interface{} `json:"retExtInfo"`
-	Time       int         `json:"time"`
+	Time       int64       `json:"time"`
 }

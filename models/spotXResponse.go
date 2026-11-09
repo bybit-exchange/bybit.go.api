@@ -5,7 +5,7 @@ type ProjectListResponse struct {
 	RetMsg     string            `json:"retMsg"`
 	Result     ProjectListResult `json:"result"`
 	RetExtInfo interface{}       `json:"retExtInfo"`
-	Time       int               `json:"time"`
+	Time       int64             `json:"time"`
 }
 
 type ProjectListResult struct {
@@ -48,7 +48,7 @@ type ActivityLogResponse struct {
 	RetMsg     string             `json:"retMsg"`
 	Result     ActivityLogRespDto `json:"result"`
 	RetExtInfo interface{}        `json:"retExtInfo"`
-	Time       int                `json:"time"`
+	Time       int64              `json:"time"`
 }
 
 type ActivityLogRespDto struct {
@@ -73,7 +73,7 @@ type CurrentStakingResponse struct {
 	RetMsg     string                `json:"retMsg"`
 	Result     CurrentStakingRespDto `json:"result"`
 	RetExtInfo interface{}           `json:"retExtInfo"`
-	Time       int                   `json:"time"`
+	Time       int64                 `json:"time"`
 }
 
 type CurrentStakingRespDto struct {
@@ -105,7 +105,7 @@ type UserHistoryResponse struct {
 	RetMsg     string             `json:"retMsg"`
 	Result     UserHistoryRespDto `json:"result"`
 	RetExtInfo interface{}        `json:"retExtInfo"`
-	Time       int                `json:"time"`
+	Time       int64              `json:"time"`
 }
 
 type UserHistoryRespDto struct {
@@ -128,7 +128,7 @@ type PuzzleProjectListResponse struct {
 	RetMsg     string                  `json:"retMsg"`
 	Result     PuzzleProjectListResult `json:"result"`
 	RetExtInfo interface{}             `json:"retExtInfo"`
-	Time       int                     `json:"time"`
+	Time       int64                   `json:"time"`
 }
 
 type PuzzleProjectListResult struct {
@@ -152,7 +152,7 @@ type GetProjectListResponse struct {
 	RetMsg     string               `json:"retMsg"`
 	Result     GetProjectListResult `json:"result"`
 	RetExtInfo interface{}          `json:"retExtInfo"`
-	Time       int                  `json:"time"`
+	Time       int64                `json:"time"`
 }
 
 type GetProjectListResult struct {
@@ -176,7 +176,7 @@ type GetUserActivityParamsResponse struct {
 	RetMsg     string                      `json:"retMsg"`
 	Result     GetUserActivityParamsResult `json:"result"`
 	RetExtInfo interface{}                 `json:"retExtInfo"`
-	Time       int                         `json:"time"`
+	Time       int64                       `json:"time"`
 }
 
 type GetUserActivityParamsResult struct {
