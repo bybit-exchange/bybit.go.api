@@ -1,0 +1,23 @@
+models/alphaResponse_test.go
+  s_90dbe6c4f5aa9c::t_75e74985490b66 1-85
+models/alphaResponse.go
+  s_90dbe6c4f5aa9c::t_4375bf0afdcccd 121-126,129-130,140-141,155,187-191,194-197,210,225,233
+  s_90dbe6c4f5aa9c::t_c4ea82667a4095 224,226-230
+  s_90dbe6c4f5aa9c::t_b8e35f8f39bbf5 234
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.2-bit.2+419f699",
+  "base_commit_sha": "9e487b21f9742cd85ed0d20d080f6146c0877545",
+  "prompts": {},
+  "sessions": {
+    "s_90dbe6c4f5aa9c": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1bf0c-7ac2-7140-88fc-1f56dfa1ae90",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "doris-xiao-bybit <doris.xiao@bybit.com>"
+    }
+  }
+}
