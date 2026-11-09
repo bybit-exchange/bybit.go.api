@@ -1,0 +1,19 @@
+docs/superpowers/specs/2026-11-09-remove-rwa-stocks-apis-design.md
+  s_90dbe6c4f5aa9c::t_1ba0bd76bb9f0e 1-20
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.2-bit.2+419f699",
+  "base_commit_sha": "4e373c06419744f6a62a2397c1d3c708116efe03",
+  "prompts": {},
+  "sessions": {
+    "s_90dbe6c4f5aa9c": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1bf0c-7ac2-7140-88fc-1f56dfa1ae90",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "doris-xiao-bybit <doris.xiao@bybit.com>"
+    }
+  }
+}
