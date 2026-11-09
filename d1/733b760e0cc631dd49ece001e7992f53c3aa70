@@ -1,0 +1,23 @@
+RELEASE_NOTE.md
+  s_90dbe6c4f5aa9c::t_cd8e09050f8e7b 268
+docs/superpowers/plans/2026-11-09-branch-review-fixes.md
+  s_90dbe6c4f5aa9c::t_93e4bebd0922a7 192,239,263,272,399
+  s_90dbe6c4f5aa9c::t_cd8e09050f8e7b 370,372,415,417
+  s_90dbe6c4f5aa9c::t_95b5e7304b7676 1-191,193-238,240-262,264-271,273-369,371,373-398,400-414,416,418-437
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.2-bit.2+419f699",
+  "base_commit_sha": "d1733b760e0cc631dd49ece001e7992f53c3aa70",
+  "prompts": {},
+  "sessions": {
+    "s_90dbe6c4f5aa9c": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1bf0c-7ac2-7140-88fc-1f56dfa1ae90",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "doris-xiao-bybit <doris.xiao@bybit.com>"
+    }
+  }
+}
