@@ -265,4 +265,4 @@ Get supply order info
 Repay
 Get repayment history
 
-Deprecated leverage token endpoints and legacy crypto loan endpoints 
+Deprecated leverage token endpoints and legacy crypto loan endpoints
