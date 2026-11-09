@@ -1,0 +1,29 @@
+models/spotXResponse.go
+  s_90dbe6c4f5aa9c::t_a35c020241add6 8,51,76,108,131,155,179
+models/timestampResponse_test.go
+  s_90dbe6c4f5aa9c::t_35972d6b02aeb1 1-59
+models/spotMarginResponse.go
+  s_90dbe6c4f5aa9c::t_a35c020241add6 334,346
+models/alphaResponse.go
+  s_90dbe6c4f5aa9c::t_a35c020241add6 19,27,41,53,72,92,100,117,136,151,166,183,205,220,240,248,260
+models/referralResponse.go
+  s_90dbe6c4f5aa9c::t_a35c020241add6 57,77,129
+models/taxResponse.go
+  s_90dbe6c4f5aa9c::t_a35c020241add6 9-10
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.2-bit.2+419f699",
+  "base_commit_sha": "090315fe1935860e251b142bb512380ecf6a0ae3",
+  "prompts": {},
+  "sessions": {
+    "s_90dbe6c4f5aa9c": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1bf0c-7ac2-7140-88fc-1f56dfa1ae90",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "doris-xiao-bybit <doris.xiao@bybit.com>"
+    }
+  }
+}
