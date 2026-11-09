@@ -1,0 +1,57 @@
+RELEASE_NOTE.md
+  s_90dbe6c4f5aa9c::t_36da50184c8101 1-139,268
+alpha.go
+  s_ea43dbab71a8c6::t_4d5155af3860ea 1-228
+consts.go
+  s_ea43dbab71a8c6::t_0983d582aeb211 5
+crypto_loan.go
+  s_ea43dbab71a8c6::t_119468f48e745b 313-325
+crypto_loan_fixed.go
+  s_ea43dbab71a8c6::t_9b221037bcf458 5,18-30
+event.go
+  s_ea43dbab71a8c6::t_8861c268b57afb 1-72
+models/alphaResponse.go
+  s_ea43dbab71a8c6::t_40aac711fe475c 1-241
+models/eventResponse.go
+  s_ea43dbab71a8c6::t_af1a85866b2a02 1-31
+models/referralResponse.go
+  s_ea43dbab71a8c6::t_8b5a30c8562770 1-136
+models/spotMarginResponse.go
+  s_ea43dbab71a8c6::t_3c4a8bc36709c6 328-347
+models/spotXResponse.go
+  s_ea43dbab71a8c6::t_d56e85dd0c2363 1-200
+models/taxResponse.go
+  s_ea43dbab71a8c6::t_aa90a126684ded 7-31
+referral.go
+  s_ea43dbab71a8c6::t_484b96bc655269 1-59
+spot_margin.go
+  s_ea43dbab71a8c6::t_e32c5cb73e5e8a 328-353
+spot_x.go
+  s_ea43dbab71a8c6::t_815c233751ab02 1-89
+tax.go
+  s_ea43dbab71a8c6::t_10d94cbb031346 61-86
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.2-bit.2+419f699",
+  "base_commit_sha": "05933c896f94551512bfb138ab8b74a12bfab51e",
+  "prompts": {},
+  "sessions": {
+    "s_90dbe6c4f5aa9c": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1bf0c-7ac2-7140-88fc-1f56dfa1ae90",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "doris-xiao-bybit <doris.xiao@bybit.com>"
+    },
+    "s_ea43dbab71a8c6": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1be04-50dc-7402-8a84-0b945c398d41",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "doris-xiao-bybit <doris.xiao@bybit.com>"
+    }
+  }
+}
