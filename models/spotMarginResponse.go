@@ -325,3 +325,23 @@ type FixedAvailableInventoryResult struct {
 	AvailableInventory string `json:"availableInventory"`
 	UpdateTime         string `json:"updateTime"`
 }
+
+type QueryFixedBorrowPenaltyInterestResponse struct {
+	RetCode    int         `json:"retCode"`
+	RetMsg     string      `json:"retMsg"`
+	Result     interface{} `json:"result"`
+	RetExtInfo interface{} `json:"retExtInfo"`
+	Time       int         `json:"time"`
+}
+
+type CancelFixedBorrowOrderRequest struct {
+	OrderId string `json:"orderId"`
+}
+
+type CancelFixedBorrowOrderResponse struct {
+	RetCode    int         `json:"retCode"`
+	RetMsg     string      `json:"retMsg"`
+	Result     interface{} `json:"result"`
+	RetExtInfo interface{} `json:"retExtInfo"`
+	Time       int         `json:"time"`
+}
